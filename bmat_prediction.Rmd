@@ -8,15 +8,16 @@ output: html_document
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(rethinking)
-knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+theme_set(theme_minimal())
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
-```{bash Converting to R-readable format}
-sed -e 's| Home |,Home |g'  -e 's|Y| Y|g' -e 's| *Y| Y|g' ../data/raw_bmat_results_tl.txt | tr "," "\n" > ../data/bmat_results_tl.txt
+```{bash Converting to R-readable format, include = FALSE}
+sed -e 's| Home |,Home |g'  -e 's|Y| Y|g' -e 's| *Y| Y|g' data/raw_bmat_results_tl.txt | tr "," "\n" > data/bmat_results_tl.txt
 ```
 
-```{r Read in data file}
-df <- read_delim("../data/bmat_results_tl.txt", delim = " ", col_names = c("Domicile", "Course", "Year", "Candidate", letters[1:8]), skip = 1) %>%
+```{r Read in data file, include = FALSE}
+df <- read_delim("data/bmat_results_tl.txt", delim = " ", col_names = c("Domicile", "Course", "Year", "Candidate", letters[1:8]), skip = 1) %>%
   unite("x", a:h, sep = " ") %>%
   mutate(x = str_remove_all(x, " NA")) %>%
   mutate(b = str_extract(x, "[0-9](.[0-9]|) [0-9](.[0-9]|)")) %>%
@@ -25,13 +26,70 @@ df <- read_delim("../data/bmat_results_tl.txt", delim = " ", col_names = c("Domi
   mutate(x = (str_remove(x, " ?(Y|) [0-9](.[0-9]|) [0-9](.[0-9]|)"))) %>%
   rename("College" = x) %>%
   mutate(BMAT_all = BMAT_Section_1 + BMAT_Section_2) %>%
-  group_by(College, Year) %>%
-  mutate(offer_fraction = sum(Offer)/n()) %>%
-  ungroup
+  #group_by(College, Year) %>%
+  #mutate(offer_fraction = sum(Offer)/n()) %>%
+  #ungroup %>%
+  select(-Domicile, -Course)
+```
+
+The Bio-Medial Aptitude Test (BMAT) is an admissions test sat by students applying to X universities. 
+It contains 3 components:
+
+1. Section 1, which is a verbal/spatial reasoning section (1-9)
+
+2. Section 2, which is a section on science and maths (1-9)
+
+3. Section 3, which is an essay section.
+
+The BMAT is an important indicator of success in admissions, so we will be using a data from a FOI request to predict likelihood of admission, and using it as a based to disucuss a Baeysian workflow. 
+
+
+As always, before starting any analysis work, let's first take a look at the data. 
+
+We have information from `r nrow(df)` applicants to `r length(unique(df$College))` colleges in the 2017, 2018 and 2019 admission cycles. You can take a look at the dataset below.
+
+```{r}
+df %>%
+  group_by(Year, College)
+  
+```
+
+That's alot of numbers though - let's instead turn some of these into graphs so we get a sense of what we're looking at. 
+
+```{r}
+df %>%
+  select(Year:Offer) %>%
+  gather(BMAT_Section_1, BMAT_Section_2, key = "Section", value = "Mark") %>%
+  #ggplot(aes(x = Offer, y = Mark, fill = Offer)) +
+  #geom_violin() +
+  ggplot(aes(x = Mark, fill = Offer)) +
+  geom_density(alpha = 0.5) +
+  facet_grid(rows = vars(Year), cols = vars(Section)) +
+  ggtitle("BMAT Scores by those who recieved Offers", subtitle = "Unsurprisingly, those who got offer got higher scores on average")
 ```
 
 ```{r}
-df
+df %>%
+  group_by(College, Year) %>%
+  summarise(
+    total_offers = sum(Offer),
+    total_applicants = n(),
+    offer_fraction = total_offers / total_applicants
+  ) %>%
+  mutate(no_offers_by_college = sum(total_offers), mean_offer_fraction = sum(total_offers) / sum(total_applicants)) %>%
+  ungroup() %>%
+  mutate(grand_offer_fraction = sum(total_offers) / sum(total_applicants)) %>%
+  mutate(
+    College = fct_reorder(College, mean_offer_fraction),
+    Year = as.character(Year)
+    ) %>%
+  ggplot(aes(y = College, x = offer_fraction, colour = Year)) +
+  geom_vline(aes(xintercept = grand_offer_fraction), colour = "grey", lty = 2) +
+  geom_point(aes(x = mean_offer_fraction, size = no_offers_by_college), colour = "black") +
+  geom_point() +
+  scale_x_continuous(labels = scales::percent) +
+  xlab("Percentage Of Applicants Given Offers") +
+  scale_color_brewer(type = "qual")
+  
 ```
 
-The Bio-Medial Aptitude 
