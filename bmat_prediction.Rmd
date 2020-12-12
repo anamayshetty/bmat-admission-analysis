@@ -48,15 +48,9 @@ As always, before starting any analysis work, let's first take a look at the dat
 
 We have information from `r nrow(df)` applicants to `r length(unique(df$College))` colleges in the 2017, 2018 and 2019 admission cycles. You can take a look at the dataset below.
 
-```{r}
-df %>%
-  group_by(Year, College)
-  
-```
-
 That's alot of numbers though - let's instead turn some of these into graphs so we get a sense of what we're looking at. 
 
-```{r}
+```{r Distribution of Scores by Offer}
 df %>%
   select(Year:Offer) %>%
   gather(BMAT_Section_1, BMAT_Section_2, key = "Section", value = "Mark") %>%
@@ -68,7 +62,7 @@ df %>%
   ggtitle("BMAT Scores by those who recieved Offers", subtitle = "Unsurprisingly, those who got offer got higher scores on average")
 ```
 
-```{r}
+```{r Offer Rates by College and Year}
 df %>%
   group_by(College, Year) %>%
   summarise(
@@ -91,5 +85,27 @@ df %>%
   xlab("Percentage Of Applicants Given Offers") +
   scale_color_brewer(type = "qual")
   
+```
+
+To approach a statical problem, we need:
+
+1. A question to answer
+
+2. The appropriate data to answer that question
+
+3. A statistical model to answer the question.
+
+Now we have our questions:
+
+"*what is the probabilty I am going to get into Cambridge based on my BMAT mark?*"
+
+We have our 
+
+```{r}
+df %>%
+  select(Candidate, Offer, contains("BMAT")) %>%
+  gather(contains("BMAT"), key = "Predictor", value = "Score") %>%
+  group_by(Predictor) %>%
+  nest
 ```
 

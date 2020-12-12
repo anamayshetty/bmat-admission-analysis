@@ -1,0 +1,68 @@
+---
+title: "statistics_for_prediction"
+author: "Anamay Shetty"
+date: "12/12/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(rethinking)
+theme_set(theme_minimal())
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{bash Converting to R-readable format, include = FALSE}
+sed -e 's| Home |,Home |g'  -e 's|Y| Y|g' -e 's| *Y| Y|g' data/raw_bmat_results_tl.txt | tr "," "\n" > data/bmat_results_tl.txt
+```
+
+```{r Read in data file, include = FALSE}
+df <- read_delim("data/bmat_results_tl.txt", delim = " ", col_names = c("Domicile", "Course", "Year", "Candidate", letters[1:8]), skip = 1) %>%
+  unite("x", a:h, sep = " ") %>%
+  mutate(x = str_remove_all(x, " NA")) %>%
+  mutate(b = str_extract(x, "[0-9](.[0-9]|) [0-9](.[0-9]|)")) %>%
+  separate(b, into = c("BMAT_Section_1", "BMAT_Section_2"), sep = " ", convert = TRUE) %>%
+  mutate(Offer = ifelse(str_detect(x, "Y "), TRUE, FALSE)) %>%
+  mutate(x = (str_remove(x, " ?(Y|) [0-9](.[0-9]|) [0-9](.[0-9]|)"))) %>%
+  rename("College" = x) %>%
+  mutate(BMAT_all = BMAT_Section_1 + BMAT_Section_2) %>%
+  #group_by(College, Year) %>%
+  #mutate(offer_fraction = sum(Offer)/n()) %>%
+  #ungroup %>%
+  select(Candidate, Offer, BMAT_all)
+```
+
+Statistics is a common feature of many science courses. I see statistics as solving two questions in science:
+
+1. Using current data and knowledge, can we predict an outcome in other situations?
+
+2. Using current data and knowledge, can we understand the underlying mechanisms which cause our outcomes of interest?
+
+In a more concrete sense, question 1 in prediction - "What will the effects of giving drug A to person X be?" - whilst question 2 is a question of inference - "Is our scientific model of drug action correct given data about drug effects?".
+
+These are often conflated, but I think prediction is something quite apart from inference, and this little piece is designed to really pull these apart - and ultimately show **why** they are so often conflated. We will tackle the question of inference in a separate piece. 
+
+A bit of background. When I was first starting off as a very bor(ed/ing) Year 12/13 student in statistics, I was interested in this question of using the scores people got on a medical aptitude test - the BMAT - to predict whether they were going to get entry to medicine courses at university. 
+
+Let's put ourselves in the shoes of someone who is coming to ask "What are my chances of getting into Cambridge?"
+
+Our dataset we're going to use is the BMAT dataset, which has `nrow(df)` people applying to Cambridge colleges. 
+
+```{r}
+df %>%
+  ggplot(aes(x = BMAT_all, y = as.numeric(Offer))) +
+  geom_point()
+```
+
+
+```{r}
+df %>%
+  #mutate(bins = BMAT_all) %>%
+  mutate(bins = round(BMAT_all)) %>%
+  group_by(bins) %>%
+  mutate(offer_fraction = mean(Offer), n = n()) %>%
+  ggplot(aes(bins, offer_fraction)) +
+  geom_point(aes(x = BMAT_all, y = as.numeric(Offer))) +
+  geom_point(colour = "red") +
+  geom_line(colour = "red")
+```
