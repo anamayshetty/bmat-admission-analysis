@@ -42,11 +42,17 @@ In a more concrete sense, question 1 in prediction - "What will the effects of g
 
 These are often conflated, but I think prediction is something quite apart from inference, and this little piece is designed to really pull these apart - and ultimately show **why** they are so often conflated. We will tackle the question of inference in a separate piece. 
 
-A bit of background. When I was first starting off as a very bor(ed/ing) Year 12/13 student in statistics, I was interested in this question of using the scores people got on a medical aptitude test - the BMAT - to predict whether they were going to get entry to medicine courses at university. 
+A bit of background. When I was first starting off as a very bor(ed/ing) Year 12/13 student just getting interested in statistics, I went and worked one of the first things I did was to download a dataset of BMAT scores and medicine Offers and do an excercise in prediction. I imagined what I would say if someone came up to me and asked:
 
-Let's put ourselves in the shoes of someone who is coming to ask "What are my chances of getting into Cambridge?"
+"Anamay I have <blah> BMAT score: what's my chances of getting into Cambridge?"
 
-Our dataset we're going to use is the BMAT dataset, which has `nrow(df)` people applying to Cambridge colleges. 
+### Option 1: You're not going to get in
+
+Let's say I gave you my dataset, but without the BMAT scores. You may think that there's no way you can answer the question posed, but we can!
+
+The average fraction of applications which lead to offers is `r round(mean(df$Offer), 3)`. This means that if you knew nothing about the person, you should tell them they won't get in! After all, you'll be right roughly 75% of the time.
+
+### Option 2: You'll get in if you do really well in the BMAT, but not if you do really *really* well on the BMAT
 
 ```{r}
 df %>%
@@ -66,3 +72,6 @@ df %>%
   geom_point(colour = "red") +
   geom_line(colour = "red")
 ```
+
+
+As you can see, we have 
