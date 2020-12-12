@@ -1,0 +1,2723 @@
+Domicile Course Apply Year ApplyID First College Offer? BMAT Section 1 Score BMAT Section 2 Score
+Home Medicine 2017 100001 Trinity 9.0 9.0
+Home Medicine 2017 100002 St John's 9.0 8.0
+Home Medicine 2017 100003 Lucy Cavendish 4.7 5.3
+Home Medicine 2017 100004 Churchill 4.3 4.7
+Home Medicine 2017 100005 Emmanuel 6.1 4.9
+Home Medicine 2017 100006 Gonville and Caius 4.3 4.7
+Home Medicine 2017 100007 Corpus Christi 6.1 4.5
+Home Medicine 2017 100008 King's 3.8 4.9
+Home Medicine 2017 100009 St John's Y 5.9 5.5
+Home Medicine 2017 100010 Magdalene 5.4 5.5
+Home Medicine 2017 100011 Jesus 4.3 4.5
+Home Medicine 2017 100012 St John's Y 5.2 6.0
+Home Medicine 2017 100013 St John's Y 5.2 5.1
+Home Medicine 2017 100014 King's 6.3 5.5
+Home Medicine 2017 100015 Downing 4.7 4.5
+Home Medicine 2017 100016 Churchill Y 5.4 5.1
+Home Medicine 2017 100017 Fitzwilliam Y 4.9 5.1
+Home Medicine 2017 100018 Christ's 5.9 5.3
+Home Medicine 2017 100019 Gonville and Caius 5.6 5.5
+Home Medicine 2017 100020 Selwyn Y 4.7 5.1
+Home Medicine 2017 100021 Christ's 4.0 5.1
+Home Medicine 2017 100022 Pembroke 4.9 4.9
+Home Medicine 2017 100023 Downing 4.5 5.1
+Home Medicine 2017 100024 Pembroke 4.9 5.3
+Home Medicine 2017 100025 Jesus 3.5 5.5
+Home Medicine 2017 100026 Emmanuel 3.5 4.9
+Home Medicine 2017 100027 Clare Y 5.9 5.7
+Home Medicine 2017 100028 King's 3.5 4.1
+Home Medicine 2017 100029 Corpus Christi 5.6 6.0
+Home Medicine 2017 100030 Jesus 6.6 4.7
+Home Medicine 2017 100031 St John's 4.5 4.5
+Home Medicine 2017 100032 Gonville and Caius Y 5.2 6.0
+Home Medicine 2017 100033 St Catharine's 5.6 3.9
+Home Medicine 2017 100034 Downing Y 5.2 6.5
+Home Medicine 2017 100035 Emmanuel Y 5.6 5.5
+Home Medicine 2017 100036 Gonville and Caius 6.3 4.9
+Home Medicine 2017 100037 Christ's 5.9 5.1
+Home Medicine 2017 100038 Emmanuel 6.1 5.7
+Home Medicine 2017 100039 Trinity 4.7 5.3
+Home Medicine 2017 100040 Trinity Hall 3.5 5.1
+Home Medicine 2017 100041 Magdalene 4.3 3.9
+Home Medicine 2017 100042 St John's Y 7.4 5.1
+Home Medicine 2017 100043 Gonville and Caius 6.9 5.5
+Home Medicine 2017 100044 St Edmund's 3.5 3.4
+Home Medicine 2017 100045 Wolfson Y 6.3 6.0
+Home Medicine 2017 100046 Clare Y 6.9 5.7
+Home Medicine 2017 100047 St Catharine's 3.8 4.7
+Home Medicine 2017 100048 Clare 4.3 4.3
+Home Medicine 2017 100049 Gonville and Caius Y 4.9 5.1
+Home Medicine 2017 100050 St Catharine's 7.8 6.5
+Home Medicine 2017 100051 Homerton Y 5.6 5.3
+Home Medicine 2017 100052 Trinity Hall Y 6.9 6.7
+Home Medicine 2017 100053 Selwyn Y 5.9 6.5
+Home Medicine 2017 100054 Pembroke 5.9 5.1
+Home Medicine 2017 100055 St John's Y 6.6 5.1
+Home Medicine 2017 100056 Emmanuel 4.7 5.5
+Home Medicine 2017 100057 Trinity Hall Y 6.6 6.2
+Home Medicine 2017 100058 St John's Y 7.1 7.5
+Home Medicine 2017 100059 Clare 5.9 4.7
+Home Medicine 2017 100060 Emmanuel Y 6.3 7.1
+Home Medicine 2017 100061 Trinity Y 6.6 6.5
+Home Medicine 2017 100062 St Catharine's 5.6 6.0
+Home Medicine 2017 100063 Downing 4.0 4.1
+Home Medicine 2017 100064 Christ's Y 7.1 6.0
+Home Medicine 2017 100065 Christ's 4.9 5.1
+Home Medicine 2017 100066 Emmanuel Y 6.1 6.0
+Home Medicine 2017 100067 Gonville and Caius 5.2 4.9
+Home Medicine 2017 100068 Jesus 4.5 4.5
+Home Medicine 2017 100069 Selwyn Y 5.2 6.0
+Home Medicine 2017 100070 Sidney Sussex 5.4 4.9
+Home Medicine 2017 100071 Gonville and Caius 4.7 4.7
+Home Medicine 2017 100072 Downing 5.4 5.5
+Home Medicine 2017 100073 King's 3.5 6.5
+Home Medicine 2017 100074 Jesus 3.3 5.1
+Home Medicine 2017 100075 Gonville and Caius Y 6.1 6.0
+Home Medicine 2017 100076 Gonville and Caius 2.7 4.3
+Home Medicine 2017 100077 St John's 4.3 4.1
+Home Medicine 2017 100078 St John's Y 5.4 6.2
+Home Medicine 2017 100079 Clare 4.9 6.0
+Home Medicine 2017 100080 St Catharine's 3.5 3.4
+Home Medicine 2017 100081 Newnham 4.3 5.1
+Home Medicine 2017 100082 King's Y 5.9 4.7
+Home Medicine 2017 100083 Gonville and Caius Y 6.6 7.1
+Home Medicine 2017 100084 Gonville and Caius Y 6.1 6.5
+Home Medicine 2017 100085 St John's 3.8 4.3
+Home Medicine 2017 100086 Trinity Y 6.3 6.2
+Home Medicine 2017 100087 King's Y 6.3 6.0
+Home Medicine 2017 100088 Queens' Y 5.6 5.5
+Home Medicine 2017 100089 St John's Y 6.3 5.3
+Home Medicine 2017 100090 Newnham 5.4 5.1
+Home Medicine 2017 100091 Downing 4.9 5.5
+Home Medicine 2017 100092 Gonville and Caius 6.1 5.3
+Home Medicine 2017 100093 St John's 5.4 4.7
+Home Medicine 2017 100094 King's 4.7 4.9
+Home Medicine 2017 100095 Jesus Y 7.4 5.7
+Home Medicine 2017 100096 Newnham 5.6 5.3
+Home Medicine 2017 100097 Emmanuel Y 6.1 6.7
+Home Medicine 2017 100098 Robinson 3.8 4.9
+Home Medicine 2017 100099 Corpus Christi 5.6 4.3
+Home Medicine 2017 100100 Downing Y 6.6 8.0
+Home Medicine 2017 100101 King's 4.9 3.7
+Home Medicine 2017 100102 King's Y 7.4 7.1
+Home Medicine 2017 100103 Pembroke Y 4.9 5.5
+Home Medicine 2017 100104 Fitzwilliam Y 5.9 4.9
+Home Medicine 2017 100105 Robinson 5.2 4.5
+Home Medicine 2017 100106 Emmanuel 5.6 5.5
+Home Medicine 2017 100107 Trinity Y 5.9 6.5
+Home Medicine 2017 100108 Gonville and Caius 5.4 5.3
+Home Medicine 2017 100109 Downing 4.7 3.2
+Home Medicine 2017 100110 Emmanuel Y 6.3 5.5
+Home Medicine 2017 100111 Downing 4.5 4.9
+Home Medicine 2017 100112 Emmanuel Y 6.1 4.9
+Home Medicine 2017 100113 Trinity Hall 3.3 4.9
+Home Medicine 2017 100114 King's 6.3 4.5
+Home Medicine 2017 100115 Robinson 5.9 5.3
+Home Medicine 2017 100116 Murray Edwards 3.8 5.1
+Home Medicine 2017 100117 Christ's 5.2 4.3
+Home Medicine 2017 100118 King's 4.5 4.5
+Home Medicine 2017 100119 Gonville and Caius 4.5 6.0
+Home Medicine 2017 100120 Christ's Y 7.1 6.5
+Home Medicine 2017 100121 Gonville and Caius Y 5.2 6.5
+Home Medicine 2017 100122 Robinson 4.0 5.5
+Home Medicine 2017 100123 Corpus Christi 6.1 5.7
+Home Medicine 2017 100124 Pembroke Y 6.3 5.1
+Home Medicine 2017 100125 King's 4.0 4.7
+Home Medicine 2017 100126 Homerton 4.5 5.1
+Home Medicine 2017 100127 Trinity 4.9 3.9
+Home Medicine 2017 100128 King's Y 6.1 6.7
+Home Medicine 2017 100129 St Catharine's 4.0 3.7
+Home Medicine 2017 100130 St Catharine's 4.7 4.9
+Home Medicine 2017 100131 St Catharine's 4.7 4.3
+Home Medicine 2017 100132 Gonville and Caius Y 5.4 6.5
+Home Medicine 2017 100133 Murray Edwards 4.5 5.5
+Home Medicine 2017 100134 Robinson Y 5.4 6.0
+Home Medicine 2017 100135 Gonville and Caius Y 4.9 6.0
+Home Medicine 2017 100136 Robinson Y 4.5 7.1
+Home Medicine 2017 100137 Corpus Christi Y 6.9 6.5
+Home Medicine 2017 100138 Selwyn 3.5 4.1
+Home Medicine 2017 100139 Clare 5.2 5.3
+Home Medicine 2017 100140 Emmanuel Y 7.1 6.7
+Home Medicine 2017 100141 Christ's Y 5.9 4.7
+Home Medicine 2017 100142 Clare 5.9 4.7
+Home Medicine 2017 100143 Downing Y 7.4 6.7
+Home Medicine 2017 100144 Sidney Sussex 4.7 4.3
+Home Medicine 2017 100145 King's 3.5 3.7
+Home Medicine 2017 100146 Churchill Y 5.9 5.3
+Home Medicine 2017 100147 Trinity Y 5.6 4.9
+Home Medicine 2017 100148 Gonville and Caius Y 7.4 6.7
+Home Medicine 2017 100149 Gonville and Caius Y 4.7 6.5
+Home Medicine 2017 100150 Gonville and Caius Y 6.3 6.2
+Home Medicine 2017 100151 St Catharine's Y 7.4 7.1
+Home Medicine 2017 100152 Fitzwilliam Y 6.9 6.5
+Home Medicine 2017 100153 Magdalene 3.5 4.9
+Home Medicine 2017 100154 Queens' Y 4.7 6.0
+Home Medicine 2017 100155 King's 4.9 5.1
+Home Medicine 2017 100156 Wolfson 3.8 3.4
+Home Medicine 2017 100157 Clare 5.4 4.3
+Home Medicine 2017 100158 Corpus Christi 5.2 6.2
+Home Medicine 2017 100159 Emmanuel Y 5.4 5.3
+Home Medicine 2017 100160 St John's Y 5.9 5.5
+Home Medicine 2017 100161 Homerton Y 4.0 4.5
+Home Medicine 2017 100162 Selwyn 4.3 4.1
+Home Medicine 2017 100163 King's 3.0 4.5
+Home Medicine 2017 100164 Jesus 6.1 5.1
+Home Medicine 2017 100165 King's Y 4.5 5.1
+Home Medicine 2017 100166 Downing 4.7 3.7
+Home Medicine 2017 100167 Gonville and Caius 4.0 3.9
+Home Medicine 2017 100168 Trinity 5.6 4.9
+Home Medicine 2017 100169 St John's Y 5.6 5.3
+Home Medicine 2017 100170 Trinity Hall 4.0 5.1
+Home Medicine 2017 100171 Trinity Hall Y 6.3 6.2
+Home Medicine 2017 100172 Emmanuel Y 5.6 6.0
+Home Medicine 2017 100173 Selwyn 6.1 4.7
+Home Medicine 2017 100174 Clare Y 6.1 5.5
+Home Medicine 2017 100175 St John's 5.2 4.7
+Home Medicine 2017 100176 Pembroke 5.9 6.0
+Home Medicine 2017 100177 Wolfson 4.9 5.3
+Home Medicine 2017 100178 Sidney Sussex Y 5.4 6.0
+Home Medicine 2017 100179 Trinity Hall Y 6.6 6.5
+Home Medicine 2017 100180 Emmanuel 5.6 5.1
+Home Medicine 2017 100181 Emmanuel 5.6 5.7
+Home Medicine 2017 100182 Gonville and Caius Y 4.9 6.7
+Home Medicine 2017 100183 Gonville and Caius Y 6.6 8.0
+Home Medicine 2017 100184 Jesus Y 5.9 6.0
+Home Medicine 2017 100185 St Catharine's 4.9 3.9
+Home Medicine 2017 100186 Clare 6.6 5.3
+Home Medicine 2017 100187 Magdalene 4.9 5.3
+Home Medicine 2017 100188 Emmanuel Y 9.0 6.5
+Home Medicine 2017 100189 Clare Y 6.6 6.0
+Home Medicine 2017 100190 Murray Edwards 4.9 4.5
+Home Medicine 2017 100191 Emmanuel 4.5 5.5
+Home Medicine 2017 100192 Christ's 3.5 4.5
+Home Medicine 2017 100193 Gonville and Caius 7.8 5.7
+Home Medicine 2017 100194 Homerton 4.0 2.5
+Home Medicine 2017 100195 Gonville and Caius Y 6.1 5.1
+Home Medicine 2017 100196 St John's 5.4 6.7
+Home Medicine 2017 100197 Clare 4.7 4.5
+Home Medicine 2017 100198 St Catharine's 5.4 4.7
+Home Medicine 2017 100199 Downing 4.9 3.2
+Home Medicine 2017 100200 Pembroke 4.7 4.7
+Home Medicine 2017 100201 St Catharine's 4.3 5.5
+Home Medicine 2017 100202 Peterhouse 6.3 5.7
+Home Medicine 2017 100203 Clare 4.7 4.5
+Home Medicine 2017 100204 Gonville and Caius 5.6 5.3
+Home Medicine 2017 100205 Christ's 3.8 4.7
+Home Medicine 2017 100206 Clare Y 5.9 6.2
+Home Medicine 2017 100207 Gonville and Caius 6.6 5.1
+Home Medicine 2017 100208 Pembroke 5.4 4.1
+Home Medicine 2017 100209 Sidney Sussex 4.0 5.1
+Home Medicine 2017 100210 Emmanuel 5.6 5.5
+Home Medicine 2017 100211 Lucy Cavendish 3.5 3.4
+Home Medicine 2017 100212 Trinity Hall 6.1 3.9
+Home Medicine 2017 100213 Gonville and Caius Y 5.6 6.7
+Home Medicine 2017 100214 St John's 6.6 4.9
+Home Medicine 2017 100215 Fitzwilliam 3.5 5.3
+Home Medicine 2017 100216 Homerton 4.3 5.1
+Home Medicine 2017 100217 Girton 4.7 4.9
+Home Medicine 2017 100218 Newnham 4.3 4.5
+Home Medicine 2017 100219 Christ's 6.3 5.5
+Home Medicine 2017 100220 Fitzwilliam Y 5.4 6.7
+Home Medicine 2017 100221 Downing 6.1 5.3
+Home Medicine 2017 100222 Gonville and Caius 4.9 4.9
+Home Medicine 2017 100223 St John's Y 5.4 4.3
+Home Medicine 2017 100224 Trinity Hall Y 7.1 6.2
+Home Medicine 2017 100225 Clare Y 5.9 7.1
+Home Medicine 2017 100226 St Catharine's 4.9 4.3
+Home Medicine 2017 100227 Downing Y 4.7 6.0
+Home Medicine 2017 100228 Fitzwilliam 5.6 5.7
+Home Medicine 2017 100229 Queens' 5.9 6.5
+Home Medicine 2017 100230 Gonville and Caius Y 7.1 6.2
+Home Medicine 2017 100231 St Catharine's Y 5.2 5.7
+Home Medicine 2017 100232 Clare 4.7 5.5
+Home Medicine 2017 100233 Churchill 4.7 4.3
+Home Medicine 2017 100234 Clare 6.1 3.4
+Home Medicine 2017 100235 Corpus Christi 4.7 5.3
+Home Medicine 2017 100236 King's 3.3 4.3
+Home Medicine 2017 100237 Selwyn Y 4.0 4.7
+Home Medicine 2017 100238 Magdalene 4.7 5.7
+Home Medicine 2017 100239 Downing 6.1 4.7
+Home Medicine 2017 100240 Jesus 6.6 5.3
+Home Medicine 2017 100241 Pembroke 4.9 6.7
+Home Medicine 2017 100242 Christ's 5.6 4.5
+Home Medicine 2017 100243 Gonville and Caius Y 6.9 5.1
+Home Medicine 2017 100244 Selwyn Y 5.9 6.0
+Home Medicine 2017 100245 Gonville and Caius Y 5.9 5.7
+Home Medicine 2017 100246 Gonville and Caius Y 6.6 6.2
+Home Medicine 2017 100247 Queens' Y 5.4 6.0
+Home Medicine 2017 100248 Downing 6.3 4.3
+Home Medicine 2017 100249 Peterhouse 4.3 3.9
+Home Medicine 2017 100250 Queens' Y 5.4 5.1
+Home Medicine 2017 100251 Gonville and Caius 4.7 4.1
+Home Medicine 2017 100252 St Catharine's Y 5.6 6.5
+Home Medicine 2017 100253 Gonville and Caius 6.3 6.0
+Home Medicine 2017 100254 Gonville and Caius Y 5.4 6.2
+Home Medicine 2017 100255 Emmanuel 4.9 5.3
+Home Medicine 2017 100256 Gonville and Caius 5.4 5.1
+Home Medicine 2017 100258 Gonville and Caius 4.9 4.9
+Home Medicine 2017 100259 St Catharine's 4.3 4.5
+Home Medicine 2017 100260 Fitzwilliam 3.8 5.5
+Home Medicine 2017 100261 Emmanuel 4.9 5.3
+Home Medicine 2017 100262 Clare Y 7.1 6.5
+Home Medicine 2017 100263 Jesus 5.4 5.1
+Home Medicine 2017 100264 St John's 3.8 3.9
+Home Medicine 2017 100265 Girton 5.4 3.7
+Home Medicine 2017 100266 Queens' 5.2 4.9
+Home Medicine 2017 100267 Emmanuel Y 7.8 6.7
+Home Medicine 2017 100268 Emmanuel Y 6.1 6.7
+Home Medicine 2017 100269 Downing 5.9 5.5
+Home Medicine 2017 100270 Magdalene 5.2 3.7
+Home Medicine 2017 100271 St Catharine's Y 5.2 6.2
+Home Medicine 2017 100272 Selwyn 5.9 6.0
+Home Medicine 2017 100273 Fitzwilliam Y 6.6 6.0
+Home Medicine 2017 100274 Queens' Y 6.1 6.0
+Home Medicine 2017 100275 Gonville and Caius 3.8 5.1
+Home Medicine 2017 100276 Corpus Christi 3.3 4.1
+Home Medicine 2017 100277 Churchill 5.2 4.9
+Home Medicine 2017 100278 Downing 6.1 4.3
+Home Medicine 2017 100279 Churchill Y 6.9 6.2
+Home Medicine 2017 100280 Gonville and Caius 4.7 4.9
+Home Medicine 2017 100281 Gonville and Caius 9.0 6.7
+Home Medicine 2017 100282 Gonville and Caius 6.9 4.5
+Home Medicine 2017 100283 Emmanuel 5.6 5.3
+Home Medicine 2017 100284 Pembroke Y 5.2 6.2
+Home Medicine 2017 100285 Pembroke 3.8 4.3
+Home Medicine 2017 100286 Homerton 3.8 5.5
+Home Medicine 2017 100287 Selwyn Y 4.0 3.7
+Home Medicine 2017 100288 Corpus Christi 4.7 5.5
+Home Medicine 2017 100289 Sidney Sussex 7.1 5.3
+Home Medicine 2017 100290 Peterhouse 5.9 5.5
+Home Medicine 2017 100291 Gonville and Caius 5.9 4.7
+Home Medicine 2017 100292 Gonville and Caius 6.6 6.5
+Home Medicine 2017 100293 Clare Y 5.9 5.3
+Home Medicine 2017 100294 Christ's 5.4 5.5
+Home Medicine 2017 100295 Queens' 5.4 4.7
+Home Medicine 2017 100296 Robinson 5.6 5.3
+Home Medicine 2017 100297 Pembroke 5.6 4.7
+Home Medicine 2017 100298 Christ's Y 6.1 5.5
+Home Medicine 2017 100299 King's Y 5.9 5.3
+Home Medicine 2017 100300 Robinson Y 4.7 5.3
+Home Medicine 2017 100301 Jesus 4.0 4.5
+Home Medicine 2017 100302 Queens' 4.7 4.3
+Home Medicine 2017 100303 Magdalene Y 4.9 4.1
+Home Medicine 2017 100304 Christ's Y 4.5 6.0
+Home Medicine 2017 100305 Fitzwilliam 5.2 3.7
+Home Medicine 2017 100306 Girton 4.0 4.1
+Home Medicine 2017 100307 Clare Y 6.1 4.9
+Home Medicine 2017 100308 Downing Y 6.9 7.5
+Home Medicine 2017 100309 Homerton 3.5 4.1
+Home Medicine 2017 100310 Newnham 4.9 5.1
+Home Medicine 2017 100311 Trinity Y 6.1 6.0
+Home Medicine 2017 100312 Pembroke 5.4 4.1
+Home Medicine 2017 100313 St John's Y 6.9 6.0
+Home Medicine 2017 100314 Clare 5.2 4.5
+Home Medicine 2017 100315 Selwyn 5.2 5.3
+Home Medicine 2017 100316 Downing Y 5.9 7.1
+Home Medicine 2017 100317 Pembroke 4.0 5.1
+Home Medicine 2017 100318 Jesus 4.7 4.9
+Home Medicine 2017 100319 Sidney Sussex Y 8.1 4.5
+Home Medicine 2017 100320 Sidney Sussex 5.4 5.7
+Home Medicine 2017 100321 Trinity Hall 4.5 4.5
+Home Medicine 2017 100322 Magdalene 3.8 4.9
+Home Medicine 2017 100323 St John's 3.5 3.2
+Home Medicine 2017 100324 Trinity Hall 5.6 4.9
+Home Medicine 2017 100325 Murray Edwards 4.9 4.9
+Home Medicine 2017 100326 Clare Y 6.3 5.7
+Home Medicine 2017 100327 Clare 4.0 4.7
+Home Medicine 2017 100328 Downing 5.4 4.5
+Home Medicine 2017 100329 Downing 5.4 5.5
+Home Medicine 2017 100330 Downing 6.1 4.9
+Home Medicine 2017 100331 Emmanuel Y 7.8 5.7
+Home Medicine 2017 100332 Emmanuel 3.3 4.1
+Home Medicine 2017 100333 Emmanuel 6.1 5.5
+Home Medicine 2017 100334 Emmanuel 4.3 6.7
+Home Medicine 2017 100335 Fitzwilliam 5.9 5.1
+Home Medicine 2017 100336 Girton 4.7 4.7
+Home Medicine 2017 100337 Girton 4.0 4.7
+Home Medicine 2017 100338 Homerton 4.5 4.7
+Home Medicine 2017 100339 Gonville and Caius 6.1 5.1
+Home Medicine 2017 100340 Gonville and Caius Y 6.3 6.5
+Home Medicine 2017 100341 Gonville and Caius 4.9 4.5
+Home Medicine 2017 100342 Gonville and Caius 5.9 5.3
+Home Medicine 2017 100343 Gonville and Caius 6.1 4.3
+Home Medicine 2017 100344 Gonville and Caius 4.5 5.1
+Home Medicine 2017 100345 Corpus Christi 5.4 5.1
+Home Medicine 2017 100346 Jesus 2.7 3.7
+Home Medicine 2017 100347 Jesus Y 6.3 5.3
+Home Medicine 2017 100348 King's Y 7.8 6.0
+Home Medicine 2017 100349 King's Y 5.4 5.1
+Home Medicine 2017 100350 Magdalene Y 7.1 6.2
+Home Medicine 2017 100351 Magdalene 4.7 4.5
+Home Medicine 2017 100352 Newnham 4.5 4.7
+Home Medicine 2017 100353 Newnham Y 5.6 4.5
+Home Medicine 2017 100354 Girton 5.9 4.9
+Home Medicine 2017 100355 Peterhouse 4.3 5.1
+Home Medicine 2017 100356 Christ's 3.3 4.3
+Home Medicine 2017 100357 Christ's Y 7.1 6.2
+Home Medicine 2017 100358 Christ's Y 6.1 6.2
+Home Medicine 2017 100359 Christ's Y 6.3 5.1
+Home Medicine 2017 100360 Christ's 5.4 4.5
+Home Medicine 2017 100361 Newnham Y 5.6 4.7
+Home Medicine 2017 100362 Newnham 4.9 5.3
+Home Medicine 2017 100363 Murray Edwards 4.5 5.1
+Home Medicine 2017 100364 Murray Edwards 4.0 4.7
+Home Medicine 2017 100365 Pembroke 5.4 5.5
+Home Medicine 2017 100366 Pembroke 5.2 4.5
+Home Medicine 2017 100367 Pembroke 4.0 4.9
+Home Medicine 2017 100368 Queens' 4.7 4.3
+Home Medicine 2017 100369 Robinson 5.2 5.1
+Home Medicine 2017 100370 Robinson Y 6.9 5.7
+Home Medicine 2017 100371 St Catharine's 4.9 4.3
+Home Medicine 2017 100372 St Catharine's Y 5.6 5.7
+Home Medicine 2017 100373 St Catharine's Y 5.9 4.7
+Home Medicine 2017 100374 St Catharine's Y 5.2 6.0
+Home Medicine 2017 100375 St Catharine's Y 6.3 6.0
+Home Medicine 2017 100376 St Catharine's Y 6.3 5.1
+Home Medicine 2017 100377 St Catharine's 3.8 4.9
+Home Medicine 2017 100378 St Catharine's 4.9 4.9
+Home Medicine 2017 100379 St Catharine's 4.7 4.9
+Home Medicine 2017 100380 St Catharine's 6.3 5.1
+Home Medicine 2017 100381 Trinity Y 5.4 5.7
+Home Medicine 2017 100382 Trinity 6.3 4.7
+Home Medicine 2017 100383 Peterhouse 4.7 4.5
+Home Medicine 2017 100384 Selwyn 4.7 4.3
+Home Medicine 2017 100385 Selwyn Y 5.9 5.7
+Home Medicine 2017 100386 Selwyn Y 6.6 5.5
+Home Medicine 2017 100387 St John's 3.5 4.7
+Home Medicine 2017 100388 St John's Y 5.9 6.7
+Home Medicine 2017 100389 St John's Y 6.9 8.8
+Home Medicine 2017 100390 Gonville and Caius 3.8 3.7
+Home Medicine 2017 100391 Gonville and Caius 6.6 5.5
+Home Medicine 2017 100392 Gonville and Caius 6.1 5.1
+Home Medicine 2017 100393 Gonville and Caius 5.2 5.3
+Home Medicine 2017 100394 Gonville and Caius 4.7 4.5
+Home Medicine 2017 100395 Gonville and Caius 5.2 5.3
+Home Medicine 2017 100396 Gonville and Caius 5.2 5.1
+Home Medicine 2017 100397 Gonville and Caius Y 5.4 6.0
+Home Medicine 2017 100398 Downing 5.4 6.7
+Home Medicine 2017 100399 Queens' 5.4 4.3
+Home Medicine 2017 100400 Downing 5.4 4.9
+Home Medicine 2017 100401 Downing Y 6.3 6.0
+Home Medicine 2017 100402 Emmanuel 5.2 5.1
+Home Medicine 2017 100403 Emmanuel Y 6.1 5.7
+Home Medicine 2017 100404 Emmanuel 6.3 4.9
+Home Medicine 2017 100405 Emmanuel 5.2 5.3
+Home Medicine 2017 100406 Emmanuel Y 6.3 6.7
+Home Medicine 2017 100407 Emmanuel Y 6.1 7.1
+Home Medicine 2017 100408 Christ's Y 7.1 5.7
+Home Medicine 2017 100409 Christ's 4.7 5.3
+Home Medicine 2017 100410 Christ's Y 6.6 7.1
+Home Medicine 2017 100411 Christ's Y 9.0 5.5
+Home Medicine 2017 100412 Christ's Y 6.1 5.3
+Home Medicine 2017 100413 Christ's 4.7 4.7
+Home Medicine 2017 100414 Churchill 3.8 4.3
+Home Medicine 2017 100415 Churchill 3.3 4.3
+Home Medicine 2017 100416 Churchill 6.6 6.0
+Home Medicine 2017 100417 Clare 4.0 3.7
+Home Medicine 2017 100418 Clare Y 6.6 6.2
+Home Medicine 2017 100419 Clare 4.9 6.0
+Home Medicine 2017 100420 Clare Y 6.3 4.7
+Home Medicine 2017 100421 Clare 5.2 6.2
+Home Medicine 2017 100422 Clare 4.9 4.5
+Home Medicine 2017 100423 Downing 3.5 3.9
+Home Medicine 2017 100424 Downing 6.6 5.7
+Home Medicine 2017 100425 Trinity 3.8 4.9
+Home Medicine 2017 100426 Trinity 5.2 6.5
+Home Medicine 2017 100427 Peterhouse 5.2 4.7
+Home Medicine 2017 100428 Peterhouse Y 4.9 4.7
+Home Medicine 2017 100429 Selwyn 5.9 4.9
+Home Medicine 2017 100430 St John's 5.6 4.9
+Home Medicine 2017 100431 St John's Y 6.1 5.7
+Home Medicine 2017 100432 St John's Y 6.6 6.2
+Home Medicine 2017 100433 St John's 6.9 4.5
+Home Medicine 2017 100434 St John's 3.8 4.5
+Home Medicine 2017 100435 St John's Y 5.4 6.2
+Home Medicine 2017 100436 Gonville and Caius 6.1 5.3
+Home Medicine 2017 100437 Gonville and Caius 4.5 4.3
+Home Medicine 2017 100438 Gonville and Caius 4.9 5.1
+Home Medicine 2017 100439 Gonville and Caius 5.2 6.7
+Home Medicine 2017 100440 Gonville and Caius 3.3 4.1
+Home Medicine 2017 100441 Gonville and Caius 4.9 5.1
+Home Medicine 2017 100442 Gonville and Caius Y 7.1 7.5
+Home Medicine 2017 100443 Gonville and Caius 5.4 6.0
+Home Medicine 2017 100444 Gonville and Caius 4.0 5.7
+Home Medicine 2017 100445 Gonville and Caius Y 6.3 6.7
+Home Medicine 2017 100446 Gonville and Caius 4.7 4.9
+Home Medicine 2017 100447 Gonville and Caius Y 5.4 5.5
+Home Medicine 2017 100448 Gonville and Caius Y 6.9 6.5
+Home Medicine 2017 100449 Gonville and Caius 4.7 4.1
+Home Medicine 2017 100450 Gonville and Caius 5.6 5.1
+Home Medicine 2017 100451 Gonville and Caius 4.3 4.7
+Home Medicine 2017 100452 Corpus Christi Y 5.9 4.9
+Home Medicine 2017 100453 Corpus Christi Y 5.9 5.7
+Home Medicine 2017 100454 Fitzwilliam 5.2 4.7
+Home Medicine 2017 100455 Fitzwilliam 4.3 6.0
+Home Medicine 2017 100456 Fitzwilliam Y 4.3 6.0
+Home Medicine 2017 100457 Fitzwilliam 5.9 4.9
+Home Medicine 2017 100458 Girton 4.7 4.3
+Home Medicine 2017 100459 Homerton 4.7 5.5
+Home Medicine 2017 100460 Jesus 5.4 5.1
+Home Medicine 2017 100461 Jesus Y 4.9 5.3
+Home Medicine 2017 100462 Jesus 4.9 6.0
+Home Medicine 2017 100463 Jesus 4.9 5.5
+Home Medicine 2017 100464 King's 4.5 4.9
+Home Medicine 2017 100465 King's 4.3 3.4
+Home Medicine 2017 100466 King's 4.7 4.7
+Home Medicine 2017 100467 King's 5.4 4.9
+Home Medicine 2017 100468 Magdalene 4.5 5.3
+Home Medicine 2017 100469 Magdalene Y 4.7 5.7
+Home Medicine 2017 100470 Newnham 4.9 5.3
+Home Medicine 2017 100471 Pembroke Y 5.6 5.1
+Home Medicine 2017 100472 Pembroke Y 6.1 6.2
+Home Medicine 2017 100473 Queens' 5.4 6.0
+Home Medicine 2017 100474 Queens' 3.0 4.5
+Home Medicine 2017 100475 Queens' Y 4.9 5.7
+Home Medicine 2017 100476 Queens' Y 5.6 6.7
+Home Medicine 2017 100477 Robinson Y 5.6 6.7
+Home Medicine 2017 100478 Robinson 4.9 4.7
+Home Medicine 2017 100479 St Catharine's 6.1 6.0
+Home Medicine 2017 100480 St Catharine's 5.4 4.5
+Home Medicine 2017 100481 St Catharine's 4.7 4.7
+Home Medicine 2017 100482 St Catharine's 6.3 5.1
+Home Medicine 2017 100483 St Catharine's 4.7 4.5
+Home Medicine 2017 100484 St Catharine's 3.5 3.9
+Home Medicine 2017 100485 St Catharine's 4.9 5.1
+Home Medicine 2017 100486 Sidney Sussex 4.0 5.5
+Home Medicine 2017 100487 Sidney Sussex 3.8 3.9
+Home Medicine 2017 100488 Trinity Hall 4.7 5.5
+Home Medicine 2017 100489 Newnham Y 5.6 5.3
+Home Medicine 2017 100490 Girton 6.1 6.0
+Home Medicine 2017 100491 Robinson 7.1 4.9
+Home Medicine 2017 100492 Girton Y 6.9 9.0
+Home Medicine 2017 100493 Girton 4.9 6.2
+Home Medicine 2017 100494 Peterhouse 5.6 3.9
+Home Medicine 2017 100495 Murray Edwards 5.9 4.5
+Home Medicine 2017 100496 Murray Edwards 3.0 2.9
+Home Medicine 2017 100497 Robinson 4.9 4.9
+Home Medicine 2017 100498 Trinity Hall 5.2 5.5
+Home Medicine 2017 100499 Magdalene Y 4.7 4.5
+Home Medicine 2017 100500 Magdalene 4.5 4.9
+Home Medicine 2017 100501 Magdalene 5.4 5.5
+Home Medicine 2017 100502 St John's 5.2 5.7
+Home Medicine 2017 100503 Girton 4.3 5.1
+Home Medicine 2017 100504 Gonville and Caius Y 6.3 6.5
+Home Medicine 2017 100505 Emmanuel Y 6.6 6.5
+Home Medicine 2017 100506 Magdalene Y 6.6 5.5
+Home Medicine 2017 100507 Newnham 3.8 4.3
+Home Medicine 2017 100508 Newnham Y 6.1 4.1
+Home Medicine 2017 100509 Newnham 4.0 4.7
+Home Medicine 2017 100510 Newnham 4.7 4.7
+Home Medicine 2017 100511 Murray Edwards 5.6 4.7
+Home Medicine 2017 100512 Murray Edwards Y 5.4 5.5
+Home Medicine 2017 100513 Jesus Y 6.3 6.2
+Home Medicine 2017 100514 Jesus Y 5.6 6.2
+Home Medicine 2017 100515 Jesus 6.1 5.7
+Home Medicine 2017 100516 Jesus Y 7.1 7.5
+Home Medicine 2017 100517 Jesus Y 5.9 4.9
+Home Medicine 2017 100518 Jesus Y 5.2 6.0
+Home Medicine 2017 100519 Jesus 4.7 4.9
+Home Medicine 2017 100520 King's 4.9 5.3
+Home Medicine 2017 100521 King's 3.8 4.7
+Home Medicine 2017 100522 King's 4.5 4.9
+Home Medicine 2017 100523 King's Y 6.3 5.3
+Home Medicine 2017 100524 King's 4.7 5.3
+Home Medicine 2017 100525 Robinson Y 6.1 5.7
+Home Medicine 2017 100526 St Catharine's 4.0 5.5
+Home Medicine 2017 100527 St Catharine's 4.9 6.2
+Home Medicine 2017 100528 St Catharine's 3.3 4.5
+Home Medicine 2017 100529 St Catharine's 3.5 3.4
+Home Medicine 2017 100530 St Catharine's Y 6.3 6.7
+Home Medicine 2017 100531 Corpus Christi Y 6.6 6.5
+Home Medicine 2017 100532 Corpus Christi Y 6.1 5.1
+Home Medicine 2017 100533 Trinity 4.9 5.7
+Home Medicine 2017 100534 Trinity Y 7.8 6.0
+Home Medicine 2017 100535 Pembroke 5.4 4.7
+Home Medicine 2017 100536 Pembroke 2.7 3.4
+Home Medicine 2017 100537 Pembroke Y 4.9 6.0
+Home Medicine 2017 100538 Pembroke 4.9 5.5
+Home Medicine 2017 100539 Queens' 4.7 3.7
+Home Medicine 2017 100540 Queens' Y 5.9 6.5
+Home Medicine 2017 100541 Queens' 4.9 4.3
+Home Medicine 2017 100542 Queens' 4.0 4.3
+Home Medicine 2017 100543 Queens' 4.7 4.9
+Home Medicine 2017 100544 Queens' 4.5 4.5
+Home Medicine 2017 100545 Trinity 5.9 4.9
+Home Medicine 2017 100546 Trinity 4.0 3.7
+Home Medicine 2017 100547 Trinity 3.5 4.3
+Home Medicine 2017 100548 Trinity 5.2 5.3
+Home Medicine 2017 100549 Trinity 3.0 4.5
+Home Medicine 2017 100550 Trinity Y 5.9 5.7
+Home Medicine 2017 100551 Peterhouse Y 5.2 4.1
+Home Medicine 2017 100552 Selwyn 5.2 6.2
+Home Medicine 2017 100553 Selwyn 5.6 5.3
+Home Medicine 2017 100554 Selwyn 5.2 4.9
+Home Medicine 2017 100555 Selwyn 4.9 3.7
+Home Medicine 2017 100556 Selwyn 4.7 4.5
+Home Medicine 2017 100557 Wolfson 4.0 2.9
+Home Medicine 2017 100558 St John's 4.7 4.5
+Home Medicine 2017 100559 St John's 3.5 4.7
+Home Medicine 2017 100560 St John's 3.3 4.5
+Home Medicine 2017 100561 St John's Y 5.2 6.2
+Home Medicine 2017 100562 St John's Y 5.9 6.2
+Home Medicine 2017 100563 St John's 5.2 3.7
+Home Medicine 2017 100564 Sidney Sussex Y 5.4 4.9
+Home Medicine 2017 100565 Peterhouse 3.5 4.5
+Home Medicine 2017 100566 Girton 5.9 5.1
+Home Medicine 2017 100567 Churchill 3.5 4.5
+Home Medicine 2017 100568 Homerton 6.6 5.5
+Home Medicine 2017 100569 Christ's 4.7 5.3
+Home Medicine 2017 100570 Christ's 5.4 4.5
+Home Medicine 2017 100571 Gonville and Caius 5.4 5.1
+Home Medicine 2017 100572 Gonville and Caius 5.9 4.3
+Home Medicine 2017 100573 Gonville and Caius 4.7 5.3
+Home Medicine 2017 100574 Gonville and Caius 3.5 3.7
+Home Medicine 2017 100575 Gonville and Caius 5.9 5.7
+Home Medicine 2017 100576 Gonville and Caius 4.7 3.9
+Home Medicine 2017 100577 Gonville and Caius 4.5 4.7
+Home Medicine 2017 100578 Gonville and Caius 3.8 3.2
+Home Medicine 2017 100579 Gonville and Caius Y 5.9 6.0
+Home Medicine 2017 100580 Gonville and Caius 5.2 4.1
+Home Medicine 2017 100581 Gonville and Caius 4.3 4.3
+Home Medicine 2017 100582 Gonville and Caius 4.0 4.9
+Home Medicine 2017 100583 Gonville and Caius 5.6 4.1
+Home Medicine 2017 100584 Gonville and Caius Y 6.3 6.2
+Home Medicine 2017 100585 Gonville and Caius Y 6.1 6.2
+Home Medicine 2017 100586 Clare 6.1 6.0
+Home Medicine 2017 100587 Clare 4.9 4.1
+Home Medicine 2017 100588 Downing Y 6.1 6.2
+Home Medicine 2017 100589 Downing 5.4 4.3
+Home Medicine 2017 100590 Downing 5.6 4.7
+Home Medicine 2017 100591 Downing Y 6.9 6.5
+Home Medicine 2017 100592 Downing Y 4.5 7.5
+Home Medicine 2017 100593 Downing 3.3 5.3
+Home Medicine 2017 100594 Downing 4.5 4.3
+Home Medicine 2017 100595 Downing Y 6.1 8.0
+Home Medicine 2017 100596 Downing 5.9 6.0
+Home Medicine 2017 100597 Downing 5.6 3.7
+Home Medicine 2017 100598 Downing Y 6.3 5.7
+Home Medicine 2017 100599 Sidney Sussex 5.4 5.5
+Home Medicine 2017 100600 Sidney Sussex 5.6 5.3
+Home Medicine 2017 100601 Sidney Sussex 4.9 4.9
+Home Medicine 2017 100602 Sidney Sussex 3.8 5.3
+Home Medicine 2017 100603 Trinity Hall Y 6.1 7.5
+Home Medicine 2017 100604 Homerton 4.3 5.3
+Home Medicine 2017 100605 Sidney Sussex 5.4 4.1
+Home Medicine 2017 100606 Murray Edwards 5.4 4.3
+Home Medicine 2017 100608 Sidney Sussex 5.2 5.3
+Home Medicine 2017 100609 Peterhouse Y 4.7 4.7
+Home Medicine 2017 100610 Churchill 3.8 3.7
+Home Medicine 2017 100611 Sidney Sussex 4.7 3.9
+Home Medicine 2017 100612 Christ's 4.0 4.5
+Home Medicine 2017 100613 Christ's 3.8 4.5
+Home Medicine 2017 100614 Churchill Y 7.8 6.2
+Home Medicine 2017 100615 Churchill Y 6.6 5.1
+Home Medicine 2017 100616 Churchill 4.3 5.3
+Home Medicine 2017 100617 Churchill 4.5 4.9
+Home Medicine 2017 100618 Emmanuel Y 7.4 5.5
+Home Medicine 2017 100619 Emmanuel Y 6.6 4.9
+Home Medicine 2017 100620 Emmanuel 4.7 4.9
+Home Medicine 2017 100621 Emmanuel Y 7.8 6.0
+Home Medicine 2017 100622 Emmanuel 5.4 5.5
+Home Medicine 2017 100623 Emmanuel 1.1 3.4
+Home Medicine 2017 100624 Fitzwilliam 4.3 4.7
+Home Medicine 2017 100625 Girton 5.2 6.0
+Home Medicine 2017 100626 Girton Y 4.5 5.3
+Home Medicine 2017 100627 Homerton Y 6.3 6.0
+Home Medicine 2017 100628 Lucy Cavendish 4.7 4.5
+Home Medicine 2017 100629 St John's Y 6.3 6.5
+Home Medicine 2017 100630 Fitzwilliam 4.9 5.5
+Home Medicine 2017 100631 King's 3.8 4.9
+Home Medicine 2017 100632 King's 4.5 4.7
+Home Medicine 2017 100633 Churchill Y 4.3 5.5
+Home Medicine 2017 100634 Pembroke 6.3 5.7
+Home Medicine 2017 100635 Fitzwilliam Y 8.1 5.1
+Home Medicine 2017 100636 Queens' 2.0 3.7
+Home Medicine 2017 100637 Robinson 4.3 4.5
+Home Medicine 2017 100638 Robinson 4.5 4.3
+Home Medicine 2017 100639 Robinson 6.6 5.5
+Home Medicine 2017 100640 St Catharine's 5.9 5.7
+Home Medicine 2017 100641 St Catharine's 4.9 4.7
+Home Medicine 2017 100642 St Catharine's Y 6.1 4.9
+Home Medicine 2017 100643 St Catharine's 3.3 3.7
+Home Medicine 2017 100644 St Catharine's 7.8 6.0
+Home Medicine 2017 100645 Trinity Y 5.6 6.2
+Home Medicine 2017 100646 Trinity 3.5 4.1
+Home Medicine 2017 100647 Trinity Y 6.3 7.5
+Home Medicine 2017 100648 Pembroke 5.6 3.4
+Home Medicine 2017 100649 Pembroke 4.0 4.9
+Home Medicine 2017 100650 Pembroke 5.9 5.3
+Home Medicine 2017 100651 Pembroke 4.7 5.1
+Home Medicine 2017 100652 Pembroke 4.7 2.9
+Home Medicine 2017 100653 Pembroke 3.0 4.3
+Home Medicine 2017 100654 Pembroke 4.0 5.1
+Home Medicine 2017 100655 Pembroke 4.9 4.3
+Home Medicine 2017 100656 Queens' Y 4.7 5.5
+Home Medicine 2017 100657 Queens' 4.9 5.3
+Home Medicine 2017 100658 Queens' 6.9 5.1
+Home Medicine 2017 100659 Queens' 5.4 4.1
+Home Medicine 2017 100660 Queens' 4.9 4.7
+Home Medicine 2017 100661 Sidney Sussex 5.4 4.7
+Home Medicine 2017 100662 Homerton 3.5 3.7
+Home Medicine 2017 100663 Newnham 4.0 4.1
+Home Medicine 2017 100664 Churchill 4.9 3.7
+Home Medicine 2017 100665 Homerton 1.6 3.9
+Home Medicine 2017 100666 Sidney Sussex 4.9 4.5
+Home Medicine 2017 100667 Murray Edwards 5.2 5.3
+Home Medicine 2017 100668 Sidney Sussex Y 5.6 6.0
+Home Medicine 2017 100669 St Edmund's 4.5 5.5
+Home Medicine 2017 100670 Murray Edwards 4.3 4.7
+Home Medicine 2017 100671 Trinity Hall 4.5 4.7
+Home Medicine 2017 100672 Newnham 2.4 4.3
+Home Medicine 2017 100673 Emmanuel 4.3 3.7
+Home Medicine 2017 100674 Magdalene 2.7 3.9
+Home Medicine 2017 100675 Peterhouse 3.0 6.0
+Home Medicine 2017 100676 Selwyn 4.3 4.7
+Home Medicine 2017 100677 Selwyn 4.5 6.0
+Home Medicine 2017 100678 St John's 3.0 3.9
+Home Medicine 2017 100679 St John's Y 7.4 7.5
+Home Medicine 2017 100680 Lucy Cavendish 2.4 4.1
+Home Medicine 2017 100681 Magdalene 5.6 5.3
+Home Medicine 2017 100682 Magdalene Y 6.3 4.5
+Home Medicine 2017 100683 Murray Edwards 5.6 4.7
+Home Medicine 2017 100684 Murray Edwards 4.7 4.1
+Home Medicine 2017 100685 Downing 3.0 3.7
+Home Medicine 2017 100686 Downing 4.9 4.9
+Home Medicine 2017 100687 Downing 5.4 5.5
+Home Medicine 2017 100688 Downing 3.5 5.1
+Home Medicine 2017 100689 Gonville and Caius 4.5 4.5
+Home Medicine 2017 100690 Gonville and Caius 2.7 4.1
+Home Medicine 2017 100691 Gonville and Caius 5.2 4.9
+Home Medicine 2017 100692 Gonville and Caius 7.1 5.7
+Home Medicine 2017 100693 Gonville and Caius 6.6 5.5
+Home Medicine 2017 100694 Gonville and Caius 4.7 4.9
+Home Medicine 2017 100695 Gonville and Caius 4.7 3.4
+Home Medicine 2017 100696 Gonville and Caius 5.2 5.5
+Home Medicine 2017 100697 Gonville and Caius 7.1 5.7
+Home Medicine 2017 100698 Gonville and Caius 4.3 4.1
+Home Medicine 2017 100699 Christ's 3.8 3.4
+Home Medicine 2017 100700 Christ's Y 6.3 6.2
+Home Medicine 2017 100701 Christ's 4.9 5.5
+Home Medicine 2017 100702 Christ's 4.0 4.7
+Home Medicine 2017 100703 Christ's 3.3 4.7
+Home Medicine 2017 100704 Christ's Y 4.9 7.1
+Home Medicine 2017 100705 Christ's 4.9 5.1
+Home Medicine 2017 100706 Churchill 3.3 4.3
+Home Medicine 2017 100707 Churchill Y 4.7 4.7
+Home Medicine 2017 100708 Trinity 5.4 4.3
+Home Medicine 2017 100709 Trinity Y 8.5 7.1
+Home Medicine 2017 100710 Trinity Hall 5.4 4.7
+Home Medicine 2017 100711 Peterhouse 4.3 4.7
+Home Medicine 2017 100712 Peterhouse Y 5.6 6.2
+Home Medicine 2017 100713 Peterhouse 1.6 4.3
+Home Medicine 2017 100714 Selwyn 5.6 5.3
+Home Medicine 2017 100715 Selwyn 4.7 4.3
+Home Medicine 2017 100716 Selwyn Y 6.1 5.5
+Home Medicine 2017 100717 Churchill 6.3 7.5
+Home Medicine 2017 100718 Churchill 4.0 4.1
+Home Medicine 2017 100719 Churchill 3.8 5.3
+Home Medicine 2017 100720 Clare Y 5.9 5.3
+Home Medicine 2017 100721 Clare 6.3 4.7
+Home Medicine 2017 100722 Clare Y 5.4 5.5
+Home Medicine 2017 100723 Clare 3.8 4.5
+Home Medicine 2017 100724 Clare 5.4 5.5
+Home Medicine 2017 100725 Corpus Christi 5.9 6.0
+Home Medicine 2017 100726 Corpus Christi 5.6 3.7
+Home Medicine 2017 100727 Corpus Christi 4.7 5.7
+Home Medicine 2017 100728 Corpus Christi 3.3 3.7
+Home Medicine 2017 100729 St Edmund's 4.5 3.4
+Home Medicine 2017 100730 Girton 3.8 3.9
+Home Medicine 2017 100731 Trinity Hall 4.0 5.7
+Home Medicine 2017 100732 Fitzwilliam 4.5 4.1
+Home Medicine 2017 100733 Emmanuel Y 5.9 6.2
+Home Medicine 2017 100734 Emmanuel 5.6 6.0
+Home Medicine 2017 100735 Emmanuel 4.3 5.1
+Home Medicine 2017 100736 Emmanuel 6.1 4.9
+Home Medicine 2017 100737 Emmanuel Y 6.3 6.7
+Home Medicine 2017 100738 Homerton 4.0 3.9
+Home Medicine 2017 100739 Homerton 3.3 4.3
+Home Medicine 2017 100740 St Edmund's 2.0 3.2
+Home Medicine 2017 100741 Jesus Y 5.4 5.3
+Home Medicine 2017 100742 Jesus 3.8 4.3
+Home Medicine 2017 100743 Jesus 5.2 4.1
+Home Medicine 2017 100744 Jesus Y 6.3 6.0
+Home Medicine 2017 100745 Jesus Y 6.3 8.0
+Home Medicine 2017 100746 Jesus Y 6.1 6.5
+Home Medicine 2017 100747 Jesus Y 6.1 5.5
+Home Medicine 2017 100748 Jesus 3.3 4.7
+Home Medicine 2017 100749 Jesus 5.2 5.7
+Home Medicine 2017 100750 Jesus Y 6.1 4.9
+Home Medicine 2017 100751 King's 3.3 3.4
+Home Medicine 2017 100752 King's 6.1 5.1
+Home Medicine 2017 100753 King's Y 7.1 4.3
+Home Medicine 2017 100754 Wolfson 4.5 4.1
+Home Medicine 2017 100755 Wolfson 6.3 5.3
+Home Medicine 2017 100757 Wolfson 3.0 3.7
+Home Medicine 2017 100758 St Catharine's 4.7 4.9
+Home Medicine 2017 100759 Gonville and Caius 4.0 6.0
+Home Medicine 2017 100760 Robinson 4.7 4.1
+Home Medicine 2017 100763 Magdalene 3.5 4.1
+Home Medicine 2017 100764 Girton 5.6 4.7
+Home Medicine 2017 100765 Wolfson Y 6.6 6.5
+Home Medicine 2017 100766 Corpus Christi 4.3 3.9
+Home Medicine 2017 100767 Sidney Sussex 5.6 4.7
+Home Medicine 2017 100768 St Edmund's 4.7 4.3
+Home Medicine 2017 100769 Selwyn 4.3 3.9
+Home Medicine 2017 100770 St Edmund's 4.9 5.5
+Home Medicine 2017 100771 Selwyn 5.9 4.9
+Home Medicine 2017 100772 Robinson 3.8 3.9
+Home Medicine 2017 100773 St Edmund's 4.7 4.7
+Home Medicine 2017 100774 St Edmund's 2.0 3.2
+Home Medicine 2017 100775 St John's 5.2 5.3
+Home Medicine 2017 100776 King's 7.1 7.1
+Home Medicine 2017 100777 Wolfson 4.3 2.9
+Home Medicine 2017 100778 Magdalene 5.9 5.5
+Home Medicine 2017 100779 Wolfson 5.2 5.5
+Home Medicine 2017 100780 Wolfson 7.4 6.7
+Home Medicine 2017 100782 Lucy Cavendish 5.4 3.2
+Home Medicine 2017 100783 Trinity Hall 5.6 5.3
+Home Medicine 2017 100784 Lucy Cavendish Y 6.3 3.9
+Home Medicine 2017 100785 Lucy Cavendish 3.5 3.9
+Home Medicine 2017 100786 St Edmund's 3.8 3.4
+Home Medicine 2017 100787 King's 5.9 4.9
+Home Medicine 2017 100792 King's 2.7 3.9
+Home Medicine 2017 100793 Christ's 3.3 3.2
+Home Medicine 2018 100796 King's 5.1 4.5
+Home Medicine 2018 100797 Downing 4.4 4.2
+Home Medicine 2018 100798 Gonville and Caius 5.6 5.4
+Home Medicine 2018 100799 Emmanuel Y 5.6 5.4
+Home Medicine 2018 100800 Emmanuel 5.9 5.4
+Home Medicine 2018 100801 King's Y 5.9 5.4
+Home Medicine 2018 100802 Downing 4.4 4.5
+Home Medicine 2018 100803 Trinity Hall Y 5.4 5.9
+Home Medicine 2018 100804 Sidney Sussex 4.6 4.7
+Home Medicine 2018 100805 Downing Y 6.4 6.8
+Home Medicine 2018 100806 Gonville and Caius Y 6.7 6.8
+Home Medicine 2018 100807 Newnham 4.4 4.9
+Home Medicine 2018 100808 Robinson 5.9 5.2
+Home Medicine 2018 100809 Selwyn 4.4 5.6
+Home Medicine 2018 100810 St John's 5.9 4.9
+Home Medicine 2018 100811 St Catharine's Y 5.1 4.9
+Home Medicine 2018 100812 Downing Y 4.6 6.5
+Home Medicine 2018 100813 Clare Y 5.1 6.2
+Home Medicine 2018 100814 Corpus Christi 5.6 5.6
+Home Medicine 2018 100815 St John's 5.1 5.2
+Home Medicine 2018 100816 Churchill 5.1 3.7
+Home Medicine 2018 100817 Corpus Christi Y 5.9 5.2
+Home Medicine 2018 100818 Queens' 3.9 4.2
+Home Medicine 2018 100819 Girton 4.9 4.5
+Home Medicine 2018 100820 Jesus 5.6 4.9
+Home Medicine 2018 100821 Fitzwilliam 4.4 3.7
+Home Medicine 2018 100822 Fitzwilliam Y 5.6 7.7
+Home Medicine 2018 100823 Christ's 4.9 5.2
+Home Medicine 2018 100824 Downing Y 6.4 6.8
+Home Medicine 2018 100825 Gonville and Caius Y 5.9 5.9
+Home Medicine 2018 100826 Gonville and Caius Y 6.4 6.5
+Home Medicine 2018 100827 Downing 4.1 4.7
+Home Medicine 2018 100828 Emmanuel 3.6 4.5
+Home Medicine 2018 100829 Downing 4.4 4.0
+Home Medicine 2018 100831 King's 3.9 4.9
+Home Medicine 2018 100832 Peterhouse Y 5.1 4.7
+Home Medicine 2018 100833 Christ's 4.9 6.2
+Home Medicine 2018 100834 St John's 5.1 5.9
+Home Medicine 2018 100835 Trinity 5.4 4.9
+Home Medicine 2018 100836 Peterhouse 4.6 5.2
+Home Medicine 2018 100837 St John's 4.4 4.5
+Home Medicine 2018 100838 St John's 5.1 6.2
+Home Medicine 2018 100839 Downing 3.9 4.5
+Home Medicine 2018 100840 Churchill 4.9 3.5
+Home Medicine 2018 100841 Pembroke 6.1 4.7
+Home Medicine 2018 100842 Gonville and Caius Y 7.6 6.2
+Home Medicine 2018 100843 Clare Y 6.4 7.2
+Home Medicine 2018 100844 St Catharine's 3.6 4.2
+Home Medicine 2018 100845 Murray Edwards 6.1 4.2
+Home Medicine 2018 100846 Queens' Y 5.4 5.9
+Home Medicine 2018 100847 Jesus 4.1 4.2
+Home Medicine 2018 100848 Queens' Y 5.6 6.8
+Home Medicine 2018 100849 Gonville and Caius Y 5.9 7.7
+Home Medicine 2018 100850 Gonville and Caius 4.9 5.6
+Home Medicine 2018 100851 St Catharine's 6.4 5.9
+Home Medicine 2018 100852 Queens' 3.4 4.5
+Home Medicine 2018 100853 St John's 4.6 4.7
+Home Medicine 2018 100854 St John's 5.4 4.7
+Home Medicine 2018 100855 Downing Y 6.1 5.9
+Home Medicine 2018 100856 Magdalene 5.1 3.2
+Home Medicine 2018 100857 Sidney Sussex Y 5.1 5.9
+Home Medicine 2018 100858 Gonville and Caius 4.4 5.4
+Home Medicine 2018 100859 Jesus 6.1 6.2
+Home Medicine 2018 100860 Peterhouse 5.4 4.9
+Home Medicine 2018 100861 Pembroke 5.4 6.8
+Home Medicine 2018 100862 Sidney Sussex Y 6.7 7.7
+Home Medicine 2018 100863 Jesus 6.1 4.9
+Home Medicine 2018 100864 Downing 4.9 4.9
+Home Medicine 2018 100865 Newnham 5.4 4.2
+Home Medicine 2018 100866 Pembroke Y 5.4 6.2
+Home Medicine 2018 100867 King's 4.6 5.2
+Home Medicine 2018 100868 Peterhouse Y 6.7 5.6
+Home Medicine 2018 100869 Emmanuel 4.9 4.7
+Home Medicine 2018 100870 Murray Edwards Y 6.4 5.9
+Home Medicine 2018 100871 Churchill 4.6 6.2
+Home Medicine 2018 100872 King's Y 5.4 5.4
+Home Medicine 2018 100873 Newnham 4.9 5.2
+Home Medicine 2018 100874 Trinity Y 4.6 4.9
+Home Medicine 2018 100875 Jesus 6.4 4.9
+Home Medicine 2018 100876 Robinson 3.6 4.0
+Home Medicine 2018 100877 Robinson 4.6 4.7
+Home Medicine 2018 100878 Clare 4.6 5.4
+Home Medicine 2018 100879 Queens' Y 5.1 5.4
+Home Medicine 2018 100880 Murray Edwards 5.1 5.4
+Home Medicine 2018 100881 Selwyn Y 5.9 6.5
+Home Medicine 2018 100882 Downing 5.4 5.2
+Home Medicine 2018 100883 King's 5.4 4.2
+Home Medicine 2018 100884 St John's 5.4 4.7
+Home Medicine 2018 100885 Emmanuel Y 6.1 5.9
+Home Medicine 2018 100886 Trinity Y 5.1 6.5
+Home Medicine 2018 100887 Downing 4.6 4.0
+Home Medicine 2018 100888 St John's 5.4 4.0
+Home Medicine 2018 100889 Jesus Y 6.4 6.2
+Home Medicine 2018 100890 Selwyn Y 5.1 4.7
+Home Medicine 2018 100891 Pembroke 5.1 5.9
+Home Medicine 2018 100892 Robinson 4.6 5.2
+Home Medicine 2018 100893 Trinity Hall Y 7.6 5.6
+Home Medicine 2018 100894 Clare 4.9 4.7
+Home Medicine 2018 100895 Emmanuel Y 5.4 4.9
+Home Medicine 2018 100896 Gonville and Caius Y 5.6 5.6
+Home Medicine 2018 100897 Jesus Y 5.6 4.7
+Home Medicine 2018 100898 Trinity 5.1 4.5
+Home Medicine 2018 100899 Emmanuel 3.1 3.5
+Home Medicine 2018 100900 St John's 4.4 4.9
+Home Medicine 2018 100901 Emmanuel Y 4.6 5.4
+Home Medicine 2018 100902 Gonville and Caius Y 5.6 5.6
+Home Medicine 2018 100903 Emmanuel Y 5.4 5.4
+Home Medicine 2018 100904 St John's Y 6.4 5.6
+Home Medicine 2018 100905 St John's Y 5.4 7.2
+Home Medicine 2018 100906 Emmanuel Y 5.6 6.5
+Home Medicine 2018 100907 St Catharine's 5.6 5.2
+Home Medicine 2018 100908 Fitzwilliam Y 4.9 7.2
+Home Medicine 2018 100909 Christ's 5.4 4.9
+Home Medicine 2018 100910 Gonville and Caius Y 6.1 5.9
+Home Medicine 2018 100911 Jesus Y 5.9 5.9
+Home Medicine 2018 100912 Selwyn 5.4 5.9
+Home Medicine 2018 100913 St Catharine's 4.4 4.5
+Home Medicine 2018 100914 Trinity Hall 5.6 4.9
+Home Medicine 2018 100915 St Catharine's Y 5.4 6.2
+Home Medicine 2018 100916 Pembroke 4.1 5.4
+Home Medicine 2018 100917 Fitzwilliam Y 5.4 5.9
+Home Medicine 2018 100918 Peterhouse 4.9 4.9
+Home Medicine 2018 100919 Clare Y 4.9 5.4
+Home Medicine 2018 100920 Peterhouse 4.1 5.2
+Home Medicine 2018 100921 St John's 4.9 3.7
+Home Medicine 2018 100922 Queens' 5.9 6.8
+Home Medicine 2018 100923 Emmanuel 6.1 4.9
+Home Medicine 2018 100924 Peterhouse Y 6.1 4.9
+Home Medicine 2018 100925 King's 4.4 4.7
+Home Medicine 2018 100926 St John's 4.4 4.9
+Home Medicine 2018 100927 Pembroke 5.9 5.2
+Home Medicine 2018 100928 Newnham 4.6 4.0
+Home Medicine 2018 100929 Queens' 4.4 4.7
+Home Medicine 2018 100930 Clare 4.6 1.8
+Home Medicine 2018 100931 Downing 5.1 4.0
+Home Medicine 2018 100932 Emmanuel 4.4 4.5
+Home Medicine 2018 100933 Jesus Y 4.9 5.9
+Home Medicine 2018 100934 St John's Y 5.6 7.7
+Home Medicine 2018 100935 Pembroke Y 3.4 4.5
+Home Medicine 2018 100936 Newnham 2.2 4.7
+Home Medicine 2018 100937 Corpus Christi 5.1 5.1
+Home Medicine 2018 100938 King's Y 5.1 5.4
+Home Medicine 2018 100939 Gonville and Caius 4.1 5.4
+Home Medicine 2018 100940 St John's Y 5.4 7.2
+Home Medicine 2018 100941 Downing Y 5.6 6.2
+Home Medicine 2018 100942 Churchill Y 6.1 5.6
+Home Medicine 2018 100943 Downing 3.1 4.7
+Home Medicine 2018 100944 Churchill 4.9 6.5
+Home Medicine 2018 100945 Newnham 4.9 4.0
+Home Medicine 2018 100946 Gonville and Caius 5.4 5.4
+Home Medicine 2018 100947 Downing Y 4.7 4.7
+Home Medicine 2018 100948 Emmanuel Y 4.9 6.2
+Home Medicine 2018 100949 Corpus Christi 4.4 4.7
+Home Medicine 2018 100950 Fitzwilliam Y 5.4 5.6
+Home Medicine 2018 100951 Emmanuel Y 4.4 5.6
+Home Medicine 2018 100952 Selwyn 5.4 6.5
+Home Medicine 2018 100953 King's 5.9 5.4
+Home Medicine 2018 100954 Selwyn Y 4.9 5.9
+Home Medicine 2018 100955 Emmanuel 4.9 5.4
+Home Medicine 2018 100956 Fitzwilliam 5.4 5.2
+Home Medicine 2018 100957 Clare 4.1 6.2
+Home Medicine 2018 100958 Emmanuel Y 5.9 5.9
+Home Medicine 2018 100959 Emmanuel 5.1 5.6
+Home Medicine 2018 100960 King's Y 4.6 5.6
+Home Medicine 2018 100961 St Catharine's 5.1 4.7
+Home Medicine 2018 100962 Downing 3.9 3.7
+Home Medicine 2018 100963 Downing 4.4 4.7
+Home Medicine 2018 100964 Selwyn 4.9 5.2
+Home Medicine 2018 100965 Pembroke 5.4 5.2
+Home Medicine 2018 100966 St John's 4.9 4.2
+Home Medicine 2018 100967 Queens' Y 5.1 5.4
+Home Medicine 2018 100968 Downing 3.9 4.0
+Home Medicine 2018 100969 St John's 3.4 5.2
+Home Medicine 2018 100970 Robinson 5.4 4.7
+Home Medicine 2018 100971 Christ's 4.4 4.7
+Home Medicine 2018 100972 Fitzwilliam 4.9 4.9
+Home Medicine 2018 100973 Clare 5.1 4.9
+Home Medicine 2018 100974 King's 5.4 2.9
+Home Medicine 2018 100975 Trinity Y 5.4 6.8
+Home Medicine 2018 100976 King's 5.6 4.5
+Home Medicine 2018 100977 Magdalene 4.6 4.2
+Home Medicine 2018 100978 Peterhouse Y 5.1 7.2
+Home Medicine 2018 100979 Girton 5.1 4.5
+Home Medicine 2018 100980 Fitzwilliam Y 6.1 6.2
+Home Medicine 2018 100981 Murray Edwards 5.9 5.6
+Home Medicine 2018 100982 Magdalene 3.9 4.5
+Home Medicine 2018 100983 St John's Y 6.1 6.8
+Home Medicine 2018 100984 Clare Y 5.1 5.6
+Home Medicine 2018 100985 Pembroke Y 4.6 5.2
+Home Medicine 2018 100986 Selwyn Y 5.1 6.2
+Home Medicine 2018 100987 Christ's Y 4.9 5.9
+Home Medicine 2018 100988 Emmanuel 4.4 5.4
+Home Medicine 2018 100989 Jesus Y 5.6 5.6
+Home Medicine 2018 100990 Downing 4.4 4.7
+Home Medicine 2018 100991 Corpus Christi 3.9 3.5
+Home Medicine 2018 100992 Newnham Y 4.4 6.5
+Home Medicine 2018 100993 Emmanuel 4.4 5.9
+Home Medicine 2018 100994 Pembroke Y 6.7 5.1
+Home Medicine 2018 100995 Emmanuel 3.9 4.2
+Home Medicine 2018 100996 Sidney Sussex Y 5.9 5.6
+Home Medicine 2018 100997 Emmanuel 5.1 5.4
+Home Medicine 2018 100998 Girton 5.6 5.2
+Home Medicine 2018 100999 Girton 5.6 4.7
+Home Medicine 2018 101000 Pembroke 4.6 5.9
+Home Medicine 2018 101001 Christ's 5.6 5.4
+Home Medicine 2018 101002 Downing Y 5.1 6.5
+Home Medicine 2018 101003 St John's Y 6.1 6.2
+Home Medicine 2018 101004 Corpus Christi 5.1 5.6
+Home Medicine 2018 101005 Trinity 4.9 5.4
+Home Medicine 2018 101006 Girton Y 5.4 5.4
+Home Medicine 2018 101007 St John's 4.6 5.2
+Home Medicine 2018 101008 St John's 4.4 4.7
+Home Medicine 2018 101009 Magdalene Y 4.9 5.2
+Home Medicine 2018 101010 Jesus 4.1 4.9
+Home Medicine 2018 101011 St John's 4.6 3.2
+Home Medicine 2018 101012 Downing Y 5.6 7.2
+Home Medicine 2018 101013 Peterhouse 4.4 4.2
+Home Medicine 2018 101014 Peterhouse 4.6 4.2
+Home Medicine 2018 101015 Queens' Y 6.7 5.4
+Home Medicine 2018 101016 Jesus Y 7.0 7.2
+Home Medicine 2018 101017 Emmanuel Y 4.9 7.7
+Home Medicine 2018 101018 Churchill 6.4 4.2
+Home Medicine 2018 101019 Jesus 6.7 6.5
+Home Medicine 2018 101020 Downing 4.1 5.4
+Home Medicine 2018 101021 Sidney Sussex 3.4 4.5
+Home Medicine 2018 101022 Downing Y 5.4 7.7
+Home Medicine 2018 101023 Gonville and Caius Y 5.1 5.9
+Home Medicine 2018 101024 Trinity Y 5.6 6.2
+Home Medicine 2018 101025 Trinity Y 6.1 5.6
+Home Medicine 2018 101026 St John's 3.6 4.0
+Home Medicine 2018 101027 Corpus Christi Y 6.1 6.2
+Home Medicine 2018 101028 Emmanuel Y 8.0 8.3
+Home Medicine 2018 101029 Gonville and Caius 5.4 5.4
+Home Medicine 2018 101030 Downing 4.4 4.5
+Home Medicine 2018 101031 Christ's Y 5.6 6.2
+Home Medicine 2018 101032 Jesus 4.9 6.2
+Home Medicine 2018 101033 St Catharine's Y 6.4 5.9
+Home Medicine 2018 101034 St John's Y 5.6 8.3
+Home Medicine 2018 101035 Christ's 4.6 4.2
+Home Medicine 2018 101036 Clare Y 5.9 5.9
+Home Medicine 2018 101037 Clare 4.1 4.7
+Home Medicine 2018 101038 St Catharine's Y 5.9 6.2
+Home Medicine 2018 101039 Downing 4.9 4.2
+Home Medicine 2018 101040 Gonville and Caius 3.1 4.9
+Home Medicine 2018 101041 St John's Y 4.6 6.5
+Home Medicine 2018 101043 St Edmund's Y 5.9 9.0
+Home Medicine 2018 101044 Fitzwilliam Y 5.4 5.6
+Home Medicine 2018 101045 Gonville and Caius 4.4 4.2
+Home Medicine 2018 101046 King's 4.2 5.6
+Home Medicine 2018 101047 Gonville and Caius 5.1 4.9
+Home Medicine 2018 101048 Girton Y 6.4 5.1
+Home Medicine 2018 101049 Fitzwilliam 3.1 3.5
+Home Medicine 2018 101050 Downing 4.4 4.5
+Home Medicine 2018 101051 King's 5.9 5.2
+Home Medicine 2018 101052 Fitzwilliam 5.1 5.4
+Home Medicine 2018 101053 Emmanuel 4.9 4.2
+Home Medicine 2018 101054 Peterhouse Y 4.4 3.5
+Home Medicine 2018 101055 Downing Y 7.0 6.8
+Home Medicine 2018 101056 Gonville and Caius 3.9 4.0
+Home Medicine 2018 101057 St Catharine's Y 4.9 6.5
+Home Medicine 2018 101058 Fitzwilliam 2.8 3.7
+Home Medicine 2018 101059 Girton 3.9 5.6
+Home Medicine 2018 101060 Clare Y 5.4 5.9
+Home Medicine 2018 101061 Christ's 3.4 4.4
+Home Medicine 2018 101062 Sidney Sussex 3.6 5.2
+Home Medicine 2018 101063 Gonville and Caius Y 6.4 5.6
+Home Medicine 2018 101064 Jesus 4.2 4.9
+Home Medicine 2018 101065 Jesus Y 4.9 5.9
+Home Medicine 2018 101066 Robinson 3.9 3.2
+Home Medicine 2018 101067 St Catharine's 5.6 4.7
+Home Medicine 2018 101068 St John's 4.4 5.4
+Home Medicine 2018 101069 Gonville and Caius Y 4.6 6.2
+Home Medicine 2018 101070 Christ's 4.4 4.5
+Home Medicine 2018 101071 St John's Y 5.9 6.2
+Home Medicine 2018 101072 Gonville and Caius Y 4.9 6.2
+Home Medicine 2018 101073 Clare Y 7.0 6.5
+Home Medicine 2018 101074 Emmanuel 5.6 5.2
+Home Medicine 2018 101075 Jesus 5.4 6.5
+Home Medicine 2018 101076 Downing 3.6 3.5
+Home Medicine 2018 101077 Christ's 5.1 4.7
+Home Medicine 2018 101078 Gonville and Caius 4.1 5.4
+Home Medicine 2018 101079 Downing Y 7.3 9.0
+Home Medicine 2018 101080 Robinson Y 4.9 5.6
+Home Medicine 2018 101081 Gonville and Caius 5.9 4.0
+Home Medicine 2018 101082 Emmanuel 5.6 5.6
+Home Medicine 2018 101083 Downing 4.6 4.9
+Home Medicine 2018 101084 St John's Y 5.4 5.9
+Home Medicine 2018 101085 Peterhouse 5.4 5.6
+Home Medicine 2018 101086 Lucy Cavendish 1.9 2.2
+Home Medicine 2018 101087 Trinity Y 4.9 5.4
+Home Medicine 2018 101088 Girton 4.4 4.9
+Home Medicine 2018 101089 Downing 4.6 5.2
+Home Medicine 2018 101090 St Catharine's 5.4 5.4
+Home Medicine 2018 101091 St Catharine's 5.6 5.4
+Home Medicine 2018 101092 Gonville and Caius Y 4.6 5.9
+Home Medicine 2018 101093 St John's 4.9 4.5
+Home Medicine 2018 101094 Clare 5.1 4.2
+Home Medicine 2018 101095 Gonville and Caius 2.5 3.7
+Home Medicine 2018 101096 Queens' 5.9 6.2
+Home Medicine 2018 101097 Trinity Y 5.9 4.9
+Home Medicine 2018 101098 St John's Y 5.6 4.7
+Home Medicine 2018 101099 Jesus 3.6 4.0
+Home Medicine 2018 101100 Jesus 4.4 4.2
+Home Medicine 2018 101101 Trinity Hall 4.4 5.4
+Home Medicine 2018 101102 Girton 4.4 4.5
+Home Medicine 2018 101103 Homerton 4.6 5.2
+Home Medicine 2018 101104 Gonville and Caius Y 4.9 5.2
+Home Medicine 2018 101105 King's 5.4 4.0
+Home Medicine 2018 101106 Homerton 4.4 4.5
+Home Medicine 2018 101107 Robinson 3.4 4.7
+Home Medicine 2018 101108 Newnham 3.9 4.5
+Home Medicine 2018 101109 King's 6.1 4.0
+Home Medicine 2018 101110 Robinson 6.1 5.9
+Home Medicine 2018 101111 Churchill Y 4.1 6.8
+Home Medicine 2018 101112 St John's 5.9 5.2
+Home Medicine 2018 101113 St John's 3.9 7.2
+Home Medicine 2018 101114 St John's Y 4.1 6.8
+Home Medicine 2018 101115 St John's 5.1 4.2
+Home Medicine 2018 101116 St John's 5.1 5.2
+Home Medicine 2018 101117 Downing 3.9 5.2
+Home Medicine 2018 101118 Downing Y 4.9 5.2
+Home Medicine 2018 101119 Downing 4.4 4.5
+Home Medicine 2018 101120 Downing 5.6 5.6
+Home Medicine 2018 101121 Downing 4.6 5.2
+Home Medicine 2018 101122 Downing 5.4 5.2
+Home Medicine 2018 101123 Emmanuel Y 5.6 5.6
+Home Medicine 2018 101124 Emmanuel 5.4 4.5
+Home Medicine 2018 101125 Emmanuel 4.1 5.4
+Home Medicine 2018 101126 Emmanuel 4.1 4.5
+Home Medicine 2018 101127 Emmanuel 4.4 5.2
+Home Medicine 2018 101128 Emmanuel Y 5.4 6.8
+Home Medicine 2018 101129 Fitzwilliam 5.1 4.7
+Home Medicine 2018 101130 Fitzwilliam Y 4.4 4.0
+Home Medicine 2018 101131 Fitzwilliam 4.6 5.9
+Home Medicine 2018 101132 Fitzwilliam Y 5.6 6.2
+Home Medicine 2018 101133 Fitzwilliam 5.4 5.6
+Home Medicine 2018 101134 Fitzwilliam 4.4 4.2
+Home Medicine 2018 101135 Fitzwilliam 4.6 5.4
+Home Medicine 2018 101136 Girton Y 4.6 6.2
+Home Medicine 2018 101137 Homerton 5.6 6.2
+Home Medicine 2018 101138 Homerton 4.1 4.7
+Home Medicine 2018 101139 Jesus 5.4 6.2
+Home Medicine 2018 101140 Jesus Y 5.9 6.5
+Home Medicine 2018 101141 Jesus 4.9 4.9
+Home Medicine 2018 101142 Jesus Y 7.0 7.2
+Home Medicine 2018 101143 Gonville and Caius Y 5.9 6.8
+Home Medicine 2018 101144 Gonville and Caius 6.7 4.5
+Home Medicine 2018 101145 Gonville and Caius Y 5.1 6.2
+Home Medicine 2018 101146 Gonville and Caius 5.6 4.9
+Home Medicine 2018 101147 Gonville and Caius 4.6 4.9
+Home Medicine 2018 101148 Gonville and Caius Y 5.1 6.2
+Home Medicine 2018 101149 Corpus Christi 4.1 4.7
+Home Medicine 2018 101150 King's 6.4 4.5
+Home Medicine 2018 101151 King's Y 4.4 5.2
+Home Medicine 2018 101152 King's 4.4 3.5
+Home Medicine 2018 101153 Magdalene 5.9 4.5
+Home Medicine 2018 101154 Newnham 4.6 4.7
+Home Medicine 2018 101155 Newnham 5.1 3.7
+Home Medicine 2018 101156 Newnham 5.4 4.0
+Home Medicine 2018 101157 Newnham 4.1 3.2
+Home Medicine 2018 101158 Murray Edwards 5.6 5.4
+Home Medicine 2018 101159 Pembroke Y 5.9 6.5
+Home Medicine 2018 101160 Pembroke 4.6 3.5
+Home Medicine 2018 101161 Queens' 3.4 4.5
+Home Medicine 2018 101162 Queens' 4.6 4.9
+Home Medicine 2018 101163 Queens' Y 6.1 5.6
+Home Medicine 2018 101164 Robinson 5.1 5.6
+Home Medicine 2018 101165 St Catharine's 5.4 5.2
+Home Medicine 2018 101166 St Catharine's 4.1 7.2
+Home Medicine 2018 101167 St Catharine's 1.9 3.7
+Home Medicine 2018 101168 St Catharine's 1.5 3.7
+Home Medicine 2018 101169 St Catharine's 5.9 4.9
+Home Medicine 2018 101170 St Catharine's Y 6.1 6.5
+Home Medicine 2018 101171 St Catharine's 4.6 4.5
+Home Medicine 2018 101172 Peterhouse 4.6 3.7
+Home Medicine 2018 101173 Peterhouse 3.1 1.9
+Home Medicine 2018 101174 Selwyn 5.6 4.9
+Home Medicine 2018 101175 Selwyn Y 4.1 5.4
+Home Medicine 2018 101176 Selwyn Y 6.4 6.5
+Home Medicine 2018 101177 Trinity Hall 5.1 3.5
+Home Medicine 2018 101178 Trinity Hall Y 6.7 6.8
+Home Medicine 2018 101179 Trinity Hall Y 4.9 4.7
+Home Medicine 2018 101180 Trinity Hall Y 5.1 5.9
+Home Medicine 2018 101181 Girton 4.6 5.2
+Home Medicine 2018 101182 Sidney Sussex 4.1 4.7
+Home Medicine 2018 101183 Magdalene Y 4.6 4.0
+Home Medicine 2018 101184 Christ's Y 7.0 7.2
+Home Medicine 2018 101185 Christ's 5.6 5.6
+Home Medicine 2018 101186 Christ's 5.6 6.2
+Home Medicine 2018 101187 Christ's Y 4.9 4.0
+Home Medicine 2018 101188 Christ's 5.9 4.7
+Home Medicine 2018 101189 Christ's Y 5.9 5.6
+Home Medicine 2018 101190 Churchill 4.1 4.5
+Home Medicine 2018 101191 Churchill 5.1 4.0
+Home Medicine 2018 101192 Churchill 3.9 4.9
+Home Medicine 2018 101193 Clare Y 4.1 5.6
+Home Medicine 2018 101194 Clare Y 5.4 7.2
+Home Medicine 2018 101195 Clare 4.1 4.7
+Home Medicine 2018 101196 Clare Y 4.6 6.5
+Home Medicine 2018 101197 Clare Y 5.6 4.7
+Home Medicine 2018 101198 Clare Y 5.6 5.9
+Home Medicine 2018 101199 Downing 6.1 5.9
+Home Medicine 2018 101200 Murray Edwards Y 4.9 4.9
+Home Medicine 2018 101201 Emmanuel 5.6 4.9
+Home Medicine 2018 101202 Christ's 4.2 5.4
+Home Medicine 2018 101203 Sidney Sussex 3.1 4.2
+Home Medicine 2018 101204 Churchill 4.4 4.2
+Home Medicine 2018 101205 Emmanuel Y 5.4 6.2
+Home Medicine 2018 101206 Queens' Y 4.6 5.6
+Home Medicine 2018 101207 Christ's 4.9 4.7
+Home Medicine 2018 101208 Christ's Y 5.9 6.2
+Home Medicine 2018 101209 Christ's 5.4 4.2
+Home Medicine 2018 101210 Christ's Y 6.1 6.5
+Home Medicine 2018 101211 Christ's 5.4 4.2
+Home Medicine 2018 101212 Christ's Y 6.7 6.2
+Home Medicine 2018 101213 Christ's 5.6 4.7
+Home Medicine 2018 101214 Churchill 4.6 4.7
+Home Medicine 2018 101215 Churchill 3.9 4.0
+Home Medicine 2018 101216 Churchill Y 5.1 6.2
+Home Medicine 2018 101217 Churchill Y 4.1 6.2
+Home Medicine 2018 101218 Churchill 5.6 4.0
+Home Medicine 2018 101219 Clare 4.6 4.2
+Home Medicine 2018 101220 Clare 5.4 5.9
+Home Medicine 2018 101221 Clare 4.9 4.7
+Home Medicine 2018 101222 Downing 4.9 4.7
+Home Medicine 2018 101223 Downing 4.6 4.5
+Home Medicine 2018 101224 Downing 4.4 5.9
+Home Medicine 2018 101225 Downing 4.4 4.7
+Home Medicine 2018 101226 Downing Y 6.1 5.9
+Home Medicine 2018 101227 Downing 6.7 5.9
+Home Medicine 2018 101228 Downing 2.8 3.7
+Home Medicine 2018 101229 Girton 2.9 2.9
+Home Medicine 2018 101230 Homerton 3.9 3.7
+Home Medicine 2018 101231 Homerton 4.4 4.9
+Home Medicine 2018 101232 Jesus 5.1 4.5
+Home Medicine 2018 101233 Jesus 4.9 4.5
+Home Medicine 2018 101234 Jesus Y 5.6 5.9
+Home Medicine 2018 101235 Jesus Y 6.1 7.7
+Home Medicine 2018 101236 Jesus Y 5.6 7.7
+Home Medicine 2018 101237 Jesus 5.4 5.4
+Home Medicine 2018 101238 Jesus 4.1 3.7
+Home Medicine 2018 101239 King's 5.9 5.4
+Home Medicine 2018 101240 King's 4.9 2.9
+Home Medicine 2018 101241 King's 5.1 5.9
+Home Medicine 2018 101242 King's 5.9 4.9
+Home Medicine 2018 101243 Magdalene Y 5.6 5.1
+Home Medicine 2018 101244 Newnham 3.9 4.0
+Home Medicine 2018 101245 Newnham 6.1 5.4
+Home Medicine 2018 101246 Murray Edwards 3.7 3.5
+Home Medicine 2018 101247 Murray Edwards 4.6 3.5
+Home Medicine 2018 101248 Murray Edwards 3.9 3.7
+Home Medicine 2018 101249 Pembroke 4.6 4.0
+Home Medicine 2018 101250 Pembroke 5.1 5.4
+Home Medicine 2018 101251 Pembroke 5.4 4.9
+Home Medicine 2018 101252 Queens' Y 5.1 5.2
+Home Medicine 2018 101253 Queens' Y 5.1 5.4
+Home Medicine 2018 101254 Queens' Y 5.9 4.5
+Home Medicine 2018 101255 Queens' 4.2 5.9
+Home Medicine 2018 101256 Queens' 4.1 5.2
+Home Medicine 2018 101257 Queens' 4.4 3.5
+Home Medicine 2018 101258 Robinson Y 5.1 4.7
+Home Medicine 2018 101259 Robinson 6.1 4.9
+Home Medicine 2018 101260 Robinson Y 5.1 5.4
+Home Medicine 2018 101261 St Catharine's 4.9 4.0
+Home Medicine 2018 101262 St Catharine's 5.6 6.5
+Home Medicine 2018 101263 St Catharine's Y 5.4 5.2
+Home Medicine 2018 101264 St Catharine's 4.1 4.9
+Home Medicine 2018 101265 Trinity Y 5.1 5.2
+Home Medicine 2018 101266 Trinity 3.6 4.2
+Home Medicine 2018 101267 Trinity 5.1 5.9
+Home Medicine 2018 101268 Peterhouse 5.1 6.2
+Home Medicine 2018 101269 Peterhouse Y 6.4 6.8
+Home Medicine 2018 101270 Selwyn 4.4 5.4
+Home Medicine 2018 101271 Selwyn 5.4 4.4
+Home Medicine 2018 101272 Selwyn 4.9 5.2
+Home Medicine 2018 101273 Selwyn Y 5.9 5.4
+Home Medicine 2018 101274 St John's 3.6 4.7
+Home Medicine 2018 101275 St John's Y 5.9 5.9
+Home Medicine 2018 101276 St John's 3.9 4.5
+Home Medicine 2018 101277 St John's 4.4 5.4
+Home Medicine 2018 101278 St John's 4.9 5.4
+Home Medicine 2018 101279 St John's Y 7.0 7.2
+Home Medicine 2018 101280 St John's 4.4 3.2
+Home Medicine 2018 101281 St John's 2.5 4.0
+Home Medicine 2018 101282 St John's 4.6 5.6
+Home Medicine 2018 101283 St John's 3.6 4.0
+Home Medicine 2018 101284 St John's 3.9 5.2
+Home Medicine 2018 101285 St John's Y 4.6 6.8
+Home Medicine 2018 101286 St John's 2.8 3.7
+Home Medicine 2018 101287 St John's 5.9 5.4
+Home Medicine 2018 101288 St John's 5.6 5.2
+Home Medicine 2018 101289 Gonville and Caius Y 6.1 7.7
+Home Medicine 2018 101290 Gonville and Caius Y 5.9 6.2
+Home Medicine 2018 101291 Gonville and Caius 4.4 5.4
+Home Medicine 2018 101292 Corpus Christi 5.4 5.2
+Home Medicine 2018 101293 Corpus Christi 5.1 4.9
+Home Medicine 2018 101294 Corpus Christi Y 6.1 7.7
+Home Medicine 2018 101295 Emmanuel 4.4 4.9
+Home Medicine 2018 101296 Emmanuel 5.1 7.2
+Home Medicine 2018 101297 Emmanuel 4.1 4.5
+Home Medicine 2018 101298 Emmanuel Y 4.9 6.2
+Home Medicine 2018 101299 Emmanuel 4.6 4.7
+Home Medicine 2018 101300 Emmanuel 4.6 4.7
+Home Medicine 2018 101301 Emmanuel 5.6 6.2
+Home Medicine 2018 101302 Fitzwilliam 4.4 4.9
+Home Medicine 2018 101303 Fitzwilliam Y 4.9 4.7
+Home Medicine 2018 101304 Fitzwilliam Y 5.4 5.4
+Home Medicine 2018 101305 Fitzwilliam 4.1 3.7
+Home Medicine 2018 101306 Fitzwilliam 4.6 4.0
+Home Medicine 2018 101307 Fitzwilliam 4.9 4.5
+Home Medicine 2018 101308 Trinity Hall 3.6 4.5
+Home Medicine 2018 101309 Sidney Sussex 3.6 4.7
+Home Medicine 2018 101310 Girton 4.6 4.5
+Home Medicine 2018 101311 Gonville and Caius 3.9 4.5
+Home Medicine 2018 101312 Magdalene 3.6 4.7
+Home Medicine 2018 101313 Girton Y 5.9 6.2
+Home Medicine 2018 101314 Girton 4.6 4.7
+Home Medicine 2018 101315 Murray Edwards 4.6 4.7
+Home Medicine 2018 101316 Newnham 2.5 2.9
+Home Medicine 2018 101317 Trinity Hall 4.4 5.6
+Home Medicine 2018 101318 Girton 5.4 5.1
+Home Medicine 2018 101319 Emmanuel 5.1 5.9
+Home Medicine 2018 101320 Queens' 4.4 6.2
+Home Medicine 2018 101321 Christ's Y 5.6 5.9
+Home Medicine 2018 101322 Pembroke 3.9 5.2
+Home Medicine 2018 101323 Emmanuel 4.4 6.2
+Home Medicine 2018 101324 Emmanuel 4.6 4.9
+Home Medicine 2018 101325 Trinity Hall 4.4 4.0
+Home Medicine 2018 101326 Trinity Hall 3.6 3.7
+Home Medicine 2018 101327 Murray Edwards 4.4 4.7
+Home Medicine 2018 101328 Sidney Sussex 2.8 3.5
+Home Medicine 2018 101329 Emmanuel 4.9 4.0
+Home Medicine 2018 101330 Emmanuel 2.8 5.4
+Home Medicine 2018 101331 Emmanuel 1.9 3.5
+Home Medicine 2018 101332 Emmanuel 3.1 4.9
+Home Medicine 2018 101333 Emmanuel 4.9 4.0
+Home Medicine 2018 101334 Fitzwilliam 3.6 3.7
+Home Medicine 2018 101335 Fitzwilliam Y 4.1 5.4
+Home Medicine 2018 101336 Fitzwilliam 2.8 4.2
+Home Medicine 2018 101337 Girton 4.4 3.5
+Home Medicine 2018 101338 Homerton Y 4.4 2.9
+Home Medicine 2018 101339 Homerton 5.6 4.7
+Home Medicine 2018 101340 Homerton 4.1 4.2
+Home Medicine 2018 101341 Girton 4.4 4.2
+Home Medicine 2018 101342 Jesus Y 7.0 5.9
+Home Medicine 2018 101343 Jesus Y 5.6 6.5
+Home Medicine 2018 101344 Jesus 5.1 4.2
+Home Medicine 2018 101345 Jesus Y 5.1 6.5
+Home Medicine 2018 101346 Jesus Y 7.3 5.9
+Home Medicine 2018 101347 Jesus 5.4 4.2
+Home Medicine 2018 101348 Jesus 4.1 4.5
+Home Medicine 2018 101349 Jesus Y 5.9 5.6
+Home Medicine 2018 101350 King's 4.4 4.7
+Home Medicine 2018 101351 King's 3.6 3.2
+Home Medicine 2018 101352 King's Y 5.6 5.6
+Home Medicine 2018 101353 King's 3.1 3.7
+Home Medicine 2018 101354 King's 3.9 2.9
+Home Medicine 2018 101355 King's 4.4 3.5
+Home Medicine 2018 101356 Lucy Cavendish 5.1 2.9
+Home Medicine 2018 101357 Newnham 3.4 4.5
+Home Medicine 2018 101358 Newnham 4.6 4.9
+Home Medicine 2018 101359 Murray Edwards 4.9 5.2
+Home Medicine 2018 101360 Murray Edwards Y 3.7 5.4
+Home Medicine 2018 101361 Pembroke 5.6 4.9
+Home Medicine 2018 101362 Pembroke 4.9 4.2
+Home Medicine 2018 101363 Pembroke 4.4 4.0
+Home Medicine 2018 101364 Pembroke 5.1 4.5
+Home Medicine 2018 101365 Pembroke Y 4.9 5.9
+Home Medicine 2018 101366 Pembroke 4.4 2.9
+Home Medicine 2018 101367 Pembroke Y 6.1 9.0
+Home Medicine 2018 101368 Pembroke 5.1 5.2
+Home Medicine 2018 101369 St Catharine's 5.9 4.0
+Home Medicine 2018 101370 St Catharine's 5.1 5.2
+Home Medicine 2018 101371 St Catharine's 4.4 3.2
+Home Medicine 2018 101372 Trinity 4.9 5.2
+Home Medicine 2018 101373 Trinity 4.9 2.2
+Home Medicine 2018 101374 Trinity 5.4 2.9
+Home Medicine 2018 101375 Trinity Y 5.4 5.2
+Home Medicine 2018 101376 Trinity Y 6.1 5.6
+Home Medicine 2018 101377 Peterhouse Y 5.1 6.5
+Home Medicine 2018 101378 Peterhouse Y 5.4 4.5
+Home Medicine 2018 101379 Peterhouse 3.9 4.7
+Home Medicine 2018 101380 Selwyn Y 4.9 5.2
+Home Medicine 2018 101381 Selwyn 4.6 3.5
+Home Medicine 2018 101382 Sidney Sussex Y 3.4 5.2
+Home Medicine 2018 101383 Sidney Sussex 5.1 4.5
+Home Medicine 2018 101384 Girton 3.4 5.2
+Home Medicine 2018 101385 Trinity Hall 3.9 2.6
+Home Medicine 2018 101386 Magdalene 5.1 4.9
+Home Medicine 2018 101387 Robinson Y 4.4 5.4
+Home Medicine 2018 101388 Christ's 4.9 5.6
+Home Medicine 2018 101389 Christ's 3.6 4.7
+Home Medicine 2018 101390 Christ's 3.6 4.5
+Home Medicine 2018 101391 Christ's 4.9 4.7
+Home Medicine 2018 101392 Christ's 4.6 5.6
+Home Medicine 2018 101393 Christ's Y 5.4 5.4
+Home Medicine 2018 101394 Churchill 4.1 5.4
+Home Medicine 2018 101395 Churchill 4.9 4.5
+Home Medicine 2018 101396 Clare 4.4 4.7
+Home Medicine 2018 101397 Clare 4.4 5.2
+Home Medicine 2018 101398 Clare Y 5.4 5.4
+Home Medicine 2018 101399 Downing Y 5.9 6.8
+Home Medicine 2018 101400 Downing Y 5.9 7.2
+Home Medicine 2018 101401 Downing 3.9 4.0
+Home Medicine 2018 101402 Downing 3.9 5.6
+Home Medicine 2018 101403 Downing 3.4 4.2
+Home Medicine 2018 101404 Downing 4.9 5.4
+Home Medicine 2018 101405 Downing 4.1 3.5
+Home Medicine 2018 101406 Downing Y 5.9 6.2
+Home Medicine 2018 101407 Downing 4.9 4.5
+Home Medicine 2018 101408 Downing 4.6 5.6
+Home Medicine 2018 101409 Downing 4.1 4.7
+Home Medicine 2018 101410 Emmanuel 3.4 4.2
+Home Medicine 2018 101411 Emmanuel 3.4 3.2
+Home Medicine 2018 101412 Emmanuel 3.4 4.9
+Home Medicine 2018 101413 Gonville and Caius 4.4 5.4
+Home Medicine 2018 101414 Gonville and Caius 4.1 3.7
+Home Medicine 2018 101415 Gonville and Caius Y 6.7 6.2
+Home Medicine 2018 101416 Gonville and Caius 5.4 5.4
+Home Medicine 2018 101417 Gonville and Caius 4.1 5.6
+Home Medicine 2018 101418 Gonville and Caius Y 4.6 5.9
+Home Medicine 2018 101419 Gonville and Caius 4.6 3.5
+Home Medicine 2018 101420 Corpus Christi 4.9 4.9
+Home Medicine 2018 101421 Corpus Christi 4.6 4.7
+Home Medicine 2018 101422 Corpus Christi 5.6 5.4
+Home Medicine 2018 101423 Queens' Y 5.1 5.9
+Home Medicine 2018 101424 Queens' 5.6 4.7
+Home Medicine 2018 101425 Robinson 5.1 4.5
+Home Medicine 2018 101426 Robinson Y 4.9 5.4
+Home Medicine 2018 101427 St Catharine's Y 5.6 5.2
+Home Medicine 2018 101428 St Catharine's Y 6.4 4.7
+Home Medicine 2018 101429 St Catharine's 5.1 4.2
+Home Medicine 2018 101430 St Catharine's 5.9 4.7
+Home Medicine 2018 101431 St Catharine's 4.4 3.2
+Home Medicine 2018 101432 St Catharine's 5.1 5.4
+Home Medicine 2018 101433 Sidney Sussex 4.6 4.0
+Home Medicine 2018 101434 Sidney Sussex Y 6.4 5.9
+Home Medicine 2018 101435 St John's 5.1 5.9
+Home Medicine 2018 101436 St John's 4.9 4.7
+Home Medicine 2018 101437 St John's 4.1 3.2
+Home Medicine 2018 101438 St John's Y 6.4 5.2
+Home Medicine 2018 101439 St John's 4.4 5.4
+Home Medicine 2018 101440 St John's Y 4.9 5.6
+Home Medicine 2018 101441 St John's 4.6 4.9
+Home Medicine 2018 101442 St John's 4.9 4.9
+Home Medicine 2018 101443 St John's 6.1 5.4
+Home Medicine 2018 101444 St John's 3.4 5.6
+Home Medicine 2018 101445 St John's 5.9 4.0
+Home Medicine 2018 101446 St John's 5.1 4.7
+Home Medicine 2018 101447 St John's Y 5.6 5.6
+Home Medicine 2018 101448 Downing Y 6.7 4.9
+Home Medicine 2018 101449 Homerton Y 5.1 7.7
+Home Medicine 2018 101450 Robinson 5.6 6.5
+Home Medicine 2018 101451 Trinity 5.4 4.2
+Home Medicine 2018 101452 Trinity 3.6 4.5
+Home Medicine 2018 101453 Trinity 5.1 6.2
+Home Medicine 2018 101455 Trinity Y 5.6 5.1
+Home Medicine 2018 101456 Trinity 4.9 5.1
+Home Medicine 2018 101457 St John's 4.9 4.7
+Home Medicine 2018 101458 St John's 4.4 4.5
+Home Medicine 2018 101459 St John's 5.1 4.5
+Home Medicine 2018 101460 St John's Y 5.6 6.8
+Home Medicine 2018 101461 St John's 5.1 4.5
+Home Medicine 2018 101462 St John's Y 5.4 6.5
+Home Medicine 2018 101463 St John's 4.9 5.6
+Home Medicine 2018 101464 St John's 3.6 5.2
+Home Medicine 2018 101465 St John's 3.9 5.6
+Home Medicine 2018 101466 St John's 6.1 5.4
+Home Medicine 2018 101467 St John's 5.6 4.0
+Home Medicine 2018 101469 St John's 4.4 4.5
+Home Medicine 2018 101470 St John's 5.1 6.2
+Home Medicine 2018 101471 St John's 1.9 3.2
+Home Medicine 2018 101472 Peterhouse Y 4.7 4.7
+Home Medicine 2018 101473 Peterhouse 3.6 4.0
+Home Medicine 2018 101474 Peterhouse 4.1 3.7
+Home Medicine 2018 101475 Selwyn Y 5.6 4.2
+Home Medicine 2018 101476 Selwyn 4.9 4.9
+Home Medicine 2018 101477 Selwyn 4.9 5.9
+Home Medicine 2018 101478 Gonville and Caius 5.9 5.4
+Home Medicine 2018 101479 Gonville and Caius 3.4 3.2
+Home Medicine 2018 101480 Gonville and Caius 5.1 7.2
+Home Medicine 2018 101481 Gonville and Caius 5.4 4.4
+Home Medicine 2018 101482 Gonville and Caius 5.6 4.5
+Home Medicine 2018 101483 Gonville and Caius 4.6 3.7
+Home Medicine 2018 101484 Gonville and Caius 4.1 5.6
+Home Medicine 2018 101485 Gonville and Caius 4.6 4.7
+Home Medicine 2018 101486 Corpus Christi 5.1 5.2
+Home Medicine 2018 101487 Corpus Christi 4.9 5.4
+Home Medicine 2018 101488 Corpus Christi Y 5.6 5.4
+Home Medicine 2018 101489 Corpus Christi 4.4 5.6
+Home Medicine 2018 101490 Corpus Christi Y 3.9 5.6
+Home Medicine 2018 101491 Churchill 1.9 1.8
+Home Medicine 2018 101492 Homerton Y 4.9 4.5
+Home Medicine 2018 101493 Homerton 3.9 5.2
+Home Medicine 2018 101494 Homerton 4.4 3.7
+Home Medicine 2018 101495 Homerton 3.1 4.2
+Home Medicine 2018 101496 Jesus 5.1 5.4
+Home Medicine 2018 101497 Jesus 3.4 5.2
+Home Medicine 2018 101498 Jesus 4.9 5.6
+Home Medicine 2018 101499 Jesus 4.6 4.5
+Home Medicine 2018 101500 Jesus Y 5.4 4.7
+Home Medicine 2018 101501 Jesus 4.6 4.7
+Home Medicine 2018 101502 Jesus 4.1 4.5
+Home Medicine 2018 101503 Jesus 4.6 5.2
+Home Medicine 2018 101504 Jesus Y 5.1 6.2
+Home Medicine 2018 101505 Jesus 2.8 4.2
+Home Medicine 2018 101506 Jesus 5.9 6.8
+Home Medicine 2018 101507 Jesus 4.1 4.7
+Home Medicine 2018 101508 Jesus 5.1 4.2
+Home Medicine 2018 101509 King's 2.5 3.5
+Home Medicine 2018 101511 Pembroke 5.4 4.0
+Home Medicine 2018 101512 Pembroke 4.4 4.0
+Home Medicine 2018 101513 Pembroke Y 4.6 5.9
+Home Medicine 2018 101514 Pembroke 5.6 5.4
+Home Medicine 2018 101515 Pembroke 5.4 5.6
+Home Medicine 2018 101516 Pembroke Y 4.9 5.2
+Home Medicine 2018 101517 Pembroke 4.6 4.5
+Home Medicine 2018 101518 Pembroke 4.4 4.2
+Home Medicine 2018 101519 King's 4.6 4.0
+Home Medicine 2018 101520 King's 4.9 6.2
+Home Medicine 2018 101521 King's 5.6 5.2
+Home Medicine 2018 101522 King's 2.8 3.7
+Home Medicine 2018 101523 King's 5.4 5.4
+Home Medicine 2018 101524 King's 2.2 4.5
+Home Medicine 2018 101525 Lucy Cavendish 2.5 2.6
+Home Medicine 2018 101526 Murray Edwards 3.4 3.5
+Home Medicine 2018 101527 Magdalene 5.1 4.0
+Home Medicine 2018 101528 Magdalene 5.1 4.5
+Home Medicine 2018 101529 Magdalene Y 5.1 5.9
+Home Medicine 2018 101530 Newnham 4.6 4.2
+Home Medicine 2018 101531 Newnham 4.6 4.9
+Home Medicine 2018 101532 Newnham 5.4 4.7
+Home Medicine 2018 101533 Sidney Sussex 4.9 5.4
+Home Medicine 2018 101534 Trinity Hall 4.1 4.7
+Home Medicine 2018 101535 Trinity Hall 6.4 4.9
+Home Medicine 2018 101536 Emmanuel 3.9 4.7
+Home Medicine 2018 101537 Emmanuel Y 4.9 5.1
+Home Medicine 2018 101538 Emmanuel 2.8 4.9
+Home Medicine 2018 101539 Emmanuel Y 5.6 5.6
+Home Medicine 2018 101540 Emmanuel Y 5.9 8.3
+Home Medicine 2018 101541 Emmanuel 5.1 4.5
+Home Medicine 2018 101542 Emmanuel 2.8 4.5
+Home Medicine 2018 101543 Emmanuel 3.1 3.2
+Home Medicine 2018 101544 Fitzwilliam 5.9 5.9
+Home Medicine 2018 101545 Fitzwilliam 4.4 3.7
+Home Medicine 2018 101546 Fitzwilliam Y 6.1 6.8
+Home Medicine 2018 101547 Fitzwilliam 4.1 2.6
+Home Medicine 2018 101548 Fitzwilliam Y 5.9 7.2
+Home Medicine 2018 101549 Fitzwilliam 4.4 5.2
+Home Medicine 2018 101550 Girton Y 6.4 5.2
+Home Medicine 2018 101551 Girton 5.4 5.4
+Home Medicine 2018 101552 St Catharine's 3.4 3.5
+Home Medicine 2018 101553 St Catharine's 4.4 4.9
+Home Medicine 2018 101554 St Catharine's 3.4 4.7
+Home Medicine 2018 101555 St Catharine's 4.1 3.7
+Home Medicine 2018 101556 St Catharine's 3.9 4.5
+Home Medicine 2018 101557 St Catharine's Y 5.9 6.5
+Home Medicine 2018 101558 St Catharine's 4.1 3.5
+Home Medicine 2018 101559 Queens' 5.6 5.9
+Home Medicine 2018 101560 Queens' 4.4 4.0
+Home Medicine 2018 101561 Queens' Y 5.6 5.6
+Home Medicine 2018 101562 Robinson 4.4 2.9
+Home Medicine 2018 101563 Robinson 5.4 4.7
+Home Medicine 2018 101564 Robinson Y 4.6 5.6
+Home Medicine 2018 101565 Robinson 4.9 4.5
+Home Medicine 2018 101566 Robinson 6.1 5.6
+Home Medicine 2018 101567 Gonville and Caius 3.6 3.7
+Home Medicine 2018 101568 Gonville and Caius 3.6 4.2
+Home Medicine 2018 101569 Girton 2.5 2.9
+Home Medicine 2018 101570 Girton 2.6 3.7
+Home Medicine 2018 101571 Magdalene 3.1 4.7
+Home Medicine 2018 101572 Girton 4.6 4.7
+Home Medicine 2018 101573 Murray Edwards 4.6 3.7
+Home Medicine 2018 101574 Gonville and Caius 5.1 4.5
+Home Medicine 2018 101575 Murray Edwards Y 4.6 5.6
+Home Medicine 2018 101576 Magdalene 2.8 4.2
+Home Medicine 2018 101577 Murray Edwards 3.9 4.2
+Home Medicine 2018 101578 Girton 3.6 4.2
+Home Medicine 2018 101579 Magdalene 4.9 4.7
+Home Medicine 2018 101580 Gonville and Caius 3.4 4.0
+Home Medicine 2018 101581 Gonville and Caius 3.1 2.2
+Home Medicine 2018 101582 Murray Edwards 4.6 4.7
+Home Medicine 2018 101583 Murray Edwards 3.1 3.2
+Home Medicine 2018 101584 Wolfson Y 4.4 4.2
+Home Medicine 2018 101585 Christ's 5.1 4.9
+Home Medicine 2018 101586 Christ's Y 5.6 5.4
+Home Medicine 2018 101587 Christ's 4.1 5.9
+Home Medicine 2018 101588 Christ's Y 5.1 5.2
+Home Medicine 2018 101589 Christ's Y 5.9 6.2
+Home Medicine 2018 101590 Christ's 5.4 4.5
+Home Medicine 2018 101591 Churchill 5.4 4.9
+Home Medicine 2018 101592 Churchill 2.5 4.5
+Home Medicine 2018 101593 Clare 7.3 6.2
+Home Medicine 2018 101594 Clare 4.9 5.6
+Home Medicine 2018 101595 Clare 3.9 3.5
+Home Medicine 2018 101596 Clare 5.4 2.6
+Home Medicine 2018 101597 Downing 4.9 6.2
+Home Medicine 2018 101598 Downing 3.7 3.7
+Home Medicine 2018 101599 Downing 4.6 4.7
+Home Medicine 2018 101600 Downing 4.4 4.9
+Home Medicine 2018 101601 Downing 3.9 5.2
+Home Medicine 2018 101602 Downing 3.9 3.7
+Home Medicine 2018 101603 Downing 3.6 3.5
+Home Medicine 2018 101604 Downing Y 5.1 5.6
+Home Medicine 2018 101605 Downing 4.9 2.2
+Home Medicine 2018 101606 Downing 4.9 5.2
+Home Medicine 2018 101607 Downing 3.9 4.2
+Home Medicine 2018 101608 Downing 5.1 5.2
+Home Medicine 2018 101609 Emmanuel Y 3.9 5.9
+Home Medicine 2018 101610 King's 3.9 4.0
+Home Medicine 2018 101611 Lucy Cavendish 3.4 2.6
+Home Medicine 2018 101612 Fitzwilliam 3.6 4.5
+Home Medicine 2018 101613 St Edmund's 4.1 4.0
+Home Medicine 2018 101614 Emmanuel 3.9 4.7
+Home Medicine 2018 101615 Trinity 3.1 3.7
+Home Medicine 2018 101616 Jesus 4.6 4.7
+Home Medicine 2018 101617 Downing 4.1 3.5
+Home Medicine 2018 101618 St Edmund's 4.1 2.2
+Home Medicine 2018 101619 Peterhouse 4.4 3.2
+Home Medicine 2018 101620 St Edmund's 5.4 3.5
+Home Medicine 2018 101621 St Catharine's 6.4 4.7
+Home Medicine 2018 101623 Trinity 2.5 2.6
+Home Medicine 2018 101624 Trinity Hall 3.9 3.2
+Home Medicine 2018 101625 Fitzwilliam 4.9 5.2
+Home Medicine 2018 101626 Pembroke 3.1 4.2
+Home Medicine 2018 101627 Trinity 4.1 3.7
+Home Medicine 2018 101628 Christ's 4.9 6.2
+Home Medicine 2018 101629 King's 4.1 2.6
+Home Medicine 2018 101630 Trinity 4.6 4.2
+Home Medicine 2018 101631 Clare 1.5 3.7
+Home Medicine 2018 101632 Jesus Y 4.9 6.5
+Home Medicine 2018 101633 Clare 4.1 4.7
+Home Medicine 2018 101634 Trinity Hall 5.1 4.2
+Home Medicine 2018 101635 King's 3.4 2.9
+Home Medicine 2018 101636 King's 4.1 3.7
+Home Medicine 2018 101637 Gonville and Caius 2.5 4.5
+Home Medicine 2018 101638 Gonville and Caius 5.4 5.4
+Home Medicine 2018 101639 Trinity 5.6 4.2
+Home Medicine 2018 101640 Queens' 4.4 4.7
+Home Medicine 2018 101641 Clare 4.4 4.7
+Home Medicine 2018 101642 Gonville and Caius Y 4.9 5.2
+Home Medicine 2018 101643 Wolfson 3.9 2.9
+Home Medicine 2018 101644 Downing 5.9 4.5
+Home Medicine 2018 101645 Trinity Hall 5.6 5.9
+Home Medicine 2018 101646 Wolfson 3.1 1.8
+Home Medicine 2018 101647 Lucy Cavendish 8.0 9.0
+Home Medicine 2018 101648 Lucy Cavendish 2.8 2.9
+Home Medicine 2018 101649 Downing 3.6 5.2
+Home Medicine 2018 101650 Trinity Hall 3.6 4.9
+Home Medicine 2018 101652 Magdalene 4.1 5.9
+Home Medicine 2018 101653 Wolfson 3.6 3.2
+Home Medicine 2018 101654 Robinson 3.1 3.2
+Home Medicine 2018 101655 Girton 4.1 4.7
+Home Medicine 2018 101657 Selwyn 5.4 3.2
+Home Medicine 2018 101658 Emmanuel Y 4.9 7.2
+Home Medicine 2018 101659 Emmanuel 4.6 4.7
+Home Medicine 2018 101660 St Edmund's 4.4 4.5
+Home Medicine 2018 101662 Fitzwilliam Y 5.4 6.2
+Home Medicine 2018 101663 Trinity 3.6 4.0
+Home Medicine 2018 101664 Trinity 3.4 2.2
+Home Medicine 2018 101665 Peterhouse 4.1 5.2
+Home Medicine 2018 101666 Selwyn Y 5.4 4.7
+Home Medicine 2018 101668 Wolfson 4.1 3.7
+Home Medicine 2018 101669 Wolfson 4.1 1.8
+Home Medicine 2018 101670 Jesus Y 4.9 5.9
+Home Medicine 2018 101671 Jesus 4.9 5.4
+Home Medicine 2018 101672 King's 3.1 4.2
+Home Medicine 2018 101673 King's 1.5 2.9
+Home Medicine 2018 101674 King's Y 5.9 4.7
+Home Medicine 2018 101675 King's Y 4.1 5.4
+Home Medicine 2018 101676 St Catharine's Y 4.6 5.2
+Home Medicine 2018 101677 Pembroke 5.6 8.3
+Home Medicine 2018 101678 St John's 3.6 4.0
+Home Medicine 2018 101679 St John's 3.1 3.2
+Home Medicine 2018 101682 St Edmund's 3.9 4.0
+Home Medicine 2018 101683 Wolfson Y 4.6 3.2
+Home Medicine 2018 101684 Wolfson 3.9 3.5
+Home Medicine 2018 101685 Wolfson 2.8 1.8
+Home Medicine 2019 101688 Trinity Y 5.7 5.4
+Home Medicine 2019 101689 Clare 5.3 5.0
+Home Medicine 2019 101690 Pembroke Y 5.3 6.5
+Home Medicine 2019 101691 Christ's Y 6.7 5.9
+Home Medicine 2019 101692 King's Y 4.6 5.4
+Home Medicine 2019 101693 Gonville and Caius Y 4.4 5.9
+Home Medicine 2019 101694 Emmanuel Y 5.7 6.2
+Home Medicine 2019 101695 Jesus Y 5.5 6.5
+Home Medicine 2019 101696 Trinity Y 9.0 6.8
+Home Medicine 2019 101697 Corpus Christi Y 4.8 5.9
+Home Medicine 2019 101698 Fitzwilliam Y 4.6 5.0
+Home Medicine 2019 101699 Downing Y 6.1 5.4
+Home Medicine 2019 101700 King's 4.8 5.9
+Home Medicine 2019 101701 Trinity Hall Y 6.2 5.9
+Home Medicine 2019 101703 St John's 4.6 6.5
+Home Medicine 2019 101704 Magdalene Y 4.4 4.6
+Home Medicine 2019 101705 Downing 2.6 4.6
+Home Medicine 2019 101706 Gonville and Caius 3.2 5.2
+Home Medicine 2019 101707 Clare 4.8 4.6
+Home Medicine 2019 101708 Downing 3.9 4.2
+Home Medicine 2019 101709 Trinity Y 6.5 7.7
+Home Medicine 2019 101710 Christ's 4.8 4.2
+Home Medicine 2019 101711 Gonville and Caius Y 6.5 6.8
+Home Medicine 2019 101712 Clare 4.4 5.2
+Home Medicine 2019 101713 Robinson 4.2 4.0
+Home Medicine 2019 101714 Gonville and Caius Y 5.3 5.0
+Home Medicine 2019 101715 Jesus Y 6.0 6.2
+Home Medicine 2019 101716 Newnham 3.7 3.4
+Home Medicine 2019 101717 Newnham Y 5.5 6.5
+Home Medicine 2019 101718 Jesus Y 5.7 6.5
+Home Medicine 2019 101719 King's 5.6 5.1
+Home Medicine 2019 101720 Magdalene 3.7 3.4
+Home Medicine 2019 101721 Newnham 2.6 4.2
+Home Medicine 2019 101722 Clare 4.8 5.4
+Home Medicine 2019 101723 Gonville and Caius 4.2 5.0
+Home Medicine 2019 101724 Emmanuel Y 5.7 9.0
+Home Medicine 2019 101725 Selwyn 4.2 4.6
+Home Medicine 2019 101726 Downing 3.7 4.0
+Home Medicine 2019 101727 King's 3.2 4.2
+Home Medicine 2019 101728 Robinson Y 4.8 7.2
+Home Medicine 2019 101729 Downing Y 6.5 6.2
+Home Medicine 2019 101730 Christ's Y 3.7 5.0
+Home Medicine 2019 101731 Churchill 4.8 5.2
+Home Medicine 2019 101732 Selwyn 3.7 4.8
+Home Medicine 2019 101733 Pembroke 5.1 5.7
+Home Medicine 2019 101734 Gonville and Caius 5.1 5.4
+Home Medicine 2019 101735 Corpus Christi 3.4 4.2
+Home Medicine 2019 101736 Christ's Y 6.0 6.5
+Home Medicine 2019 101737 Selwyn Y 5.7 5.9
+Home Medicine 2019 101738 Robinson 5.1 4.4
+Home Medicine 2019 101739 Gonville and Caius Y 6.0 6.8
+Home Medicine 2019 101740 Jesus 4.2 4.0
+Home Medicine 2019 101741 Gonville and Caius 4.6 5.0
+Home Medicine 2019 101742 St Edmund's 1.6 1.8
+Home Medicine 2019 101743 Emmanuel 4.8 4.0
+Home Medicine 2019 101744 Jesus Y 5.1 6.2
+Home Medicine 2019 101745 Trinity Hall Y 5.7 5.0
+Home Medicine 2019 101746 Pembroke 6.0 5.4
+Home Medicine 2019 101747 St John's Y 4.8 6.2
+Home Medicine 2019 101748 Downing 4.2 5.7
+Home Medicine 2019 101749 Peterhouse 6.0 5.2
+Home Medicine 2019 101750 Gonville and Caius 3.2 4.4
+Home Medicine 2019 101751 Downing Y 4.4 5.7
+Home Medicine 2019 101752 Newnham 3.9 6.2
+Home Medicine 2019 101753 St Edmund's 4.4 4.0
+Home Medicine 2019 101754 Churchill Y 5.5 7.2
+Home Medicine 2019 101755 Queens' Y 6.1 5.9
+Home Medicine 2019 101756 Christ's 4.6 5.4
+Home Medicine 2019 101757 Emmanuel Y 6.5 6.5
+Home Medicine 2019 101758 Christ's Y 6.2 5.7
+Home Medicine 2019 101759 Selwyn Y 3.4 5.2
+Home Medicine 2019 101760 St Catharine's Y 4.8 5.9
+Home Medicine 2019 101761 King's 5.7 6.5
+Home Medicine 2019 101762 St John's 4.4 6.5
+Home Medicine 2019 101763 Emmanuel 4.6 5.2
+Home Medicine 2019 101764 Emmanuel Y 6.2 6.2
+Home Medicine 2019 101765 King's 3.9 3.4
+Home Medicine 2019 101766 Peterhouse 3.4 3.8
+Home Medicine 2019 101767 Pembroke 4.6 5.7
+Home Medicine 2019 101768 Clare 5.3 4.8
+Home Medicine 2019 101769 Homerton 5.1 5.4
+Home Medicine 2019 101770 Jesus 3.4 4.8
+Home Medicine 2019 101771 Gonville and Caius Y 6.0 6.5
+Home Medicine 2019 101772 Christ's 5.1 5.2
+Home Medicine 2019 101773 Clare 4.4 5.9
+Home Medicine 2019 101774 Jesus 5.7 4.8
+Home Medicine 2019 101775 Clare Y 6.0 5.9
+Home Medicine 2019 101776 Emmanuel Y 4.8 6.2
+Home Medicine 2019 101777 Fitzwilliam 4.2 3.8
+Home Medicine 2019 101778 Gonville and Caius Y 6.0 6.5
+Home Medicine 2019 101779 Emmanuel 3.4 4.4
+Home Medicine 2019 101780 Homerton 3.9 5.7
+Home Medicine 2019 101781 Pembroke 4.8 4.6
+Home Medicine 2019 101782 Gonville and Caius 4.8 5.4
+Home Medicine 2019 101783 St John's 5.5 6.8
+Home Medicine 2019 101784 Gonville and Caius 3.9 5.0
+Home Medicine 2019 101785 Clare Y 5.3 5.9
+Home Medicine 2019 101786 Christ's Y 5.1 6.2
+Home Medicine 2019 101787 Magdalene 3.2 4.6
+Home Medicine 2019 101788 Jesus 3.7 4.6
+Home Medicine 2019 101789 Downing 5.3 5.0
+Home Medicine 2019 101790 Churchill 4.2 5.0
+Home Medicine 2019 101791 Sidney Sussex 3.7 4.0
+Home Medicine 2019 101792 Selwyn 4.8 5.2
+Home Medicine 2019 101793 St Catharine's 4.2 4.6
+Home Medicine 2019 101794 Queens' 5.3 6.8
+Home Medicine 2019 101795 Churchill 3.9 4.4
+Home Medicine 2019 101796 Girton 5.1 5.4
+Home Medicine 2019 101797 Peterhouse 4.2 5.0
+Home Medicine 2019 101798 Pembroke Y 6.7 5.9
+Home Medicine 2019 101799 Fitzwilliam 3.4 4.4
+Home Medicine 2019 101800 Selwyn Y 5.7 6.2
+Home Medicine 2019 101801 Pembroke 3.9 5.0
+Home Medicine 2019 101802 St John's 4.8 3.8
+Home Medicine 2019 101803 Girton 4.6 4.8
+Home Medicine 2019 101804 St John's 4.6 5.4
+Home Medicine 2019 101805 Clare 4.2 4.0
+Home Medicine 2019 101806 Clare Y 6.7 7.1
+Home Medicine 2019 101807 Gonville and Caius 5.1 4.6
+Home Medicine 2019 101808 Downing Y 6.7 5.7
+Home Medicine 2019 101809 Emmanuel 4.4 5.0
+Home Medicine 2019 101810 Sidney Sussex Y 6.0 5.2
+Home Medicine 2019 101811 Newnham 2.6 4.2
+Home Medicine 2019 101812 Jesus 6.2 3.8
+Home Medicine 2019 101813 Clare Y 6.5 5.9
+Home Medicine 2019 101814 Jesus 4.8 5.4
+Home Medicine 2019 101815 Christ's Y 6.7 5.2
+Home Medicine 2019 101816 Clare 4.6 6.2
+Home Medicine 2019 101817 Clare 5.3 5.4
+Home Medicine 2019 101818 Trinity Y 6.2 6.8
+Home Medicine 2019 101819 Newnham 4.8 4.6
+Home Medicine 2019 101820 Sidney Sussex 2.9 4.0
+Home Medicine 2019 101821 Corpus Christi 5.1 5.2
+Home Medicine 2019 101822 Corpus Christi 3.9 4.0
+Home Medicine 2019 101823 Jesus Y 6.7 6.5
+Home Medicine 2019 101824 St Catharine's 4.6 5.0
+Home Medicine 2019 101825 Corpus Christi 4.2 4.8
+Home Medicine 2019 101826 Trinity Hall 4.6 5.4
+Home Medicine 2019 101827 Jesus 3.4 2.9
+Home Medicine 2019 101828 Magdalene 4.2 4.4
+Home Medicine 2019 101829 Peterhouse 4.8 5.9
+Home Medicine 2019 101830 Girton 5.6 5.1
+Home Medicine 2019 101831 Christ's Y 6.2 7.2
+Home Medicine 2019 101832 St Catharine's 5.7 4.6
+Home Medicine 2019 101833 Girton 2.9 3.8
+Home Medicine 2019 101834 Peterhouse Y 4.8 6.2
+Home Medicine 2019 101835 St Catharine's 3.9 5.4
+Home Medicine 2019 101836 St Catharine's 5.3 4.2
+Home Medicine 2019 101837 St Catharine's Y 6.7 7.7
+Home Medicine 2019 101838 Robinson Y 6.0 6.5
+Home Medicine 2019 101839 St John's Y 4.7 4.7
+Home Medicine 2019 101840 Christ's Y 6.2 5.2
+Home Medicine 2019 101841 Christ's Y 5.3 6.2
+Home Medicine 2019 101842 Downing 3.7 5.9
+Home Medicine 2019 101843 Peterhouse Y 6.5 4.8
+Home Medicine 2019 101844 Pembroke Y 6.5 5.7
+Home Medicine 2019 101845 Churchill 3.7 5.2
+Home Medicine 2019 101846 Gonville and Caius 3.9 5.7
+Home Medicine 2019 101847 Jesus 4.4 4.0
+Home Medicine 2019 101848 Jesus Y 5.1 4.0
+Home Medicine 2019 101849 Queens' 4.6 5.0
+Home Medicine 2019 101850 Peterhouse 4.8 4.8
+Home Medicine 2019 101851 St Catharine's Y 6.7 5.4
+Home Medicine 2019 101852 Sidney Sussex 2.3 5.7
+Home Medicine 2019 101853 Jesus Y 6.7 6.5
+Home Medicine 2019 101854 Girton 3.9 3.2
+Home Medicine 2019 101855 Pembroke 5.3 4.6
+Home Medicine 2019 101856 St Catharine's 5.3 5.0
+Home Medicine 2019 101857 Selwyn 4.2 4.6
+Home Medicine 2019 101858 Newnham 4.8 4.8
+Home Medicine 2019 101859 Murray Edwards 4.6 3.8
+Home Medicine 2019 101860 St John's Y 5.7 5.2
+Home Medicine 2019 101861 Trinity Y 7.0 6.5
+Home Medicine 2019 101862 Downing 4.6 5.4
+Home Medicine 2019 101863 St John's 5.3 5.4
+Home Medicine 2019 101864 Gonville and Caius Y 5.7 6.2
+Home Medicine 2019 101865 Jesus 5.7 5.9
+Home Medicine 2019 101866 Lucy Cavendish 3.2 2.6
+Home Medicine 2019 101867 Queens' 5.1 5.4
+Home Medicine 2019 101868 Jesus 4.2 4.4
+Home Medicine 2019 101869 Magdalene 3.9 5.7
+Home Medicine 2019 101870 Churchill Y 6.0 6.5
+Home Medicine 2019 101871 Fitzwilliam Y 4.6 5.4
+Home Medicine 2019 101872 St Catharine's Y 5.4 5.4
+Home Medicine 2019 101873 Trinity 3.2 4.4
+Home Medicine 2019 101874 Christ's 4.6 3.8
+Home Medicine 2019 101875 Trinity Y 5.5 8.6
+Home Medicine 2019 101876 Jesus Y 7.0 6.8
+Home Medicine 2019 101877 St Catharine's 5.9 6.1
+Home Medicine 2019 101878 St Catharine's 5.1 4.6
+Home Medicine 2019 101879 Magdalene Y 5.1 5.7
+Home Medicine 2019 101880 Queens' Y 5.7 5.9
+Home Medicine 2019 101881 Gonville and Caius Y 8.0 5.9
+Home Medicine 2019 101882 Jesus 4.4 5.7
+Home Medicine 2019 101883 St Catharine's 4.8 4.6
+Home Medicine 2019 101884 Selwyn 4.4 4.2
+Home Medicine 2019 101885 Gonville and Caius Y 4.2 5.0
+Home Medicine 2019 101886 Downing 4.6 5.2
+Home Medicine 2019 101887 St Catharine's 5.5 3.4
+Home Medicine 2019 101888 St John's Y 4.4 6.5
+Home Medicine 2019 101889 St Catharine's 4.2 4.8
+Home Medicine 2019 101890 Jesus Y 5.3 5.7
+Home Medicine 2019 101891 Gonville and Caius 3.4 3.6
+Home Medicine 2019 101892 Emmanuel Y 5.7 5.7
+Home Medicine 2019 101893 Queens' 5.4 5.9
+Home Medicine 2019 101894 Murray Edwards 2.9 4.8
+Home Medicine 2019 101895 St John's 5.3 5.2
+Home Medicine 2019 101896 Jesus 6.0 5.0
+Home Medicine 2019 101897 Magdalene 3.4 4.9
+Home Medicine 2019 101898 Emmanuel 5.7 4.4
+Home Medicine 2019 101899 St Catharine's Y 4.4 5.4
+Home Medicine 2019 101900 Emmanuel Y 7.3 5.9
+Home Medicine 2019 101901 Churchill Y 5.7 6.5
+Home Medicine 2019 101902 St Catharine's Y 5.5 7.2
+Home Medicine 2019 101903 Girton 4.8 4.6
+Home Medicine 2019 101904 St John's 5.1 4.8
+Home Medicine 2019 101905 Emmanuel 5.5 4.8
+Home Medicine 2019 101906 St John's Y 5.3 5.9
+Home Medicine 2019 101907 Emmanuel 4.2 4.6
+Home Medicine 2019 101908 Corpus Christi Y 4.8 6.5
+Home Medicine 2019 101909 Selwyn Y 6.7 5.6
+Home Medicine 2019 101910 Murray Edwards 3.2 4.8
+Home Medicine 2019 101911 Sidney Sussex 4.2 5.2
+Home Medicine 2019 101912 St Catharine's 3.9 4.4
+Home Medicine 2019 101913 Jesus 5.3 4.8
+Home Medicine 2019 101914 Downing 5.3 4.6
+Home Medicine 2019 101915 Downing 3.7 5.4
+Home Medicine 2019 101916 St Catharine's 6.7 4.5
+Home Medicine 2019 101917 Queens' 4.4 5.7
+Home Medicine 2019 101918 Christ's Y 5.6 5.6
+Home Medicine 2019 101919 Queens' Y 6.5 6.2
+Home Medicine 2019 101920 Queens' 7.0 5.4
+Home Medicine 2019 101921 Selwyn 2.9 5.2
+Home Medicine 2019 101922 Emmanuel 6.0 5.0
+Home Medicine 2019 101923 Gonville and Caius 4.6 4.6
+Home Medicine 2019 101924 Jesus 3.9 5.2
+Home Medicine 2019 101925 Newnham 2.6 4.0
+Home Medicine 2019 101926 Emmanuel 4.2 4.6
+Home Medicine 2019 101927 Girton 4.2 4.6
+Home Medicine 2019 101928 Downing Y 6.7 5.9
+Home Medicine 2019 101929 Peterhouse Y 5.1 6.8
+Home Medicine 2019 101930 Emmanuel 5.1 6.2
+Home Medicine 2019 101931 Pembroke 3.4 5.2
+Home Medicine 2019 101932 Selwyn 4.6 4.2
+Home Medicine 2019 101933 St Catharine's 4.7 6.1
+Home Medicine 2019 101934 St John's 4.6 6.2
+Home Medicine 2019 101935 Emmanuel 5.1 4.6
+Home Medicine 2019 101936 Clare 4.2 5.4
+Home Medicine 2019 101937 Newnham 3.4 5.2
+Home Medicine 2019 101938 St Catharine's 5.7 5.4
+Home Medicine 2019 101939 Selwyn 4.9 5.9
+Home Medicine 2019 101940 St Catharine's Y 5.7 6.5
+Home Medicine 2019 101941 Jesus Y 5.5 6.5
+Home Medicine 2019 101942 St Catharine's 6.5 4.0
+Home Medicine 2019 101943 Sidney Sussex 4.2 4.6
+Home Medicine 2019 101944 Sidney Sussex Y 4.8 5.0
+Home Medicine 2019 101945 Trinity Y 4.6 5.2
+Home Medicine 2019 101946 Clare 4.4 4.6
+Home Medicine 2019 101947 Jesus 4.6 5.0
+Home Medicine 2019 101948 Emmanuel Y 7.3 6.2
+Home Medicine 2019 101949 Trinity 5.3 5.0
+Home Medicine 2019 101950 Sidney Sussex Y 5.1 4.8
+Home Medicine 2019 101951 Wolfson Y 4.4 5.4
+Home Medicine 2019 101952 St Edmund's 2.0 4.4
+Home Medicine 2019 101953 Clare 2.6 3.8
+Home Medicine 2019 101954 Christ's 5.7 4.6
+Home Medicine 2019 101955 St John's 5.1 4.8
+Home Medicine 2019 101956 Trinity 5.9 4.9
+Home Medicine 2019 101957 St John's 6.7 7.7
+Home Medicine 2019 101958 St Catharine's 5.7 5.9
+Home Medicine 2019 101959 Corpus Christi Y 5.7 5.7
+Home Medicine 2019 101960 Pembroke 4.4 5.0
+Home Medicine 2019 101961 Peterhouse 5.1 5.0
+Home Medicine 2019 101962 St John's 4.2 3.8
+Home Medicine 2019 101963 Queens' 4.8 4.4
+Home Medicine 2019 101964 Trinity Hall 3.7 4.4
+Home Medicine 2019 101965 Magdalene Y 4.8 7.2
+Home Medicine 2019 101966 Girton 4.4 5.0
+Home Medicine 2019 101967 Pembroke 3.9 4.4
+Home Medicine 2019 101968 Clare 4.8 4.2
+Home Medicine 2019 101969 Homerton 4.6 4.6
+Home Medicine 2019 101970 Emmanuel 4.4 5.0
+Home Medicine 2019 101971 King's 3.9 5.4
+Home Medicine 2019 101972 Christ's 3.4 4.4
+Home Medicine 2019 101973 Jesus 5.1 4.4
+Home Medicine 2019 101974 Gonville and Caius 4.4 4.0
+Home Medicine 2019 101975 Jesus 4.6 3.6
+Home Medicine 2019 101976 Emmanuel 4.6 4.0
+Home Medicine 2019 101977 Pembroke 2.9 3.2
+Home Medicine 2019 101978 Gonville and Caius 5.6 4.9
+Home Medicine 2019 101979 Homerton 5.3 5.0
+Home Medicine 2019 101980 Selwyn Y 7.3 5.7
+Home Medicine 2019 101981 Murray Edwards Y 4.8 5.2
+Home Medicine 2019 101982 St John's Y 6.7 6.5
+Home Medicine 2019 101983 Gonville and Caius 4.2 3.6
+Home Medicine 2019 101984 Gonville and Caius Y 5.3 5.2
+Home Medicine 2019 101985 Christ's Y 5.3 5.4
+Home Medicine 2019 101986 Pembroke 3.9 5.4
+Home Medicine 2019 101987 Trinity 6.5 5.4
+Home Medicine 2019 101988 Jesus Y 5.5 7.7
+Home Medicine 2019 101989 Newnham 4.2 3.2
+Home Medicine 2019 101990 Gonville and Caius Y 4.6 5.4
+Home Medicine 2019 101991 Murray Edwards Y 4.6 5.0
+Home Medicine 2019 101992 Clare Y 5.3 5.0
+Home Medicine 2019 101993 St John's 3.7 5.0
+Home Medicine 2019 101994 Trinity Hall Y 6.0 7.2
+Home Medicine 2019 101995 Churchill 3.2 5.0
+Home Medicine 2019 101996 Trinity 4.4 5.7
+Home Medicine 2019 101997 St Catharine's 4.4 5.4
+Home Medicine 2019 101998 Emmanuel Y 5.1 5.7
+Home Medicine 2019 101999 Sidney Sussex 3.2 5.7
+Home Medicine 2019 102000 Jesus Y 4.8 5.9
+Home Medicine 2019 102001 St John's 5.3 5.2
+Home Medicine 2019 102002 Downing 4.6 5.4
+Home Medicine 2019 102003 Emmanuel 5.1 5.9
+Home Medicine 2019 102004 Christ's 3.7 4.6
+Home Medicine 2019 102005 Downing 3.2 3.8
+Home Medicine 2019 102006 Jesus Y 7.0 5.2
+Home Medicine 2019 102007 Gonville and Caius Y 6.2 5.9
+Home Medicine 2019 102008 Homerton Y 4.4 5.6
+Home Medicine 2019 102009 Pembroke 4.6 5.9
+Home Medicine 2019 102010 Jesus 5.1 5.2
+Home Medicine 2019 102011 Queens' Y 5.3 6.2
+Home Medicine 2019 102012 St John's 3.4 4.4
+Home Medicine 2019 102013 Gonville and Caius 4.8 5.2
+Home Medicine 2019 102014 Fitzwilliam Y 2.9 6.2
+Home Medicine 2019 102015 Downing 3.4 4.6
+Home Medicine 2019 102016 St Catharine's 5.3 5.0
+Home Medicine 2019 102017 Emmanuel 3.7 5.2
+Home Medicine 2019 102018 Emmanuel 4.7 4.2
+Home Medicine 2019 102019 Gonville and Caius Y 6.5 6.2
+Home Medicine 2019 102020 St John's Y 5.3 3.8
+Home Medicine 2019 102021 Gonville and Caius Y 5.3 7.2
+Home Medicine 2019 102022 Gonville and Caius Y 4.6 6.2
+Home Medicine 2019 102023 Robinson Y 5.7 4.4
+Home Medicine 2019 102024 Emmanuel Y 5.1 6.8
+Home Medicine 2019 102025 Jesus Y 5.3 5.0
+Home Medicine 2019 102026 Jesus 4.4 5.2
+Home Medicine 2019 102027 Clare Y 6.0 5.7
+Home Medicine 2019 102028 St John's 7.0 6.2
+Home Medicine 2019 102029 Gonville and Caius Y 5.7 6.8
+Home Medicine 2019 102030 St Catharine's 4.6 5.0
+Home Medicine 2019 102031 Corpus Christi Y 4.2 5.0
+Home Medicine 2019 102032 Christ's 5.5 4.8
+Home Medicine 2019 102033 Christ's 3.2 5.0
+Home Medicine 2019 102034 Trinity Hall Y 4.8 5.9
+Home Medicine 2019 102035 Emmanuel Y 6.5 6.2
+Home Medicine 2019 102036 Christ's 4.6 4.6
+Home Medicine 2019 102037 Gonville and Caius Y 7.0 6.5
+Home Medicine 2019 102038 Fitzwilliam Y 3.2 4.4
+Home Medicine 2019 102039 Sidney Sussex 6.0 3.6
+Home Medicine 2019 102040 Trinity Hall 4.6 5.0
+Home Medicine 2019 102041 St John's 3.7 4.0
+Home Medicine 2019 102042 Murray Edwards 4.2 4.0
+Home Medicine 2019 102043 Murray Edwards 4.6 2.9
+Home Medicine 2019 102044 Jesus 3.4 4.4
+Home Medicine 2019 102045 Magdalene Y 6.5 5.4
+Home Medicine 2019 102046 St John's 4.6 4.6
+Home Medicine 2019 102047 Clare Y 6.0 6.8
+Home Medicine 2019 102048 Emmanuel 4.8 4.8
+Home Medicine 2019 102049 Jesus 4.4 5.6
+Home Medicine 2019 102050 Peterhouse 4.2 3.6
+Home Medicine 2019 102051 St Catharine's 4.6 4.8
+Home Medicine 2019 102052 Corpus Christi Y 4.6 4.4
+Home Medicine 2019 102053 Wolfson Y 3.7 5.2
+Home Medicine 2019 102054 Churchill Y 4.6 5.0
+Home Medicine 2019 102055 Selwyn 4.8 3.8
+Home Medicine 2019 102056 St John's 3.9 5.0
+Home Medicine 2019 102057 Churchill 4.6 5.2
+Home Medicine 2019 102058 St Catharine's 4.8 5.0
+Home Medicine 2019 102059 Selwyn Y 4.6 4.8
+Home Medicine 2019 102060 Gonville and Caius 4.4 4.4
+Home Medicine 2019 102061 Emmanuel 2.3 4.8
+Home Medicine 2019 102062 Gonville and Caius 3.4 2.9
+Home Medicine 2019 102063 Gonville and Caius 4.4 5.0
+Home Medicine 2019 102064 Jesus 5.3 4.6
+Home Medicine 2019 102065 Murray Edwards 5.3 3.8
+Home Medicine 2019 102066 Christ's 4.6 4.0
+Home Medicine 2019 102067 Gonville and Caius 4.4 4.2
+Home Medicine 2019 102068 Gonville and Caius 2.6 5.7
+Home Medicine 2019 102069 Newnham 4.4 4.2
+Home Medicine 2019 102070 Queens' Y 7.0 5.1
+Home Medicine 2019 102071 Downing 4.9 4.5
+Home Medicine 2019 102072 St John's Y 3.7 4.2
+Home Medicine 2019 102073 Gonville and Caius 4.2 5.0
+Home Medicine 2019 102074 Christ's 3.9 4.4
+Home Medicine 2019 102075 Trinity Hall 4.7 4.7
+Home Medicine 2019 102076 Robinson Y 5.1 6.4
+Home Medicine 2019 102077 St Catharine's 3.9 5.9
+Home Medicine 2019 102078 King's Y 5.7 6.2
+Home Medicine 2019 102079 Downing Y 5.1 5.2
+Home Medicine 2019 102080 Downing 5.5 5.0
+Home Medicine 2019 102081 Peterhouse 4.4 5.9
+Home Medicine 2019 102082 Downing 4.4 4.6
+Home Medicine 2019 102083 Gonville and Caius 4.6 3.8
+Home Medicine 2019 102084 Newnham 3.7 5.1
+Home Medicine 2019 102085 Trinity Hall Y 3.7 5.4
+Home Medicine 2019 102086 Downing 4.6 6.2
+Home Medicine 2019 102087 Jesus 3.2 5.4
+Home Medicine 2019 102088 Trinity Y 5.5 6.8
+Home Medicine 2019 102089 Jesus 5.4 6.1
+Home Medicine 2019 102090 Lucy Cavendish 4.7 4.5
+Home Medicine 2019 102091 Homerton 6.0 5.4
+Home Medicine 2019 102092 Newnham 4.4 4.4
+Home Medicine 2019 102093 Jesus Y 6.2 6.8
+Home Medicine 2019 102094 Homerton 4.6 4.2
+Home Medicine 2019 102095 Fitzwilliam Y 3.2 5.0
+Home Medicine 2019 102096 Downing Y 4.8 5.7
+Home Medicine 2019 102097 St Catharine's 4.4 5.0
+Home Medicine 2019 102098 Corpus Christi 5.7 5.7
+Home Medicine 2019 102099 St Catharine's 4.4 4.4
+Home Medicine 2019 102100 Fitzwilliam 4.8 4.0
+Home Medicine 2019 102101 Churchill 4.8 4.8
+Home Medicine 2019 102102 King's Y 5.3 5.4
+Home Medicine 2019 102103 Corpus Christi 4.6 3.6
+Home Medicine 2019 102104 St Catharine's 4.6 3.6
+Home Medicine 2019 102105 Queens' 4.4 4.0
+Home Medicine 2019 102106 Clare 4.4 5.9
+Home Medicine 2019 102107 St Edmund's 3.2 3.8
+Home Medicine 2019 102108 King's 3.7 4.6
+Home Medicine 2019 102109 St Edmund's Y 4.4 4.0
+Home Medicine 2019 102110 Trinity Hall 4.2 5.6
+Home Medicine 2019 102111 St John's 4.2 6.5
+Home Medicine 2019 102112 Christ's Y 6.4 6.8
+Home Medicine 2019 102113 Gonville and Caius Y 5.5 5.9
+Home Medicine 2019 102114 St Catharine's Y 5.1 6.2
+Home Medicine 2019 102115 Murray Edwards 3.4 3.4
+Home Medicine 2019 102116 St John's 4.4 3.4
+Home Medicine 2019 102117 Jesus 3.7 4.4
+Home Medicine 2019 102118 Trinity 4.4 3.6
+Home Medicine 2019 102119 Jesus 6.0 4.8
+Home Medicine 2019 102120 Fitzwilliam Y 4.8 5.9
+Home Medicine 2019 102121 Christ's 4.2 5.9
+Home Medicine 2019 102122 St John's 5.5 5.7
+Home Medicine 2019 102123 Downing 4.2 5.2
+Home Medicine 2019 102124 Queens' Y 4.6 5.7
+Home Medicine 2019 102125 Sidney Sussex 3.7 5.0
+Home Medicine 2019 102126 Churchill 2.0 5.0
+Home Medicine 2019 102127 Clare 3.4 5.2
+Home Medicine 2019 102128 Selwyn 5.1 5.7
+Home Medicine 2019 102129 Jesus 3.9 5.2
+Home Medicine 2019 102130 Gonville and Caius Y 5.7 6.5
+Home Medicine 2019 102131 Newnham 3.7 3.2
+Home Medicine 2019 102132 Emmanuel 4.6 4.6
+Home Medicine 2019 102133 Robinson 5.1 5.9
+Home Medicine 2019 102134 Gonville and Caius Y 7.6 6.8
+Home Medicine 2019 102135 Christ's 5.5 4.4
+Home Medicine 2019 102136 Clare 4.8 3.2
+Home Medicine 2019 102137 Gonville and Caius 5.7 5.2
+Home Medicine 2019 102138 Gonville and Caius 3.7 4.6
+Home Medicine 2019 102139 Fitzwilliam 4.8 5.4
+Home Medicine 2019 102140 Newnham 2.9 4.4
+Home Medicine 2019 102141 Christ's 5.5 5.0
+Home Medicine 2019 102142 Pembroke 5.1 6.2
+Home Medicine 2019 102143 Churchill 6.7 5.6
+Home Medicine 2019 102144 St Catharine's 5.1 7.6
+Home Medicine 2019 102145 Trinity Hall Y 5.3 6.5
+Home Medicine 2019 102146 Magdalene 5.5 4.6
+Home Medicine 2019 102147 St John's Y 4.8 5.7
+Home Medicine 2019 102148 St Catharine's 6.7 4.8
+Home Medicine 2019 102149 St John's Y 4.4 5.4
+Home Medicine 2019 102150 Gonville and Caius Y 5.4 5.1
+Home Medicine 2019 102151 Churchill Y 5.1 7.1
+Home Medicine 2019 102152 Christ's 5.3 4.4
+Home Medicine 2019 102153 St Catharine's Y 5.7 6.5
+Home Medicine 2019 102154 Pembroke 5.1 4.0
+Home Medicine 2019 102155 Gonville and Caius Y 4.2 5.2
+Home Medicine 2019 102156 Churchill 4.2 3.7
+Home Medicine 2019 102157 Gonville and Caius 3.7 3.6
+Home Medicine 2019 102158 Jesus 5.1 5.0
+Home Medicine 2019 102159 Sidney Sussex Y 4.8 4.4
+Home Medicine 2019 102160 Christ's 4.6 4.0
+Home Medicine 2019 102161 Pembroke 4.6 4.8
+Home Medicine 2019 102162 St Catharine's Y 6.0 5.9
+Home Medicine 2019 102163 Emmanuel 4.8 4.8
+Home Medicine 2019 102164 Selwyn 6.0 6.2
+Home Medicine 2019 102165 Christ's 4.4 5.9
+Home Medicine 2019 102166 Selwyn Y 8.0 6.4
+Home Medicine 2019 102167 Selwyn 4.4 4.2
+Home Medicine 2019 102168 Trinity Hall 6.0 5.0
+Home Medicine 2019 102169 Trinity 2.9 3.4
+Home Medicine 2019 102170 Jesus 5.5 5.7
+Home Medicine 2019 102171 Gonville and Caius Y 4.2 6.5
+Home Medicine 2019 102172 Fitzwilliam Y 3.4 5.0
+Home Medicine 2019 102173 Selwyn 5.6 5.4
+Home Medicine 2019 102174 St Catharine's 2.3 4.4
+Home Medicine 2019 102175 Queens' 4.8 5.9
+Home Medicine 2019 102176 Trinity 3.9 3.6
+Home Medicine 2019 102177 Selwyn 5.7 4.8
+Home Medicine 2019 102178 Fitzwilliam 5.3 3.8
+Home Medicine 2019 102179 Trinity Y 4.6 5.4
+Home Medicine 2019 102180 Gonville and Caius 5.7 6.8
+Home Medicine 2019 102181 Jesus 3.7 4.2
+Home Medicine 2019 102182 Churchill 5.7 4.0
+Home Medicine 2019 102183 Sidney Sussex 3.4 4.8
+Home Medicine 2019 102184 Clare 4.6 5.7
+Home Medicine 2019 102185 Churchill 4.4 5.0
+Home Medicine 2019 102186 Gonville and Caius 5.1 4.8
+Home Medicine 2019 102187 Murray Edwards 4.8 2.6
+Home Medicine 2019 102188 Jesus 4.4 5.0
+Home Medicine 2019 102189 Newnham 3.4 5.0
+Home Medicine 2019 102190 Selwyn 5.5 5.7
+Home Medicine 2019 102191 Girton 4.8 5.9
+Home Medicine 2019 102192 Gonville and Caius 4.8 5.0
+Home Medicine 2019 102193 Trinity 4.2 3.2
+Home Medicine 2019 102194 Sidney Sussex Y 6.0 7.2
+Home Medicine 2019 102195 St John's Y 5.3 5.4
+Home Medicine 2019 102196 Jesus 3.2 3.4
+Home Medicine 2019 102197 Jesus Y 6.2 5.9
+Home Medicine 2019 102198 Jesus 4.4 5.2
+Home Medicine 2019 102199 Emmanuel 3.7 5.4
+Home Medicine 2019 102200 Gonville and Caius 3.9 4.6
+Home Medicine 2019 102201 Sidney Sussex 5.9 5.1
+Home Medicine 2019 102202 Clare Y 7.0 8.6
+Home Medicine 2019 102203 Gonville and Caius 3.7 4.6
+Home Medicine 2019 102204 Girton Y 6.2 6.2
+Home Medicine 2019 102205 Queens' 2.9 3.8
+Home Medicine 2019 102206 Magdalene 5.3 6.8
+Home Medicine 2019 102207 Queens' 3.7 4.4
+Home Medicine 2019 102208 Emmanuel 5.4 4.2
+Home Medicine 2019 102209 Trinity 5.1 4.2
+Home Medicine 2019 102210 Girton 4.4 5.4
+Home Medicine 2019 102211 Selwyn 4.2 4.0
+Home Medicine 2019 102212 Jesus 3.7 4.0
+Home Medicine 2019 102213 Emmanuel 5.9 4.9
+Home Medicine 2019 102214 Murray Edwards 4.2 4.2
+Home Medicine 2019 102215 Sidney Sussex 5.5 5.7
+Home Medicine 2019 102216 Gonville and Caius 4.2 6.2
+Home Medicine 2019 102218 Downing 4.8 5.9
+Home Medicine 2019 102219 Lucy Cavendish 4.8 3.4
+Home Medicine 2019 102220 Downing 3.2 3.6
+Home Medicine 2019 102221 Downing Y 5.3 5.4
+Home Medicine 2019 102222 Gonville and Caius 3.7 4.4
+Home Medicine 2019 102223 Jesus 5.6 6.1
+Home Medicine 2019 102224 Gonville and Caius 3.9 5.2
+Home Medicine 2019 102225 Sidney Sussex Y 6.0 6.5
+Home Medicine 2019 102226 St Catharine's 4.2 4.4
+Home Medicine 2019 102227 Girton Y 5.9 6.8
+Home Medicine 2019 102228 Trinity Hall 6.0 4.4
+Home Medicine 2019 102229 Gonville and Caius 2.3 4.6
+Home Medicine 2019 102230 Emmanuel 5.3 5.4
+Home Medicine 2019 102231 Trinity Hall Y 3.7 5.4
+Home Medicine 2019 102232 Emmanuel Y 7.0 6.4
+Home Medicine 2019 102233 Emmanuel 4.4 4.6
+Home Medicine 2019 102234 Downing 5.1 4.6
+Home Medicine 2019 102235 Girton 3.7 4.6
+Home Medicine 2019 102236 Gonville and Caius 5.1 5.4
+Home Medicine 2019 102237 Gonville and Caius 3.9 4.4
+Home Medicine 2019 102238 Gonville and Caius 4.4 4.2
+Home Medicine 2019 102239 Robinson 4.4 4.4
+Home Medicine 2019 102240 St Catharine's 4.9 5.9
+Home Medicine 2019 102241 Churchill 4.6 2.9
+Home Medicine 2019 102242 Homerton 5.1 5.2
+Home Medicine 2019 102243 Selwyn Y 4.6 4.4
+Home Medicine 2019 102244 Gonville and Caius 5.1 5.4
+Home Medicine 2019 102245 Emmanuel 5.3 6.2
+Home Medicine 2019 102246 Jesus Y 6.7 5.7
+Home Medicine 2019 102247 Gonville and Caius 5.3 5.0
+Home Medicine 2019 102248 Emmanuel Y 5.1 5.4
+Home Medicine 2019 102249 Sidney Sussex 2.9 4.0
+Home Medicine 2019 102250 Christ's 3.2 3.2
+Home Medicine 2019 102251 Gonville and Caius 4.4 5.7
+Home Medicine 2019 102252 Jesus 4.4 5.4
+Home Medicine 2019 102253 Jesus 5.7 4.6
+Home Medicine 2019 102254 Pembroke Y 4.4 5.7
+Home Medicine 2019 102255 Jesus 4.8 4.8
+Home Medicine 2019 102256 Emmanuel 5.3 5.4
+Home Medicine 2019 102257 Clare 5.5 5.7
+Home Medicine 2019 102258 Newnham 4.4 4.8
+Home Medicine 2019 102259 St Catharine's 4.6 4.0
+Home Medicine 2019 102260 Gonville and Caius 4.4 5.7
+Home Medicine 2019 102261 Gonville and Caius 4.2 4.6
+Home Medicine 2019 102262 St John's 5.5 5.7
+Home Medicine 2019 102263 Downing Y 5.5 5.2
+Home Medicine 2019 102264 Newnham 3.9 4.6
+Home Medicine 2019 102265 Gonville and Caius 5.1 5.9
+Home Medicine 2019 102266 St Catharine's 3.7 4.8
+Home Medicine 2019 102267 Sidney Sussex Y 3.9 5.1
+Home Medicine 2019 102268 Trinity 4.4 5.4
+Home Medicine 2019 102269 Jesus 4.6 5.0
+Home Medicine 2019 102270 Queens' 4.4 5.4
+Home Medicine 2019 102271 Churchill 3.9 3.6
+Home Medicine 2019 102272 St John's 5.9 4.5
+Home Medicine 2019 102273 Emmanuel Y 4.4 6.2
+Home Medicine 2019 102274 St Catharine's Y 5.1 6.8
+Home Medicine 2019 102275 Peterhouse 4.6 5.4
+Home Medicine 2019 102276 Churchill 4.4 4.6
+Home Medicine 2019 102277 St Catharine's 4.2 4.0
+Home Medicine 2019 102278 Pembroke 3.7 4.6
+Home Medicine 2019 102279 Queens' Y 4.2 5.9
+Home Medicine 2019 102280 Downing 5.5 4.6
+Home Medicine 2019 102281 Emmanuel 4.4 4.2
+Home Medicine 2019 102282 Churchill 4.4 4.6
+Home Medicine 2019 102283 St John's 3.9 3.8
+Home Medicine 2019 102284 Jesus 3.4 2.9
+Home Medicine 2019 102285 St John's Y 5.1 5.0
+Home Medicine 2019 102286 St John's Y 5.1 7.2
+Home Medicine 2019 102287 Jesus Y 6.0 5.7
+Home Medicine 2019 102288 Gonville and Caius Y 5.3 5.4
+Home Medicine 2019 102289 St John's 4.4 5.9
+Home Medicine 2019 102290 Jesus Y 5.7 5.7
+Home Medicine 2019 102291 Jesus 7.3 4.9
+Home Medicine 2019 102292 Murray Edwards 4.4 4.2
+Home Medicine 2019 102293 Corpus Christi 3.9 5.0
+Home Medicine 2019 102294 Christ's 5.7 5.4
+Home Medicine 2019 102295 St John's 3.4 5.4
+Home Medicine 2019 102296 Downing Y 5.5 7.2
+Home Medicine 2019 102297 Clare 3.9 3.4
+Home Medicine 2019 102298 Trinity Hall 4.6 3.6
+Home Medicine 2019 102299 Jesus Y 5.7 5.7
+Home Medicine 2019 102300 Clare 4.4 3.4
+Home Medicine 2019 102301 Corpus Christi 3.4 2.9
+Home Medicine 2019 102302 King's 2.9 4.0
+Home Medicine 2019 102303 Emmanuel 4.4 4.6
+Home Medicine 2019 102304 Murray Edwards 4.2 3.6
+Home Medicine 2019 102305 Downing Y 6.0 5.9
+Home Medicine 2019 102306 Magdalene 4.6 5.0
+Home Medicine 2019 102307 Gonville and Caius 4.6 4.2
+Home Medicine 2019 102308 Emmanuel 5.1 5.2
+Home Medicine 2019 102309 Christ's 5.1 4.0
+Home Medicine 2019 102310 Jesus 4.4 5.1
+Home Medicine 2019 102311 St Catharine's 5.3 5.0
+Home Medicine 2019 102312 Girton 4.6 4.2
+Home Medicine 2019 102313 Gonville and Caius 4.2 5.4
+Home Medicine 2019 102314 Downing Y 4.4 4.0
+Home Medicine 2019 102315 Pembroke 4.2 4.2
+Home Medicine 2019 102316 Jesus Y 6.1 6.4
+Home Medicine 2019 102317 Churchill 4.4 4.8
+Home Medicine 2019 102318 St John's Y 5.7 5.2
+Home Medicine 2019 102319 Queens' 3.7 3.6
+Home Medicine 2019 102320 Corpus Christi 2.3 2.9
+Home Medicine 2019 102321 Downing 3.7 3.6
+Home Medicine 2019 102322 Gonville and Caius Y 7.0 7.2
+Home Medicine 2019 102323 Emmanuel Y 6.0 5.7
+Home Medicine 2019 102324 Gonville and Caius Y 5.3 5.0
+Home Medicine 2019 102325 King's 3.9 4.0
+Home Medicine 2019 102326 St Catharine's 4.6 4.2
+Home Medicine 2019 102327 St John's Y 6.0 5.2
+Home Medicine 2019 102328 Trinity 4.6 4.8
+Home Medicine 2019 102329 Gonville and Caius 5.3 5.7
+Home Medicine 2019 102330 Magdalene 5.3 5.4
+Home Medicine 2019 102331 Queens' Y 4.4 5.7
+Home Medicine 2019 102332 Emmanuel Y 6.2 6.2
+Home Medicine 2019 102333 Churchill 5.1 5.9
+Home Medicine 2019 102334 Trinity Y 5.1 5.9
+Home Medicine 2019 102335 Jesus 5.7 5.7
+Home Medicine 2019 102336 Christ's 5.3 5.9
+Home Medicine 2019 102337 Jesus 5.5 5.9
+Home Medicine 2019 102338 Downing 4.6 6.5
+Home Medicine 2019 102339 Emmanuel Y 6.5 7.2
+Home Medicine 2019 102340 Downing 5.1 3.4
+Home Medicine 2019 102341 St John's 3.9 4.7
+Home Medicine 2019 102342 Trinity 3.4 6.2
+Home Medicine 2019 102343 Jesus 5.1 5.4
+Home Medicine 2019 102344 Gonville and Caius 4.8 5.4
+Home Medicine 2019 102345 Selwyn Y 4.9 5.9
+Home Medicine 2019 102346 King's Y 6.7 5.0
+Home Medicine 2019 102347 Murray Edwards 3.2 4.8
+Home Medicine 2019 102348 Pembroke Y 5.3 5.9
+Home Medicine 2019 102349 Girton 4.4 5.2
+Home Medicine 2019 102350 Girton 4.4 4.4
+Home Medicine 2019 102351 St John's Y 6.0 5.7
+Home Medicine 2019 102352 Jesus 4.8 5.0
+Home Medicine 2019 102353 Peterhouse Y 4.2 5.7
+Home Medicine 2019 102354 Lucy Cavendish 3.4 4.2
+Home Medicine 2019 102355 Pembroke 3.2 5.0
+Home Medicine 2019 102356 Emmanuel Y 5.3 5.2
+Home Medicine 2019 102357 Homerton 4.4 3.4
+Home Medicine 2019 102358 Pembroke 4.4 4.6
+Home Medicine 2019 102359 Queens' Y 5.3 5.2
+Home Medicine 2019 102360 Hughes Hall 5.7 4.6
+Home Medicine 2019 102362 Newnham 5.5 5.4
+Home Medicine 2019 102363 St John's Y 4.6 4.8
+Home Medicine 2019 102364 Homerton 4.2 4.0
+Home Medicine 2019 102365 Jesus 4.4 4.8
+Home Medicine 2019 102366 Fitzwilliam 5.1 6.2
+Home Medicine 2019 102367 Murray Edwards 5.5 4.2
+Home Medicine 2019 102368 Peterhouse 4.6 5.0
+Home Medicine 2019 102369 Gonville and Caius 4.8 3.4
+Home Medicine 2019 102370 Christ's 4.6 3.6
+Home Medicine 2019 102371 Magdalene 4.4 4.4
+Home Medicine 2019 102372 Magdalene 4.4 4.2
+Home Medicine 2019 102373 Gonville and Caius 5.5 5.7
+Home Medicine 2019 102374 Robinson 2.9 3.8
+Home Medicine 2019 102375 Churchill 3.9 4.2
+Home Medicine 2019 102376 Jesus 4.2 4.0
+Home Medicine 2019 102377 Emmanuel Y 4.8 6.5
+Home Medicine 2019 102378 Jesus 2.9 4.2
+Home Medicine 2019 102379 Selwyn 3.2 4.0
+Home Medicine 2019 102380 Sidney Sussex 5.3 5.4
+Home Medicine 2019 102381 Jesus 5.5 4.6
+Home Medicine 2019 102382 Queens' Y 3.9 5.2
+Home Medicine 2019 102383 Jesus 4.6 3.6
+Home Medicine 2019 102384 Jesus 2.3 3.4
+Home Medicine 2019 102385 Peterhouse Y 4.6 4.8
+Home Medicine 2019 102386 Clare 2.9 5.4
+Home Medicine 2019 102387 Jesus 4.2 3.6
+Home Medicine 2019 102388 Gonville and Caius Y 3.7 4.8
+Home Medicine 2019 102389 Pembroke 4.2 5.2
+Home Medicine 2019 102390 Emmanuel Y 6.0 6.8
+Home Medicine 2019 102391 Jesus Y 8.0 5.9
+Home Medicine 2019 102392 Selwyn Y 5.3 5.9
+Home Medicine 2019 102393 Clare 5.1 5.0
+Home Medicine 2019 102394 Pembroke 3.9 4.8
+Home Medicine 2019 102395 Pembroke Y 6.7 5.9
+Home Medicine 2019 102396 King's 3.7 4.0
+Home Medicine 2019 102397 Trinity 3.9 5.0
+Home Medicine 2019 102398 Christ's 3.2 5.0
+Home Medicine 2019 102399 Downing 4.6 4.2
+Home Medicine 2019 102400 Girton 6.5 5.7
+Home Medicine 2019 102401 King's 4.6 4.2
+Home Medicine 2019 102402 Trinity Hall 2.6 4.6
+Home Medicine 2019 102403 Magdalene 3.7 4.4
+Home Medicine 2019 102404 Sidney Sussex 2.6 4.2
+Home Medicine 2019 102405 Corpus Christi 4.8 5.4
+Home Medicine 2019 102406 Pembroke 4.2 5.7
+Home Medicine 2019 102407 Queens' 4.6 5.4
+Home Medicine 2019 102408 King's Y 6.1 6.1
+Home Medicine 2019 102409 Gonville and Caius 3.7 4.2
+Home Medicine 2019 102410 Emmanuel 2.9 4.4
+Home Medicine 2019 102411 Christ's 3.2 3.4
+Home Medicine 2019 102412 Trinity Hall 2.6 2.9
+Home Medicine 2019 102413 Gonville and Caius 3.2 3.8
+Home Medicine 2019 102414 Murray Edwards Y 5.5 5.2
+Home Medicine 2019 102415 Fitzwilliam 3.9 3.8
+Home Medicine 2019 102416 Magdalene 3.2 4.0
+Home Medicine 2019 102417 St John's 5.5 2.3
+Home Medicine 2019 102418 Homerton 5.3 4.2
+Home Medicine 2019 102419 Sidney Sussex 4.2 5.2
+Home Medicine 2019 102420 St John's 3.7 3.6
+Home Medicine 2019 102421 Trinity Hall 4.6 4.6
+Home Medicine 2019 102422 Jesus 2.6 1.8
+Home Medicine 2019 102423 King's 2.6 5.0
+Home Medicine 2019 102424 Jesus 4.8 4.2
+Home Medicine 2019 102425 Corpus Christi 4.8 4.8
+Home Medicine 2019 102426 Jesus 3.2 3.4
+Home Medicine 2019 102427 Homerton 3.9 4.6
+Home Medicine 2019 102428 Queens' 3.9 4.6
+Home Medicine 2019 102429 Jesus 4.4 4.8
+Home Medicine 2019 102430 Sidney Sussex 3.4 4.6
+Home Medicine 2019 102431 Girton 3.7 5.2
+Home Medicine 2019 102432 St Catharine's 5.3 4.4
+Home Medicine 2019 102433 Churchill 4.9 4.2
+Home Medicine 2019 102434 St Catharine's 4.2 5.7
+Home Medicine 2019 102435 Murray Edwards 3.2 3.8
+Home Medicine 2019 102436 Pembroke 4.8 5.0
+Home Medicine 2019 102437 Homerton 3.4 3.2
+Home Medicine 2019 102438 Christ's 4.2 4.6
+Home Medicine 2019 102439 Pembroke Y 5.1 6.4
+Home Medicine 2019 102440 King's 3.4 4.0
+Home Medicine 2019 102441 St Catharine's 4.2 4.8
+Home Medicine 2019 102442 St John's 3.7 5.2
+Home Medicine 2019 102443 Sidney Sussex Y 5.3 5.2
+Home Medicine 2019 102444 Christ's 4.8 5.0
+Home Medicine 2019 102445 Pembroke 3.2 3.4
+Home Medicine 2019 102446 Downing 3.4 4.9
+Home Medicine 2019 102447 Fitzwilliam 2.9 1.3
+Home Medicine 2019 102448 Corpus Christi 4.7 4.2
+Home Medicine 2019 102449 Robinson 5.1 4.2
+Home Medicine 2019 102450 Homerton Y 4.2 4.8
+Home Medicine 2019 102451 Newnham 3.9 3.8
+Home Medicine 2019 102452 Selwyn 5.7 4.6
+Home Medicine 2019 102453 Emmanuel 5.1 5.4
+Home Medicine 2019 102454 Churchill 5.5 5.2
+Home Medicine 2019 102455 St John's 3.7 4.7
+Home Medicine 2019 102456 St Catharine's 3.7 5.2
+Home Medicine 2019 102457 Gonville and Caius 3.4 4.0
+Home Medicine 2019 102458 Trinity Hall 5.7 5.4
+Home Medicine 2019 102459 Jesus Y 5.7 5.7
+Home Medicine 2019 102460 St John's Y 6.0 5.9
+Home Medicine 2019 102461 Pembroke 4.4 4.0
+Home Medicine 2019 102462 King's 5.3 2.9
+Home Medicine 2019 102463 Jesus 3.7 4.4
+Home Medicine 2019 102464 Jesus 3.4 2.9
+Home Medicine 2019 102465 Trinity Hall 3.9 3.2
+Home Medicine 2019 102466 Clare 5.1 5.7
+Home Medicine 2019 102467 Christ's 4.4 4.5
+Home Medicine 2019 102468 Downing 4.8 5.2
+Home Medicine 2019 102469 Churchill Y 4.6 5.7
+Home Medicine 2019 102470 Churchill 4.4 4.0
+Home Medicine 2019 102471 Trinity Hall 3.4 3.8
+Home Medicine 2019 102472 Churchill 5.3 4.8
+Home Medicine 2019 102473 Trinity Hall Y 5.1 5.9
+Home Medicine 2019 102474 King's 3.4 5.4
+Home Medicine 2019 102475 King's 4.4 4.4
+Home Medicine 2019 102476 Trinity Y 4.6 5.4
+Home Medicine 2019 102477 Downing Y 6.0 6.2
+Home Medicine 2019 102478 Fitzwilliam 3.7 4.4
+Home Medicine 2019 102479 Queens' 4.6 3.4
+Home Medicine 2019 102480 King's 4.4 4.6
+Home Medicine 2019 102481 Trinity 4.2 6.5
+Home Medicine 2019 102482 Pembroke 5.1 5.9
+Home Medicine 2019 102483 Churchill 3.9 2.3
+Home Medicine 2019 102484 Girton Y 5.5 5.9
+Home Medicine 2019 102485 Christ's 5.3 4.8
+Home Medicine 2019 102486 Newnham 2.9 4.0
+Home Medicine 2019 102487 Fitzwilliam 4.6 4.6
+Home Medicine 2019 102488 Pembroke 3.4 4.0
+Home Medicine 2019 102489 Clare 4.2 3.8
+Home Medicine 2019 102490 Gonville and Caius Y 5.5 6.5
+Home Medicine 2019 102491 Trinity Y 6.7 8.6
+Home Medicine 2019 102492 King's 4.6 3.8
+Home Medicine 2019 102493 St Catharine's 4.6 4.4
+Home Medicine 2019 102494 Murray Edwards 4.4 4.4
+Home Medicine 2019 102495 Gonville and Caius 5.1 4.8
+Home Medicine 2019 102496 St Catharine's 5.3 4.8
+Home Medicine 2019 102497 Newnham 5.6 5.6
+Home Medicine 2019 102498 Emmanuel 5.1 5.0
+Home Medicine 2019 102499 Clare Y 5.7 5.7
+Home Medicine 2019 102500 Downing 3.4 4.6
+Home Medicine 2019 102501 Trinity 4.4 3.4
+Home Medicine 2019 102502 Corpus Christi Y 4.4 5.4
+Home Medicine 2019 102503 Trinity 4.2 4.2
+Home Medicine 2019 102504 Downing 4.2 4.8
+Home Medicine 2019 102505 Corpus Christi 5.1 4.5
+Home Medicine 2019 102506 Robinson 3.7 3.6
+Home Medicine 2019 102507 Newnham 4.2 4.6
+Home Medicine 2019 102508 Newnham 2.9 3.4
+Home Medicine 2019 102509 Christ's Y 6.0 5.9
+Home Medicine 2019 102510 Peterhouse 3.2 5.0
+Home Medicine 2019 102511 Jesus 5.1 6.5
+Home Medicine 2019 102512 Jesus 4.6 4.0
+Home Medicine 2019 102513 Fitzwilliam 4.6 4.8
+Home Medicine 2019 102514 Trinity 4.8 4.8
+Home Medicine 2019 102515 Gonville and Caius 3.9 4.0
+Home Medicine 2019 102516 St John's 5.5 5.2
+Home Medicine 2019 102517 Gonville and Caius 5.6 6.1
+Home Medicine 2019 102518 Trinity 3.7 5.2
+Home Medicine 2019 102519 King's 5.1 3.6
+Home Medicine 2019 102520 King's Y 5.1 4.6
+Home Medicine 2019 102521 King's 4.8 4.8
+Home Medicine 2019 102522 Trinity 5.3 5.0
+Home Medicine 2019 102523 Gonville and Caius 4.4 5.2
+Home Medicine 2019 102524 Emmanuel 5.3 4.8
+Home Medicine 2019 102525 Pembroke 5.7 5.4
+Home Medicine 2019 102526 Trinity 6.0 4.8
+Home Medicine 2019 102527 Selwyn 3.9 4.2
+Home Medicine 2019 102528 Trinity Hall 3.9 4.2
+Home Medicine 2019 102529 Jesus 4.4 5.4
+Home Medicine 2019 102530 King's 3.4 5.0
+Home Medicine 2019 102531 Gonville and Caius 2.9 1.8
+Home Medicine 2019 102532 Gonville and Caius 5.3 4.6
+Home Medicine 2019 102533 Churchill 4.6 4.0
+Home Medicine 2019 102534 Downing 3.7 6.5
+Home Medicine 2019 102535 Robinson 4.4 5.4
+Home Medicine 2019 102536 Emmanuel Y 6.0 5.4
+Home Medicine 2019 102537 Gonville and Caius 4.8 5.4
+Home Medicine 2019 102538 Gonville and Caius Y 7.0 6.2
+Home Medicine 2019 102539 Trinity Hall 5.1 5.2
+Home Medicine 2019 102540 Christ's 5.3 6.2
+Home Medicine 2019 102541 Christ's 4.4 4.4
+Home Medicine 2019 102542 Robinson 5.5 4.8
+Home Medicine 2019 102543 Peterhouse 5.3 5.9
+Home Medicine 2019 102544 Jesus 3.7 2.6
+Home Medicine 2019 102545 King's 5.5 3.8
+Home Medicine 2019 102546 Fitzwilliam 3.2 4.2
+Home Medicine 2019 102547 Gonville and Caius 4.4 4.4
+Home Medicine 2019 102548 Pembroke 3.2 4.8
+Home Medicine 2019 102550 Homerton 4.4 4.8
+Home Medicine 2019 102551 Gonville and Caius Y 6.4 6.8
+Home Medicine 2019 102552 St Catharine's Y 7.0 6.8
+Home Medicine 2019 102553 Emmanuel 4.2 4.2
+Home Medicine 2019 102554 Downing 6.1 6.4
+Home Medicine 2019 102555 Churchill 3.4 4.4
+Home Medicine 2019 102556 Robinson Y 3.9 4.0
+Home Medicine 2019 102557 Gonville and Caius Y 5.3 5.9
+Home Medicine 2019 102558 Emmanuel 4.8 5.0
+Home Medicine 2019 102559 Robinson 2.6 3.4
+Home Medicine 2019 102560 Wolfson 2.3 3.6
+Home Medicine 2019 102561 Jesus 4.4 4.0
+Home Medicine 2019 102562 Churchill 7.0 5.1
+Home Medicine 2019 102563 Christ's Y 6.0 5.0
+Home Medicine 2019 102564 Jesus Y 6.4 6.1
+Home Medicine 2019 102565 Pembroke 4.8 4.6
+Home Medicine 2019 102566 Jesus Y 6.1 5.9
+Home Medicine 2019 102567 Fitzwilliam Y 5.5 6.2
+Home Medicine 2019 102568 Trinity Hall Y 6.0 6.8
+Home Medicine 2019 102569 St John's 3.7 4.4
+Home Medicine 2019 102570 Queens' 3.7 5.0
+Home Medicine 2019 102571 Churchill 4.2 4.8
+Home Medicine 2019 102572 King's 2.3 2.9
+Home Medicine 2019 102573 Emmanuel 4.8 5.4
+Home Medicine 2019 102574 Jesus 3.4 5.0
+Home Medicine 2019 102575 Downing 5.7 4.8
+Home Medicine 2019 102576 Emmanuel 3.7 3.8
+Home Medicine 2019 102577 Peterhouse 4.2 4.0
+Home Medicine 2019 102578 Queens' 4.2 3.6
+Home Medicine 2019 102579 Homerton 5.5 4.4
+Home Medicine 2019 102580 King's 4.9 4.7
+Home Medicine 2019 102581 Downing 2.9 2.6
+Home Medicine 2019 102582 Girton Y 6.5 6.8
+Home Medicine 2019 102583 Magdalene 3.7 2.9
+Home Medicine 2019 102584 Gonville and Caius 4.8 4.2
+Home Medicine 2019 102585 Queens' 4.4 5.2
+Home Medicine 2019 102586 Christ's 5.5 5.9
+Home Medicine 2019 102587 Emmanuel 2.9 3.2
+Home Medicine 2019 102588 Gonville and Caius 4.6 5.7
+Home Medicine 2019 102589 St Catharine's Y 6.7 6.8
+Home Medicine 2019 102590 Selwyn 4.2 5.2
+Home Medicine 2019 102591 Queens' Y 4.2 5.4
+Home Medicine 2019 102592 Emmanuel 4.7 5.1
+Home Medicine 2019 102593 King's 3.9 4.6
+Home Medicine 2019 102594 Gonville and Caius 4.8 5.2
+Home Medicine 2019 102595 Jesus 3.4 4.8
+Home Medicine 2019 102596 St Catharine's 3.9 6.8
+Home Medicine 2019 102597 Churchill 4.4 3.2
+Home Medicine 2019 102598 St John's 4.7 4.9
+Home Medicine 2019 102599 Wolfson Y 5.4 3.5
+Home Medicine 2019 102600 Sidney Sussex 3.2 3.6
+Home Medicine 2019 102601 St Catharine's 3.9 5.7
+Home Medicine 2019 102602 Trinity Y 5.1 6.8
+Home Medicine 2019 102603 Gonville and Caius Y 6.7 6.8
+Home Medicine 2019 102604 Magdalene Y 3.7 5.4
+Home Medicine 2019 102605 Trinity Hall 5.5 5.4
+Home Medicine 2019 102606 St Catharine's 3.7 4.0
+Home Medicine 2019 102607 Fitzwilliam 3.9 4.4
+Home Medicine 2019 102608 Pembroke 3.9 3.8
+Home Medicine 2019 102609 King's 4.4 3.6
+Home Medicine 2019 102610 Pembroke Y 4.4 5.4
+Home Medicine 2019 102611 Christ's 5.3 4.6
+Home Medicine 2019 102612 Gonville and Caius 3.4 3.4
+Home Medicine 2019 102613 Gonville and Caius 4.2 5.4
+Home Medicine 2019 102614 St John's 4.2 4.6
+Home Medicine 2019 102615 Gonville and Caius 3.9 4.8
+Home Medicine 2019 102616 Murray Edwards 3.4 5.7
+Home Medicine 2019 102617 Newnham 3.4 2.9
+Home Medicine 2019 102618 Selwyn 4.4 4.6
+Home Medicine 2019 102619 Gonville and Caius 2.3 3.8
+Home Medicine 2019 102620 Magdalene 5.3 5.2
+Home Medicine 2019 102621 St John's Y 4.7 4.5
+Home Medicine 2019 102622 Downing Y 5.1 6.2
+Home Medicine 2019 102623 St Catharine's Y 6.0 6.5
+Home Medicine 2019 102624 Churchill 4.4 5.7
+Home Medicine 2019 102625 Gonville and Caius 4.2 6.8
+Home Medicine 2019 102626 Churchill 4.2 3.8
+Home Medicine 2019 102627 Emmanuel 4.2 3.6
+Home Medicine 2019 102628 Fitzwilliam 5.3 5.7
+Home Medicine 2019 102629 St Catharine's 3.7 4.6
+Home Medicine 2019 102630 Wolfson 3.2 2.9
+Home Medicine 2019 102631 St Edmund's 4.6 3.4
+Home Medicine 2019 102632 St Edmund's Y 4.2 4.6
+Home Medicine 2019 102633 Sidney Sussex 3.4 4.6
+Home Medicine 2019 102634 Queens' 2.6 3.4
+Home Medicine 2019 102636 Selwyn Y 5.7 5.4
+Home Medicine 2019 102637 Gonville and Caius 5.7 4.4
+Home Medicine 2019 102638 Robinson 4.8 4.0
+Home Medicine 2019 102639 Robinson 4.6 4.6
+Home Medicine 2019 102640 Fitzwilliam 2.3 3.6
+Home Medicine 2019 102641 Robinson 3.4 4.4
+Home Medicine 2019 102642 St Edmund's 3.2 4.2
+Home Medicine 2019 102643 Sidney Sussex 2.9 5.2
+Home Medicine 2019 102644 Sidney Sussex Y 4.6 4.2
+Home Medicine 2019 102646 Trinity Hall 3.7 4.8
+Home Medicine 2019 102647 St Edmund's 4.4 3.8
+Home Medicine 2019 102648 Fitzwilliam 3.2 2.9
+Home Medicine 2019 102649 Girton 3.7 4.4
+Home Medicine 2019 102650 Newnham 2.6 2.9
+Home Medicine 2019 102651 Trinity Hall 5.3 5.9
+Home Medicine 2019 102652 Jesus 3.4 5.4
+Home Medicine 2019 102653 Jesus Y 4.6 5.9
+Home Medicine 2019 102654 Jesus Y 6.7 5.9
+Home Medicine 2019 102655 Jesus 3.7 5.2
+Home Medicine 2019 102656 Jesus 3.7 5.0
+Home Medicine 2019 102657 Christ's Y 5.7 6.2
+Home Medicine 2019 102658 St Catharine's 3.9 5.4
+Home Medicine 2019 102659 St Catharine's 2.6 4.0
+Home Medicine 2019 102660 St Catharine's 4.8 4.0
+Home Medicine 2019 102661 St Catharine's 5.5 4.4
+Home Medicine 2019 102662 St Catharine's 4.8 4.6
+Home Medicine 2019 102663 Peterhouse 4.6 5.2
+Home Medicine 2019 102664 Christ's 3.2 3.6
+Home Medicine 2019 102665 Christ's 4.4 3.6
+Home Medicine 2019 102666 Christ's 2.3 2.9
+Home Medicine 2019 102667 Christ's 5.7 5.0
+Home Medicine 2019 102668 Christ's 5.1 4.0
+Home Medicine 2019 102669 Christ's 2.6 3.6
+Home Medicine 2019 102670 Christ's 2.9 3.8
+Home Medicine 2019 102671 Trinity 2.9 4.6
+Home Medicine 2019 102672 Trinity 4.2 3.6
+Home Medicine 2019 102673 Trinity 3.4 4.6
+Home Medicine 2019 102674 Trinity Y 4.4 5.7
+Home Medicine 2019 102675 Trinity 5.1 5.0
+Home Medicine 2019 102676 Trinity 5.1 4.6
+Home Medicine 2019 102677 Trinity 5.1 5.0
+Home Medicine 2019 102678 Fitzwilliam 4.9 5.9
+Home Medicine 2019 102679 Fitzwilliam 2.6 2.3
+Home Medicine 2019 102680 Fitzwilliam Y 5.1 4.5
+Home Medicine 2019 102681 Homerton 3.9 4.8
+Home Medicine 2019 102682 Homerton 3.2 4.0
+Home Medicine 2019 102683 Homerton 3.4 4.0
+Home Medicine 2019 102684 Homerton Y 4.6 5.0
+Home Medicine 2019 102685 St Edmund's 4.6 2.6
+Home Medicine 2019 102686 Pembroke Y 8.4 8.2
+Home Medicine 2019 102687 Pembroke 4.4 5.4
+Home Medicine 2019 102688 Pembroke 5.4 4.2
+Home Medicine 2019 102689 Pembroke Y 8.4 8.2
+Home Medicine 2019 102690 Pembroke 3.9 3.6
+Home Medicine 2019 102691 Sidney Sussex 4.8 4.2
+Home Medicine 2019 102692 Queens' 3.9 3.2
+Home Medicine 2019 102693 Queens' 2.3 3.4
+Home Medicine 2019 102694 Queens' 3.4 1.0
+Home Medicine 2019 102695 Queens' 3.7 4.2
+Home Medicine 2019 102696 Robinson 5.1 4.0
+Home Medicine 2019 102697 St Catharine's 3.9 4.6
+Home Medicine 2019 102698 St Catharine's 4.6 2.9
+Home Medicine 2019 102699 St John's 4.2 3.6
+Home Medicine 2019 102700 St John's 3.9 3.6
+Home Medicine 2019 102701 St John's 2.6 2.9
+Home Medicine 2019 102702 St John's 5.1 5.4
+Home Medicine 2019 102703 St John's 2.6 4.2
+Home Medicine 2019 102704 Churchill 3.9 4.2
+Home Medicine 2019 102705 Gonville and Caius 4.2 3.8
+Home Medicine 2019 102706 Gonville and Caius 3.9 4.0
+Home Medicine 2019 102707 Clare 4.9 2.6
+Home Medicine 2019 102708 Clare Y 5.3 5.2
+Home Medicine 2019 102709 Clare 3.9 5.2
+Home Medicine 2019 102710 Clare 4.8 6.2
+Home Medicine 2019 102711 Clare 5.7 3.8
+Home Medicine 2019 102712 Clare 4.4 4.0
+Home Medicine 2019 102713 Gonville and Caius 3.4 3.8
+Home Medicine 2019 102714 Gonville and Caius 5.5 3.6
+Home Medicine 2019 102715 Gonville and Caius Y 5.3 5.0
+Home Medicine 2019 102716 Gonville and Caius 4.6 4.8
+Home Medicine 2019 102717 Gonville and Caius 3.7 3.4
+Home Medicine 2019 102718 Gonville and Caius Y 5.6 6.1
+Home Medicine 2019 102719 Downing 4.6 5.2
+Home Medicine 2019 102720 Downing Y 4.8 5.9
+Home Medicine 2019 102721 Downing 3.9 5.7
+Home Medicine 2019 102722 Emmanuel 6.5 5.2
+Home Medicine 2019 102723 Emmanuel Y 6.0 7.7
+Home Medicine 2019 102724 Emmanuel 4.4 4.0
+Home Medicine 2019 102725 Emmanuel Y 6.7 7.2
+Home Medicine 2019 102726 Emmanuel Y 4.4 5.2
+Home Medicine 2019 102727 Emmanuel 4.2 5.2
+Home Medicine 2019 102728 Emmanuel 4.4 5.4
+Home Medicine 2019 102729 Emmanuel 5.1 5.0
+Home Medicine 2019 102730 Corpus Christi 3.7 3.6
+Home Medicine 2019 102731 Corpus Christi 2.9 5.4
+Home Medicine 2019 102732 Corpus Christi 4.2 4.0
+Home Medicine 2019 102733 Wolfson 4.2 5.9
+Home Medicine 2019 102734 King's 4.4 2.9
+Home Medicine 2019 102735 King's 3.4 3.4
+Home Medicine 2019 102736 King's 5.3 5.4
+Home Medicine 2019 102737 King's 4.6 4.6
+Home Medicine 2019 102738 King's 3.9 3.4
+Home Medicine 2019 102739 King's 5.5 5.9
+Home Medicine 2019 102740 King's 3.9 4.0
+Home Medicine 2019 102741 St Edmund's 1.6 4.0
+Home Medicine 2019 102743 Lucy Cavendish 3.2 3.8
+Home Medicine 2019 102744 Lucy Cavendish 3.9 3.4
+Home Medicine 2019 102745 Magdalene 3.2 2.9
+Home Medicine 2019 102746 Newnham 5.1 5.0
+Home Medicine 2019 102747 Newnham 3.9 3.4
+Home Medicine 2019 102748 Murray Edwards 3.4 4.6
+Home Medicine 2019 102749 Murray Edwards 4.2 5.0
+Home Medicine 2019 102750 Murray Edwards 4.6 4.6
+Home Medicine 2019 102751 Wolfson 2.6 2.9
+Home Medicine 2019 102752 St Edmund's 5.3 5.0
+Home Medicine 2019 102753 St Edmund's 3.9 2.9
+Home Medicine 2019 102754 Corpus Christi 5.1 5.7
+Home Medicine 2019 102755 Trinity 4.6 5.4
