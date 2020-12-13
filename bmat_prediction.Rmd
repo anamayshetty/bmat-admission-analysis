@@ -141,12 +141,31 @@ test <- filter(df, Year == 2019)
 
 The purpose of our analysis is to get a formula which will allow us to map between 
 
-```{r Prior Prediction Simulation}
+```{r Linear vs Logistic Model}
 tibble(x = seq(2, 18, 0.01), linear = (x - 2)/16, logistic = 1 / (1 + exp(-(-10 + x)))) %>%
   gather(linear, logistic, key = "form", value = "y") %>%
   ggplot(aes(x, y, colour = form)) +
   geom_line() +
   xlab("Score") + ylab("Probabilty of Getting Offer")
+```
+
+```{r Prior Predictive Modelling for Linear Regression}
+
+```
+
+
+```{r Prior Predictive Modelling for Logistic Regression}
+
+# a ~ Normal(-1, 1.5)
+# b ~ Log-Normal(1, .25)
+cross_df(list(x = seq(-3, 3, 0.1), a = rnorm(20, -1, 1.5), b = exp(rnorm(20, 1, .25)))) %>%
+  mutate(y = a + b * x, p = 1 / (1 + exp(-y))) %>%
+  unite(col = "ab", a, b) %>%
+  ggplot(aes(x, p, group = ab)) +
+  geom_line(alpha = .1) +
+  theme_minimal()
+
+
 ```
 
 
