@@ -33,6 +33,8 @@ df <- read_delim("data/bmat_results_tl.txt", delim = " ", col_names = c("Domicil
   filter(College != "Hughes Hall")
 ```
 
+# Introduction
+
 We have also removed Hughe's Hall, as there is only one record and it not present every eyar. We will think about Hughes' Hall in a bit. 
 
 The Bio-Medial Aptitude Test (BMAT) is an admissions test sat by students applying to X universities. 
@@ -113,7 +115,12 @@ df %>%
   nest
 ```
 
+# Developing the model
+
+Prior predictive modelling allows us to develop our model and understand some of our assumptions. 
+
 Now let us start preparing for some modelling. We are going to use the sequential nature of our dataset to use the 2017/8 data to train our model, and the 2019 model to test to see how effective it is. 
+
 The reason why we split into years to document dataset shift. 
 
 
@@ -132,15 +139,18 @@ test <- filter(df, Year == 2019)
 
 ```
 
+The purpose of our analysis is to get a formula which will allow us to map between 
+
 ```{r Prior Prediction Simulation}
-
-test %>%
-  ggplot(Score, Offer)
-
+tibble(x = seq(2, 18, 0.01), linear = (x - 2)/16, logistic = 1 / (1 + exp(-(-10 + x)))) %>%
+  gather(linear, logistic, key = "form", value = "y") %>%
+  ggplot(aes(x, y, colour = form)) +
+  geom_line() +
+  xlab("Score") + ylab("Probabilty of Getting Offer")
 ```
 
 
-```{r Generating Fixed-effects model}
+```{r Generating Fixed-effects models}
 model_v1 <- quap(
   alist(
     Offer ~ dbinom(1, p),
@@ -159,15 +169,78 @@ model_v2 <- quap(
   ),
   data = train
 )
+
+model_v3 <- quap(
+  alist(
+    Offer ~ dbinom(1, p),
+    logit(p) <- a[College_ID] + b * Score,
+    a[College_ID] ~ dnorm(-1, 1.5),
+    b ~ dlnorm(1, 0.25)
+  ),
+  data = train
+)
+
 ```
 
+```{r Generating Mixed-effects models}
+model_v4 <- ulam(
+  alist(
+    Offer ~ dbinom(1, p),
+    logit(p) <- a[College_ID] + b * Score,
+    a[College_ID] ~ dnorm(a_bar, 1.5),
+    a_bar ~ dnorm(1.5, 0.5),
+    b ~ dlnorm(1, 0.25)
+  ),
+  data = train, chains = 4, log_lik=TRUE
+)
+```
+
+```{r}
+results <- bind_cols(
+  test, 
+  map_dfc(
+    list(
+      intercept_no_slope = model_v1, 
+      constant_intercept_slope = model_v2, 
+      varying_intercept_slope = model_v3, 
+      adaptive_intercept_slope = model_v4
+      ), 
+    ~apply(sim(., data=test), MARGIN = 2, FUN = mean)
+    )
+)
+```
 
 
 ```{r}
 
-test %>%
-  mutate(prediction = apply(sim(model_v1, data=test), MARGIN = 2, FUN = mean))
+results %>%
+  gather(contains("slope"), key = "model", value = "p") %>%
+  mutate(pred_Offer = if_else(p > 0.5, TRUE, FALSE)) %>%
+  mutate(prediction_truth = if_else(pred_Offer == Offer, TRUE, FALSE)) %>%
+  group_by(model) %>%
+  summarise(accuracy = mean(prediction_truth))
+  #count(model, prediction_truth)
 
+```
+
+
+```{r}
+
+map_dfc(
+    list(
+      intercept_no_slope = model_v1, 
+      constant_intercept_slope = model_v2, 
+      varying_intercept_slope = model_v3, 
+      adaptive_intercept_slope = model_v4
+      ), 
+    ~apply(link(., data=cross_df(list(College_ID = seq(28), Score = seq(-3, 3, 0.1)))), MARGIN = 2, FUN = mean)
+    ) %>%
+  bind_cols(cross_df(list(College_ID = seq(28), Score = seq(-3, 3, 0.1)))) %>%
+  mutate(BMAT_all = Score * sd(test$BMAT_all) + mean(test$BMAT_all)) %>%
+  gather(contains("slope"), key = "model", value = "p") %>%
+  ggplot(aes(BMAT_all, p, colour = model)) +
+  geom_line() +
+  facet_wrap(~College_ID)
 
 ```
 
@@ -191,53 +264,5 @@ model_v3 <- ulam(
 precis(model_v3, depth = 2)
 ```
 
-
-```{r}
-data(reedfrogs)
-d <- reedfrogs
-# make the tank cluster variable 
-d$tank <- 1:nrow(d)
-dat <- list(
-  S = d$surv,
-  N = d$density,
-  tank = d$tank )
-
-m13.2 <- ulam( alist(
-  S ~ dbinom( N , p ) ,
-  logit(p) <- a[tank] ,
-  a[tank] ~ dnorm( a_bar , sigma ) , a_bar ~ dnorm( 0 , 1.5 ) ,
-  sigma ~ dexp( 1 )
-  ), data=dat , chains=4 , log_lik=TRUE )
-```
-
-```{r}
-sort(unique(train$College_ID))
-```
-
-
-```{r}
-library(rethinking)
-
-data(chimpanzees)
-d <- chimpanzees
-d$treatment <- 1 + d$prosoc_left + 2*d$condition
-
-dat_list <- list(
-  pulled_left = d$pulled_left,
-  actor = d$actor,treatment = as.integer(d$treatment)
-  )
-# particles in 11-dimensional space
-
-m11.4 <- ulam(
-  alist(
-    pulled_left ~ dbinom( 1 , p ) ,
-    logit(p) <- a[actor] + b[treatment] ,
-    a[actor] ~ dnorm( 0 , 1.5 ),
-    b[treatment] ~ dnorm( 0 , 0.5 )
-    ) ,
-  data=dat_list , chains=4 )
-
-precis( m11.4 , depth=2 )
-
-```
+`
 
