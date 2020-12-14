@@ -151,6 +151,14 @@ tibble(x = seq(2, 18, 0.01), linear = (x - 2)/16, logistic = 1 / (1 + exp(-(-10 
 
 ```{r Prior Predictive Modelling for Linear Regression}
 
+cross_df(list(x = seq(-3, 3, 0.1), a = rnorm(20, 0.5, 0.2), b = exp(rnorm(20, log(1/6), 0.2)))) %>%
+  mutate(y = a + b * x) %>%
+  unite(col = "ab", a, b) %>%
+  ggplot(aes(x, y, group = ab)) +
+  geom_line(alpha = .1) +
+  theme_minimal()
+
+
 ```
 
 
@@ -168,8 +176,45 @@ cross_df(list(x = seq(-3, 3, 0.1), a = rnorm(20, -1, 1.5), b = exp(rnorm(20, 1, 
 
 ```
 
+TODO: Add in prior predictive simulations for the variable and adaptive priors
 
 ```{r Generating Fixed-effects models}
+
+
+bmat_models <- vector("list", 5)
+names(bmat_models) <- list("linear", "intercept_only", "fixed_intercept_and_slopes", "varying_intercept_and_fixed_slope", "adaptive_intercepts_and_slopes")
+coefficient_lists <- list(
+  alist(
+    Offer <- a + b * Score,
+    a ~ dnorm(0.5, 0.2),
+    b ~ dlnorm(log(1/6), 0.2)
+  ),
+  alist(
+    Offer ~ dbinom(1, p),
+    logit(p) <- a,
+    a ~ dnorm(-1, 1.5)
+  ),
+  alist(
+    Offer ~ dbinom(1, p),
+    logit(p) <- a + b * Score,
+    a ~ dnorm(-1, 1.5),
+    b ~ dlnorm(1, 0.25)
+  ),
+  alist(
+    Offer ~ dbinom(1, p),
+    logit(p) <- a[College_ID] + b * Score,
+    a[College_ID] ~ dnorm(-1, 1.5),
+    b ~ dlnorm(1, 0.25)
+  ),
+  alist(
+    Offer ~ dbinom(1, p),
+    logit(p) <- a[College_ID] + b * Score,
+    a[College_ID] ~ dnorm(a_bar, 1.5),
+    a_bar ~ dnorm(1.5, 0.5),
+    b ~ dlnorm(1, 0.25)
+  )
+)
+
 model_v1 <- quap(
   alist(
     Offer ~ dbinom(1, p),
