@@ -35,18 +35,31 @@ df <- read_delim("data/bmat_results_tl.txt", delim = " ", col_names = c("Domicil
 
 # Introduction
 
-We have also removed Hughe's Hall, as there is only one record and it not present every eyar. We will think about Hughes' Hall in a bit. 
+This document is intended to show a simple Bayesian workflow, based off the methods from McElreath's Statistical Rethinking. 
 
-The Bio-Medial Aptitude Test (BMAT) is an admissions test sat by students applying to X universities. 
-It contains 3 components:
+# Question
 
-1. Section 1, which is a verbal/spatial reasoning section (1-9)
+The Bio-Medial Aptitude Test (BMAT) is an admissions test sat by students applying to 8 universities in the UK, including the University of Cambridgde. It is most commonly sat in November, and consists of three sections:
 
-2. Section 2, which is a section on science and maths (1-9)
+1. Section 1, which is a verbal/spatial reasoning section
+
+2. Section 2, which is a section on science and maths based on the GCSE curriculum.
 
 3. Section 3, which is an essay section.
 
-The BMAT is an important indicator of success in admissions, so we will be using a data from a FOI request to predict likelihood of admission, and using it as a based to disucuss a Baeysian workflow. 
+The entire exam takes two hours, and candidates recieve a mark of 1-9 each for Section 1 and 2, and a mark from 1-5 for Section 3, along with a mark A-E for their spelling and grammar in the essay.
+
+Candidates often want to know what their chances of getting into Cambridge are based on their BMAT score, and this generates alot of data from prospective students using Freedom of Information (FoI) requests to get the data out of the university. I have found one such dataset here, which we will use. This dataset contains data from 2017 to 2019 on Home (i.e. from the UK) Medicine candidiates, with the following data:
+
+1. What year they are applying in (2017, 2018 or 2019)
+
+2. Which college they are making their primary application to (e.g. King's, St John's, Trinity)
+
+3. Their BMAT Section 1 score
+
+4. Their BMAT Section 2 score
+
+5. Whether they recieved an offer from the college they applied to. 
 
 
 As always, before starting any analysis work, let's first take a look at the data. 
@@ -105,7 +118,7 @@ Now we have our questions:
 
 "*what is the probabilty I am going to get into Cambridge based on my BMAT mark?*"
 
-We have our 
+We have our BMAT score, which we are 
 
 ```{r}
 df %>%
