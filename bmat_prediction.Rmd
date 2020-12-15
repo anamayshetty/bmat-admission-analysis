@@ -59,15 +59,24 @@ Candidates often want to know what their chances of getting into Cambridge are b
 
 4. Their BMAT Section 2 score
 
-5. Whether they recieved an offer from the college they applied to. 
+5. Whether they recieved an offer from the college they applied to i.e. ignoring pool offers. 
 
+We can use this to ask the following question:
+
+**"Given a particular BMAT score, what is the probability I will get an offer from Cambridge?"**
+
+# Looking at data
 
 As always, before starting any analysis work, let's first take a look at the data. 
 
 We have information from `r nrow(df)` applicants to `r length(unique(df$College))` colleges in the 2017, 2018 and 2019 admission cycles. You can take a look at the dataset below.
 
-That's alot of numbers though - let's instead turn some of these into graphs so we get a sense of what we're looking at. 
+```{r Original Dataframe}
+df %>%
+  select(Year:Offer)
+```
 
+Let's also try plotting out some of this to get a better sense of the dataset. First, let's plot out the distribution of BMAT scores, and see if there a difference between those who got offers and those who didn't.
 
 ```{r Distribution of Scores by Offer}
 df %>%
@@ -78,8 +87,13 @@ df %>%
   ggplot(aes(x = Mark, fill = Offer)) +
   geom_density(alpha = 0.5) +
   facet_grid(rows = vars(Year), cols = vars(Section)) +
-  ggtitle("BMAT Scores by those who recieved Offers", subtitle = "Unsurprisingly, those who got offer got higher scores on average")
+  scale_fill_brewer(type = "qual") +
+  ggtitle("BMAT Scores by those who recieved Offers", subtitle = "Unsurprisingly, those who got offers got higher scores on average")
 ```
+
+So unsurprisingly, there is! But we can see there is a clear overlap between the two groups: there are plenty of students who got offers (are in the purple distribution) who got lower offers than those who were rejected. 
+
+But we also know that this is looking across all colleges: we know acceptance rates vary loads across colleges.
 
 ```{r Offer Rates by College and Year}
 df %>%
@@ -89,7 +103,7 @@ df %>%
     total_applicants = n(),
     offer_fraction = total_offers / total_applicants
   ) %>%
-  mutate(no_offers_by_college = sum(total_offers), mean_offer_fraction = sum(total_offers) / sum(total_applicants)) %>%
+  mutate(`# Offers by College` = sum(total_offers), mean_offer_fraction = sum(total_offers) / sum(total_applicants)) %>%
   ungroup() %>%
   mutate(grand_offer_fraction = sum(total_offers) / sum(total_applicants)) %>%
   mutate(
@@ -98,44 +112,17 @@ df %>%
     ) %>%
   ggplot(aes(y = College, x = offer_fraction, colour = Year)) +
   geom_vline(aes(xintercept = grand_offer_fraction), colour = "grey", lty = 2) +
-  geom_point(aes(x = mean_offer_fraction, size = no_offers_by_college), colour = "black") +
+  geom_point(aes(x = mean_offer_fraction, size = `# Offers by College`), colour = "black") +
   geom_point() +
   scale_x_continuous(labels = scales::percent) +
   xlab("Percentage Of Applicants Given Offers") +
-  scale_color_brewer(type = "qual")
-  
+  scale_color_brewer(type = "qual") +
+  ggtitle("Acceptance Rates by Cambridge college")
 ```
 
-To approach a statical problem, we need:
+So we can see that we may need to take into account which college you are applying to, in order to improve our model - we will see if this is the case once we have our results!
 
-1. A question to answer
-
-2. The appropriate data to answer that question
-
-3. A statistical model to answer the question.
-
-Now we have our questions:
-
-"*what is the probabilty I am going to get into Cambridge based on my BMAT mark?*"
-
-We have our BMAT score, which we are 
-
-```{r}
-df %>%
-  select(Candidate, Offer, contains("BMAT")) %>%
-  gather(contains("BMAT"), key = "Predictor", value = "Score") %>%
-  group_by(Predictor) %>%
-  nest
-```
-
-# Developing the model
-
-Prior predictive modelling allows us to develop our model and understand some of our assumptions. 
-
-Now let us start preparing for some modelling. We are going to use the sequential nature of our dataset to use the 2017/8 data to train our model, and the 2019 model to test to see how effective it is. 
-
-The reason why we split into years to document dataset shift. 
-
+# Data Processing
 
 ```{r Forming the Training and Test Datasets}
 
@@ -152,19 +139,109 @@ test <- filter(df, Year == 2019)
 
 ```
 
-The purpose of our analysis is to get a formula which will allow us to map between 
+Now let us start preparing for some modelling. We are going to use the sequential nature of our dataset to use the 2017/8 data to train our model, and the 2019 model to test to see how effective it is. The reason why we some data aside - rather than using all of it - is that we want to know how effective our predictions will be on data we *haven't* seen. The model hasn't seen the 2019 data, so we can use to see how good our model is. 
+We are splitting them chronologically because we want to see how our model predicts things in the future: so let's do the same thing for our testing, and use the earlier years to train the model, and later years to predict. After all, if our model which is trained on data from 2017-8 can't predict the 2019 acceptance rates, it's probably going to be no use for 2020 and onwards! 
 
-```{r Linear vs Logistic Model}
-tibble(x = seq(2, 18, 0.01), linear = (x - 2)/16, logistic = 1 / (1 + exp(-(-10 + x)))) %>%
-  gather(linear, logistic, key = "form", value = "y") %>%
+There are two other data processing steps before we start modelling. We are going to take our scores on the BMAT Section 1 and 2 and add them together to create one BMAT score. This is because these scores are highly correleated i.e. if you do well on BMAT Section 1, you will very likely do well on BMAT Section 2:
+
+```{r Correlation between BMAT Scores}
+
+df %>%
+  ggplot(aes(BMAT_Section_1, BMAT_Section_2)) +
+  geom_point() +
+  xlab("BMAT Section 1") + ylab("BMAT Section 2")
+  ggtitle("Relationship between BMAT Section 1 and 2 scores", subtitle = "The two results are highly correlated")
+
+```
+
+This will create problems for our model[^1], so we will add the scores and just use one input to predict probabilty of getting an offer. We will also standardise the scores, by taking away the mean and dividing by the standard deviation of the distribution. Looking at our test set, you can see the effect below:
+
+```{r}
+test %>%
+  rename(`Standardised BMAT Mark` = Score, `Raw BMAT Mark`= BMAT_all) %>%
+  gather(contains("Mark"), key = "Measure", value = "value") %>%
+  ggplot(aes(x = value, fill = Measure)) +
+  geom_density() +
+  stat_function(fun = dnorm, colour = "red") +
+  facet_grid(rows = vars(Measure), scales = "free_x") +
+  xlab("Score") +
+  scale_fill_brewer(type = "qual") +
+  ggtitle("Shifting BMAT Score", subtitle = "We can now reference a Standard Normal Distribution")
+```
+
+Again, the reasons are not too important [^2], but this will help us when interpreting the model we get given: we can say things like "1 SD increase in your BAMT score will increase your chances of getting in by X amount", and we can do this because we have now made sure that the underlying distribution has a standard deviation of 1 unit. It will also let us take our model and use on datasets with different means and standard deviations by first normalising them, making our model more generalisable. 
+
+We will use the normalised score (which goes between -3 and 3 roughly) when modelling, and we will convert back to the normal BMAT score when assessing the results. Don't be alarmed when you see it: a normalised score for -3 means getting a really low score on the BMAT, 0 means getting an average score, and 3 means getting a very high score.
+
+# Picking a general model
+
+The purpose of our analysis is to get model which for a given BMAT score, will give us a probabilty of being accepted. Below, are two potential options:
+
+```{r Striaght-line vs Logistic Model}
+#tibble(x = seq(2, 18, 0.01), linear = (x - 2)/16, logistic = 1 / (1 + exp(-(-10 + x)))) %>%
+tibble(x = seq(-3, 3, 0.01), `straight line` = (x + 3)/6, logistic = 1 / (1 + exp(-(2*x)))) %>%
+  gather(`straight line`, logistic, key = "form", value = "y") %>%
   ggplot(aes(x, y, colour = form)) +
   geom_line() +
+  scale_colour_brewer(type = "qual") +
   xlab("Score") + ylab("Probabilty of Getting Offer")
 ```
 
+The striaght line model (in green) is probably quite familiar and natural. As we increase our mark on the BMAT, we increase out chances of getting in. So why do we have this "logistic" line as well? There are deep mathematical/philosophical reasons[^3], but more usefully, there are two big practical benefits to the logistic model:
+
+1. The logistic model is alot more flexible than the linear model. You can see that if we got someone who got a really really high BMAT score, they can end up with a probabilty of getting in greater than 1! That's (literally) not possible, and the same on the low end. The logistic model *never* goes greater than 1 or less than 0, so we will never get a nonsense result out. 
+
+2. We intuitively know that a candidate who does really well and **really** really well are going to have a similar probabilty of getting in: the number of candidates between someone who gets two 8s and someone who gets two 9s isn't very much. But the difference between someone who gets two 6s and two 7s **is** a lot, and there are alot more candidates between them. On the bottom end, someone who gets 2 3s is not going have that much better of a chance of getting in than someone who gets 2 2s, even though for all of these pairs, the difference in marks is 2. So it makes sense that at the ends we have a flat line (the chance of getting in doesn't change very much) whilst for the candidates in the middle, a small increase in marks will really improve their chance of getting in. 
+
+The only downside is that the logistic model is a bit nastier-looking. Let's look at the linear model first though: here we are going to use $p$ to represent the probabilty of getting an offer, and $Score$ to represent the normalised BMAT score - which you'll remember is roughly from -3 to 3:
+
+$$ p = a + b* Score$$
+
+So this is our friendly striaght line equation from GCSE: $a$ is the intercept, and $b$ is the slope of our straight line. Because we've normalise our BMAT data, we can even be more specific: we can say $a$ is the probabilty of an offer for someone with an average BMAT score (i.e. a normalised BMAT score of 0), whilst $b$ is the increase in probabilty of getting in by increasing your BMAT score by one standard deviation. We'll talk a bit more about what that means when we get to our results, in case that's too tricky to take in right now. 
+
+Now let's take a look at the logistic model: brace youself:
+
+$$ p = \frac{1}{1 + e^{-(a + b * Score)}}$$
+
+Wew. So whilst we got our improved model benefits, we have subbed that in for a fairly nightmarish equation!
+
+The good news that whilst the logistic model looks tricky for us, the computer can handle it without any issues, and we're going to be using the computer to do our model fitting. $a$ and $b$ have similar meanings to the linear regression equation, but they are subtly different because we no longer have a striaght line. The best way to think about the parameters is to see how the affect the shape of the line, as shown below:
+
+```{r}
+cross_df(list(x = seq(-3, 3, 0.1), a = seq(-2, 2), b = seq(5))) %>%
+  mutate(y = a + b * x, p = 1 / (1 + exp(-y))) %>%
+  ggplot(aes(x, p)) +
+  geom_vline(xintercept = 0, lty = 2, colour = "red") +
+  geom_line() +
+  facet_grid(rows = vars(a), cols = vars(b)) +
+  xlab("Score") +
+  ggtitle("Different parameter effects", subtitle = "Rows = a, Columns = b")
+```
+
+The $a$ parameter moves the line left and right: a high $a$ means the student with an average BMAT score (shown as a normalised score of 0 and the red dashed line) will have a high probabilty of getting in - look where the red line crosses the logistic curve higher and higher as $a$ gets bigger towards the bottom. The $b$ value indicates the steepness of the line: high $b$ values on the right means a small change of marks in the middle increases your chance of getting in by alot, whilst those with already high or low scores will see very little change.
+
+TODO: Add in section on varying intercepts, or remove influence of college in above chart. 
+
+# Prior predictive modelling for parameters
+
+So now we have two potential models: a straight line model and a logistic model. Now back at GCSE/A-Level, we would plot out our data and try to draw a straight line through it, and estimate the slope and intercept. Whilst this is possible directly for our straight line model directly, we could transform our normalised BMAT scores using our logistic equation and to a similar routine of plotting out the points and drawing a striaght line if we were so inclined. This kind of approach is called **regression**, and our outputs will be estimates for $a$ and $b$. These esimates will let us draw the line and allow us to predict likelihood of entry into Cambridge for anyone we can get BMAT data off. 
+This is approximately what our computer behind the scences will be doing if we were using a **frequentist** approach - which is often the default - and the functions `lm()` and `glm()` from R. 
+
+Because we are using a Bayesian approach though, there's one thing we need to do in addition to the above steps: we need to tell the computer what we roughly think our paramters $a$ and $b$ will be, and then let the computer use those suggestions to develop estimates for our parameters.
+
+There are again mathetmatical/philosophical reasons for preferring this approach, but there (again) two main practical reasons:
+
+1. The computer will have much less uncertainty when tell us the estimates - if you've have some stats experience, that would be approximately the same as saying the confidence intervals will be smaller. This is because we are going to tell the computer what are parameters are possible, whilst a frequentist analysis doesn't, so the computer can ignore the impossible or unlikely values for the parameter and only focus on the ones we told it are possible. 
+
+2. We are going to get to throw away the clunky language which comes with frequentist statistics, and use much clearer language: so instead of calculating a X% confidence interval, which is defined as *"the interval in which if the experiment was repeated 100 times, the parameter would lie within X times"*, we can caculate an X% compatibility interval, defined as *"the interval we are X% sure the parameter's true value lies"*, which is far more intuitive (note that these are not the same thing!). At the very least, you can stop annoying statisticians from griping about how you describe your results, which honestly counts as a win in my book. 
+
+So to do our predictive modelling, we need to draw out what the results from our estimates for $a$ and $b$ are: if we have reasonable estimates for $a$ and $b$, then the potential relationship between BMAT score and probabilty of getting an offer will be reasonable as well.
+
+Let's start with the linear model: I've put the 
+
 ```{r Prior Predictive Modelling for Linear Regression}
 
-cross_df(list(x = seq(-3, 3, 0.1), a = rnorm(20, 0.5, 0.2), b = exp(rnorm(20, log(1/6), 0.2)))) %>%
+cross_df(list(x = seq(-3, 3, 0.1), a = rnorm(20, 0.5, 0.07), b = exp(rnorm(20, log(1/6), 0.5)))) %>%
   mutate(y = a + b * x) %>%
   unite(col = "ab", a, b) %>%
   ggplot(aes(x, y, group = ab)) +
