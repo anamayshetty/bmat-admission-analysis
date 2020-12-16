@@ -175,7 +175,7 @@ We will use the normalised score (which goes between -3 and 3 roughly) when mode
 
 # Picking a general model
 
-The purpose of our analysis is to get model which for a given BMAT score, will give us a probabilty of being accepted. Below, are two potential options:
+The purpose of our analysis is to get model which for a given BMAT score, will give us a probabilty of being accepted. We will be using the logistic function. Below, are two potential options:
 
 ```{r Striaght-line vs Logistic Model}
 #tibble(x = seq(2, 18, 0.01), linear = (x - 2)/16, logistic = 1 / (1 + exp(-(-10 + x)))) %>%
@@ -408,14 +408,25 @@ bmat_results <- bind_cols(
     )
 )
 
+test_binned <- test %>%
+  mutate(bins = ntile(BMAT_all, n = 5)) %>%
+  group_by(bins, College_ID) %>%
+  summarise(BMAT_all_mean = mean(BMAT_all), fraction_offer = mean(Offer), n = n())
+
+train_binned <- train %>%
+  mutate(bins = ntile(BMAT_all, n = 5)) %>%
+  group_by(bins, College_ID) %>%
+  summarise(BMAT_all_mean = mean(BMAT_all), fraction_offer = mean(Offer), n = n())
+
 ```
 
 ```{r}
 bmat_results %>%
   mutate(BMAT_all = Score * sd(test$BMAT_all) + mean(test$BMAT_all)) %>%
   gather(-College_ID, -Score, -BMAT_all, key = "model", value = "p") %>%
-  ggplot(aes(BMAT_all, p, colour = model)) +
-  geom_line() +
+  ggplot() +
+  geom_point(data = train_binned, aes(x = BMAT_all_mean, y = fraction_offer, size = n)) +
+  geom_line(aes(BMAT_all, p, colour = model)) +
   scale_colour_brewer(type = "qual") +
   facet_wrap(~College_ID)
 ```
@@ -439,24 +450,17 @@ bind_cols(
 
 ```
 
+```{r Investigating outliers}
 
-```{r}
 
-map_dfc(
-    list(
-      intercept_no_slope = model_v1, 
-      constant_intercept_slope = model_v2, 
-      varying_intercept_slope = model_v3, 
-      adaptive_intercept_slope = model_v4
-      ), 
-    ~apply(link(., data=cross_df(list(College_ID = seq(28), Score = seq(-3, 3, 0.1)))), MARGIN = 2, FUN = mean)
-    ) %>%
-  bind_cols(cross_df(list(College_ID = seq(28), Score = seq(-3, 3, 0.1)))) %>%
+bmat_results %>%
   mutate(BMAT_all = Score * sd(test$BMAT_all) + mean(test$BMAT_all)) %>%
-  gather(contains("slope"), key = "model", value = "p") %>%
-  ggplot(aes(BMAT_all, p, colour = model)) +
-  geom_line() +
-  facet_wrap(~College_ID)
+  gather(-College_ID, -Score, -BMAT_all, key = "model", value = "p") %>%
+  filter(College_ID == 18) %>%
+  ggplot() +
+  geom_point(data = train_binned, aes(x = BMAT_all_mean, y = fraction_offer)) +
+  geom_line(aes(BMAT_all, p, colour = model)) +
+  scale_colour_brewer(type = "qual")
 
 ```
 

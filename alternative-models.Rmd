@@ -1,0 +1,29 @@
+---
+title: "Alternative Models"
+author: "Anamay Shetty"
+date: "16/12/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(rethinking)
+theme_set(theme_minimal())
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+```
+
+This files dicusses alternative models for our dataset
+
+
+1. Straight-line model
+
+2. Varying parameters
+
+3. Adaptive priors
+
+4. Latent variable model
+
+```{r}
+train <- read_tsv("data/train.txt")
+```
+
