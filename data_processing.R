@@ -13,7 +13,8 @@ df <- read_delim("data/bmat_results_tl.txt", delim = " ", col_names = c("Domicil
   #mutate(offer_fraction = sum(Offer)/n()) %>%
   #ungroup %>%
   select(-Domicile, -Course) %>%
-  filter(College != "Hughes Hall") 
+  filter(College != "Hughes Hall")  %>%
+  mutate(Candidate_ID = seq(nrow(.)))
 
 df %>%
   write_tsv("data/bmat_df.txt")
@@ -23,7 +24,7 @@ df <- df %>%
   mutate(Score = (BMAT_all - mean(BMAT_all)) / sd(BMAT_all)) %>%
   mutate(College_ID = as.numeric(as.factor(College))) %>%
   ungroup() %>%
-  select(-Candidate, -College, -dataset)
+  select(-dataset)
 
 filter(df, Year %in% c(2017, 2018)) %>%
   write_tsv("data/train.txt")
