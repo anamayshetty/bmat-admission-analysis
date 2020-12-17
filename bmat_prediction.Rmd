@@ -131,7 +131,7 @@ df <- df %>%
   mutate(Score = (BMAT_all - mean(BMAT_all)) / sd(BMAT_all)) %>%
   mutate(College_ID = as.numeric(as.factor(College))) %>%
   ungroup() %>%
-  select(-Candidate, -College, -dataset)
+  select(-dataset)
 
 train <- filter(df, Year %in% c(2017, 2018))
 test <- filter(df, Year == 2019)
@@ -173,37 +173,17 @@ Again, the reasons are not too important [^2], but this will help us when interp
 
 We will use the normalised score (which goes between -3 and 3 roughly) when modelling, and we will convert back to the normal BMAT score when assessing the results. Don't be alarmed when you see it: a normalised score for -3 means getting a really low score on the BMAT, 0 means getting an average score, and 3 means getting a very high score.
 
-# Picking a general model
+# Prior predictive modelling
 
-The purpose of our analysis is to get model which for a given BMAT score, will give us a probabilty of being accepted. We will be using the logistic function. Below, are two potential options:
+The purpose of our analysis is to get model which for a given BMAT score, will give us a probabilty of being accepted. We will be using the logistic function. 
 
-```{r Striaght-line vs Logistic Model}
-#tibble(x = seq(2, 18, 0.01), linear = (x - 2)/16, logistic = 1 / (1 + exp(-(-10 + x)))) %>%
-tibble(x = seq(-3, 3, 0.01), `straight line` = (x + 3)/6, logistic = 1 / (1 + exp(-(2*x)))) %>%
-  gather(`straight line`, logistic, key = "form", value = "y") %>%
-  ggplot(aes(x, y, colour = form)) +
-  geom_line() +
-  scale_colour_brewer(type = "qual") +
-  xlab("Score") + ylab("Probabilty of Getting Offer")
-```
-
-The striaght line model (in green) is probably quite familiar and natural. As we increase our mark on the BMAT, we increase out chances of getting in. So why do we have this "logistic" line as well? There are deep mathematical/philosophical reasons[^3], but more usefully, there are two big practical benefits to the logistic model:
-
-1. The logistic model is alot more flexible than the linear model. You can see that if we got someone who got a really really high BMAT score, they can end up with a probabilty of getting in greater than 1! That's (literally) not possible, and the same on the low end. The logistic model *never* goes greater than 1 or less than 0, so we will never get a nonsense result out. 
-
-2. We intuitively know that a candidate who does really well and **really** really well are going to have a similar probabilty of getting in: the number of candidates between someone who gets two 8s and someone who gets two 9s isn't very much. But the difference between someone who gets two 6s and two 7s **is** a lot, and there are alot more candidates between them. On the bottom end, someone who gets 2 3s is not going have that much better of a chance of getting in than someone who gets 2 2s, even though for all of these pairs, the difference in marks is 2. So it makes sense that at the ends we have a flat line (the chance of getting in doesn't change very much) whilst for the candidates in the middle, a small increase in marks will really improve their chance of getting in. 
-
-The only downside is that the logistic model is a bit nastier-looking. Let's look at the linear model first though: here we are going to use $p$ to represent the probabilty of getting an offer, and $Score$ to represent the normalised BMAT score - which you'll remember is roughly from -3 to 3:
-
-$$ p = a + b* Score$$
-
-So this is our friendly striaght line equation from GCSE: $a$ is the intercept, and $b$ is the slope of our straight line. Because we've normalise our BMAT data, we can even be more specific: we can say $a$ is the probabilty of an offer for someone with an average BMAT score (i.e. a normalised BMAT score of 0), whilst $b$ is the increase in probabilty of getting in by increasing your BMAT score by one standard deviation. We'll talk a bit more about what that means when we get to our results, in case that's too tricky to take in right now. 
-
-Now let's take a look at the logistic model: brace youself:
+Let's take a look at the logistic model: brace youself:
 
 $$ p = \frac{1}{1 + e^{-(a + b * Score)}}$$
 
 Wew. So whilst we got our improved model benefits, we have subbed that in for a fairly nightmarish equation!
+
+For this model, we need to estimate two parameters - $a$ and $b$
 
 The good news that whilst the logistic model looks tricky for us, the computer can handle it without any issues, and we're going to be using the computer to do our model fitting. $a$ and $b$ have similar meanings to the linear regression equation, but they are subtly different because we no longer have a striaght line. The best way to think about the parameters is to see how the affect the shape of the line, as shown below:
 
@@ -260,34 +240,6 @@ So for our striaght-line model, we need to determine the $a$ and $b$ parameter s
 
 Using these three facts, I can start saying things that my distribution of $b$ needs to be positive and $a$ needs to give us an intercept where the mean BMAT score i.e. a BMAT normalised score of 0 goes through roughly 20%. We also know that we should be staying between 0 and 1 on the y-axis for nearly all of our possible normalised BMAT scores. 
 
-It will look like something below. 
-
-```{r Prior Predictive Modelling for Linear Regression}
-
-cross_df(list(x = seq(-3, 3, 0.1), a = rnorm(30, 0.4, 0.1), b = exp(rnorm(30, log(1/6), 0.5)))) %>%
-  mutate(y = a + b * x) %>%
-  unite(col = "ab", a, b) %>%
-  ggplot(aes(x, y, group = ab)) +
-  geom_line(alpha = .1) +
-  theme_minimal() +
-  xlab("Normalised BMAT Score") + ylab("Probabilty of Offer")
-
-
-```
-
-As we can see, before we see any data, we're pretty unsure about what our best-fit line is going to look like. We are sure it's sloping upwards, and pretty sure the average Cambridge applicant is more likely to be rejected than accepted, but beyond that we are being very vague. Some of our estimates even go beyond 0 and 1!
-
-```{r Displaying distribution of straight-line parameters}
-tibble(a = rnorm(1e5, 0.4, 0.1), b = exp(rnorm(1e5, log(1/6), 0.5))) %>%
-  gather(a, b, key = "key", value = "value") %>%
-  ggplot(aes(value, fill = key)) +
-  geom_density() +
-  scale_fill_brewer(type = "qual") +
-  guides(fill = FALSE) +
-  facet_wrap(~key) +
-  ggtitle("Prior distribution of straight-line model parameters")
-```
-
 
 ```{r Prior Predictive Modelling for Logistic Regression}
 
@@ -320,8 +272,11 @@ Now let's run some models!
 ```{r Generating Fixed-effects models, echo=FALSE}
 
 
-bmat_models <- vector("list", 6)
+bmat_models <- vector("list", 5)
 names(bmat_models) <- list("linear", "fixed_intercept_only", "fixed_intercept_and_fixed_slope", "varying_intercept_and_fixed_slope", "varying_intercept_and_varying_slope", "adaptive_intercepts_and_adaptive_slopes")
+
+names(bmat_models) <- list("linear", "fixed_intercept_only", "fixed_intercept_and_fixed_slope", "varying_intercept_and_fixed_slope", "varying_intercept_and_varying_slope")
+
 
 # straight-line model
 bmat_models[[1]] <- quap(
@@ -381,17 +336,17 @@ bmat_models[[5]] <- quap(
 ```{r Generating Mixed-effects models, echo=FALSE}
 
 # Give each college unique slope and intercept with adaptive prior behind it
-bmat_models[[6]] <- ulam(
-  alist(
-    Offer ~ dbinom(1, p),
-    logit(p) <- a[College_ID] + b[College_ID] * Score,
-    a[College_ID] ~ dnorm(a_bar, 1.5),
-    a_bar ~ dnorm(1.5, 0.5),
-    b[College_ID] ~ dlnorm(b_bar, 0.25),
-    b_bar ~ dnorm(1, 0.2)
-  ),
-  data = train, chains = 4, log_lik=TRUE
-)
+# bmat_models[[6]] <- ulam(
+#   alist(
+#     Offer ~ dbinom(1, p),
+#     logit(p) <- a[College_ID] + b[College_ID] * Score,
+#     a[College_ID] ~ dnorm(a_bar, 1.5),
+#     a_bar ~ dnorm(1.5, 0.5),
+#     b[College_ID] ~ dlnorm(b_bar, 0.25),
+#     b_bar ~ dnorm(1, 0.2)
+#   ),
+#   data = train, chains = 4, log_lik=TRUE
+# )
 
 ```
 
@@ -464,4 +419,19 @@ bmat_results %>%
 
 ```
 
+```{r Who are we not predicting properly?}
+
+bmat_test_results <- bind_cols(
+  test, 
+  map_dfc(
+    bmat_models, 
+    ~apply(link(., data=test), MARGIN = 2, FUN = mean)
+    )
+)
+
+bmat_test_results %>%
+  mutate(difference = Offer - fixed_intercept_and_fixed_slope) %>%
+  arrange(desc(abs(difference)))
+
+```
 
