@@ -175,17 +175,26 @@ We will use the normalised score (which goes between -3 and 3 roughly) when mode
 
 # Prior predictive modelling
 
-The purpose of our analysis is to get model which for a given BMAT score, will give us a probabilty of being accepted. We will be using the logistic function. 
+The purpose of our analysis is to get model which for a given BMAT score, will give us a probabilty of being accepted. We will be using the logistic function to relate the normalised BMAT score to probabilty of getting an offer.  
 
 Let's take a look at the logistic model: brace youself:
 
 $$ p = \frac{1}{1 + e^{-(a + b * Score)}}$$
 
-Wew. So whilst we got our improved model benefits, we have subbed that in for a fairly nightmarish equation!
+Wow - this equation looks pretty scary, but let's break this down by looking at the bit in brackets first:
 
-For this model, we need to estimate two parameters - $a$ and $b$
 
-The good news that whilst the logistic model looks tricky for us, the computer can handle it without any issues, and we're going to be using the computer to do our model fitting. $a$ and $b$ have similar meanings to the linear regression equation, but they are subtly different because we no longer have a striaght line. The best way to think about the parameters is to see how the affect the shape of the line, as shown below:
+$$ y = a + b * Score$$
+You'll recognise that the second equation is just the equation of a straight line: $a$ is the intercept (where does the striaght line cross the y-axis) and $b$ is the slope (how much does y increase with a one unit increase in x, which here is the normalised BMAT score).
+
+Instead of just plotting $y$ on the y-axis and $Score$ on the x-axis, we then use the logistic transformation:
+
+
+$$ p = \frac{1}{1 + e^{-y}}$$
+
+And then we plot p on the y-axis. We do this because we are trying to predict the probabilty of someone getting an offer, and probabilties can only go between 0 and 1. A straight line keeps going off to inifinity, so we would end up with some BMAT scores predicting someone having probabilties greater than 1 and less than 0 of getting an offer, which isn't possible![^1].
+
+Once we have our model, we now just need to estimate two parameters: $a$ and $b$. Once we have that, we will be able to predict offer probabilities from BMAT scores! We need to pick our parameters because changing them will lead to very different lines and predictions:
 
 ```{r}
 cross_df(list(x = seq(-3, 3, 0.1), a = seq(-2, 2), b = seq(5))) %>%
@@ -200,20 +209,12 @@ cross_df(list(x = seq(-3, 3, 0.1), a = seq(-2, 2), b = seq(5))) %>%
 
 The $a$ parameter moves the line left and right: a high $a$ means the student with an average BMAT score (shown as a normalised score of 0 and the red dashed line) will have a high probabilty of getting in - look where the red line crosses the logistic curve higher and higher as $a$ gets bigger towards the bottom. The $b$ value indicates the steepness of the line: high $b$ values on the right means a small change of marks in the middle increases your chance of getting in by alot, whilst those with already high or low scores will see very little change.
 
-TODO: Add in section on varying intercepts, or remove influence of college in above chart. 
-
 # Prior predictive modelling for parameters
 
-So now we have two potential models: a straight line model and a logistic model. Now back at GCSE/A-Level, we would plot out our data and try to draw a straight line through it, and estimate the slope and intercept. Whilst this is possible directly for our straight line model directly, we could transform our normalised BMAT scores using our logistic equation and to a similar routine of plotting out the points and drawing a striaght line if we were so inclined. This kind of approach is called **regression**, and our outputs will be estimates for $a$ and $b$. These esimates will let us draw the line and allow us to predict likelihood of entry into Cambridge for anyone we can get BMAT data off. 
+So now we our model and the parameters we need to estimate. Now back at GCSE/A-Level, we would plot out our data and try to draw a straight line through it, and estimate the slope and intercept. We could transform our normalised BMAT scores using our logistic equation and to a similar routine of plotting out the points and drawing a striaght line if we were so inclined. This kind of approach is called **regression**, and our outputs will be estimates for $a$ and $b$. These esimates will let us draw the line and allow us to predict likelihood of entry into Cambridge for anyone we can get BMAT data off. 
 This is approximately what our computer behind the scences will be doing if we were using a **frequentist** approach - which is often the default - and the functions `lm()` and `glm()` from R. 
 
 Because we are using a Bayesian approach though, there's one thing we need to do in addition to the above steps: we need to tell the computer what we roughly think our paramters $a$ and $b$ will be, and then let the computer use those suggestions to develop estimates for our parameters.
-
-There are again mathetmatical/philosophical reasons for preferring this approach, but there (again) two main practical reasons:
-
-1. The computer will have much less uncertainty when tell us the estimates - if you've have some stats experience, that would be approximately the same as saying the confidence intervals will be smaller. This is because we are going to tell the computer what are parameters are possible, whilst a frequentist analysis doesn't, so the computer can ignore the impossible or unlikely values for the parameter and only focus on the ones we told it are possible. 
-
-2. We are going to get to throw away the clunky language which comes with frequentist statistics, and use much clearer language: so instead of calculating a X% confidence interval, which is defined as *"the interval in which if the experiment was repeated 100 times, the parameter would lie within X times"*, we can caculate an X% compatibility interval, defined as *"the interval we are X% sure the parameter's true value lies"*, which is far more intuitive (note that these are not the same thing!). At the very least, you can stop annoying statisticians from griping about how you describe your results, which honestly counts as a win in my book. 
 
 So to do our predictive modelling, we need to draw out what the results from our estimates for $a$ and $b$ are: if we have reasonable estimates for $a$ and $b$, then the potential relationship between BMAT score and probabilty of getting an offer will be reasonable as well.
 
@@ -230,7 +231,7 @@ cross_df(list(x = seq(-3, 3, 0.1), a = rnorm(30, 0.5, 0.07), b = exp(rnorm(30, l
 
 ```
 
-So for our striaght-line model, we need to determine the $a$ and $b$ parameter should roughly be. We know the following things about what we want this line to look like:
+So for our model, we need to determine the $a$ and $b$ parameter should roughly be. We know the following things about what we want this line to look like:
 
 1. The line should be sloping upwards, from bottom-left to top-right - there is no way that students with higher BMAT scores are less likely to get in!
 
@@ -264,7 +265,7 @@ tibble(a = rnorm(1e5, -1, 1.5), b = exp(rnorm(1e5, 1, 0.25))) %>%
   scale_fill_brewer(type = "qual") +
   guides(fill = FALSE) +
   facet_wrap(~key) +
-  ggtitle("Prior distribution of straight-line model parameters")
+  ggtitle("Prior distribution of model parameters")
 ```
 
 Now let's run some models!
@@ -272,34 +273,13 @@ Now let's run some models!
 ```{r Generating Fixed-effects models, echo=FALSE}
 
 
-bmat_models <- vector("list", 5)
-names(bmat_models) <- list("linear", "fixed_intercept_only", "fixed_intercept_and_fixed_slope", "varying_intercept_and_fixed_slope", "varying_intercept_and_varying_slope", "adaptive_intercepts_and_adaptive_slopes")
+bmat_models <- vector("list", 2)
+# names(bmat_models) <- list("linear", "fixed_intercept_only", "fixed_intercept_and_fixed_slope", "varying_intercept_and_fixed_slope", "varying_intercept_and_varying_slope", "adaptive_intercepts_and_adaptive_slopes")
 
-names(bmat_models) <- list("linear", "fixed_intercept_only", "fixed_intercept_and_fixed_slope", "varying_intercept_and_fixed_slope", "varying_intercept_and_varying_slope")
-
-
-# straight-line model
-bmat_models[[1]] <- quap(
-  alist(
-    Offer <- a + b * Score,
-    a ~ dnorm(0.4, 0.1),
-    b ~ dlnorm(-1.8, 0.5)
-  ),
-  data = train
-)
-
-# Intercept only
-bmat_models[[2]] <- quap(
-  alist(
-    Offer ~ dbinom(1, p),
-    logit(p) <- a,
-    a ~ dnorm(-1, 1.5)
-  ),
-  data = train
-)
+names(bmat_models) <- list("fixed_effects", "varying effects")
 
 # Normal fixed effects
-bmat_models[[3]] <- quap(
+bmat_models[[1]] <- quap(
   alist(
     Offer ~ dbinom(1, p),
     logit(p) <- a + b * Score,
@@ -309,19 +289,9 @@ bmat_models[[3]] <- quap(
   data = train
 )
 
-# Give each college unique intercept
-bmat_models[[4]] <- quap(
-  alist(
-    Offer ~ dbinom(1, p),
-    logit(p) <- a[College_ID] + b * Score,
-    a[College_ID] ~ dnorm(-1, 1.5),
-    b ~ dlnorm(1, 0.25)
-  ),
-  data = train
-)
 
-# Give each college unique slope and intercept
-bmat_models[[5]] <- quap(
+
+bmat_models[[2]] <- quap(
   alist(
     Offer ~ dbinom(1, p),
     logit(p) <- a[College_ID] + b[College_ID] * Score,
@@ -333,29 +303,136 @@ bmat_models[[5]] <- quap(
 
 ```
 
-```{r Generating Mixed-effects models, echo=FALSE}
+So now we've fitted our model, let's see how our parameter estimates have changed:
 
-# Give each college unique slope and intercept with adaptive prior behind it
-# bmat_models[[6]] <- ulam(
-#   alist(
-#     Offer ~ dbinom(1, p),
-#     logit(p) <- a[College_ID] + b[College_ID] * Score,
-#     a[College_ID] ~ dnorm(a_bar, 1.5),
-#     a_bar ~ dnorm(1.5, 0.5),
-#     b[College_ID] ~ dlnorm(b_bar, 0.25),
-#     b_bar ~ dnorm(1, 0.2)
-#   ),
-#   data = train, chains = 4, log_lik=TRUE
-# )
+```{r}
+extract.samples(bmat_models[[1]]) %>%
+  gather(a, b, key = "key", value = "value") %>%
+  ggplot(aes(value, fill = key)) +
+  geom_density() +
+  scale_fill_brewer(type = "qual") +
+  guides(fill = FALSE) +
+  facet_wrap(~key) +
+  ggtitle("Posterior distribution of model parameters")
+  
+```
 
+So we can now see that compared to before, the distributions are much narrower. This means we are much more confidenent in what the correct values of the parameters are. Let's see what our curve looks like:
+
+```{r Binned test results}
+test_binned <- test %>%
+  #group_by(College) %>%
+  mutate(bins = ntile(BMAT_all, n = 5)) %>%
+  group_by(bins, College) %>%
+  summarise(BMAT_all_mean = mean(BMAT_all), fraction_offer = mean(Offer), n = n())
+
+train_binned <- train %>%
+  #group_by(College) %>%
+  mutate(bins = ntile(BMAT_all, n = 7)) %>%
+  group_by(bins, College) %>%
+  summarise(BMAT_all_mean = mean(BMAT_all), fraction_offer = mean(Offer), n = n())
 ```
 
 ```{r}
+cross_df(list(x = seq(-3, 3, 0.1), a = extract.samples(bmat_models[[1]], n = 30)$a, b = extract.samples(bmat_models[[1]], n = 30)$b)) %>%
+  mutate(y = a + b * x, p = 1 / (1 + exp(-y))) %>%
+  mutate(BMAT_all = x * sd(train$BMAT_all) + mean(train$BMAT_all)) %>%
+  unite(col = "ab", a, b) %>%
+  group_by(BMAT_all) %>%
+  summarise_at(c("p"), list(
+    lower_89 = ~quantile(., 0.055),
+    upper_89 = ~quantile(., 0.945),
+    lower_67 = ~quantile(., 0.165),
+    upper_67 = ~quantile(., 0.835),
+    lower_97 = ~quantile(., 0.015),
+    upper_97 = ~quantile(., 0.985)
+    )) %>%
+  ggplot() +
+  geom_ribbon(aes(x = BMAT_all, ymin = lower_97, ymax = upper_97), alpha = 0.3, fill = "blue") +
+  geom_ribbon(aes(x = BMAT_all, ymin = lower_89, ymax = upper_89), alpha = 0.3, fill = "blue") +
+  geom_ribbon(aes(x = BMAT_all, ymin = lower_67, ymax = upper_67), alpha = 0.3, fill = "blue") +
+  xlab("Raw BMAT Score") + ylab("Probabilty of Offer") +
+  ggtitle("Estimated relationship between BMAT Score and Probabilty of Offer", subtitle = "67%, 89% and 97% prediction intervals shown, from darkest to lightest")
+  
+```
 
-crossed_test_df <- cross_df(list(College_ID = seq(28), Score = seq(-3, 3, 0.1)))
+
+```{r Posterior Predictive Modelling for Logistic Regression}
+
+cross_df(list(x = seq(-3, 3, 0.1), a = extract.samples(bmat_models[[1]], n = 30)$a, b = extract.samples(bmat_models[[1]], n = 30)$b)) %>%
+  mutate(y = a + b * x, p = 1 / (1 + exp(-y))) %>%
+  mutate(BMAT_all = x * sd(train$BMAT_all) + mean(train$BMAT_all)) %>%
+  unite(col = "ab", a, b) %>%
+  ggplot(aes(BMAT_all, p, group = ab)) +
+  geom_line(alpha = .05, colour = "blue") +
+  theme_minimal() +
+  xlab("Raw BMAT Score") + ylab("Probabilty of Offer") +
+  ggtitle("Estimated relationship between BMAT Score and Probabilty of Offer")
 
 
-bmat_results <- bind_cols(
+```
+
+But not just that, we want to know how good our predictions are! We can see how our prediction does on those from 2019, which we have not used to train our model:
+
+```{r}
+bmat_test_results <- bind_cols(
+  test, 
+  map_dfc(
+    bmat_models, 
+    ~apply(link(., data=test), MARGIN = 2, FUN = mean)
+    )
+) %>%
+  mutate(pred_Offer = fixed_effects > 0.5)
+
+table(bmat_test_results$Offer, bmat_test_results$pred_Offer)
+
+```
+
+We can also visualise this as an ROC curve:
+
+```{r ROC Calculations}
+
+create_roc_df <- function(predictions, truth) {
+  
+  cutoff <- seq(0, 1, 0.001)
+  
+  predictions_matrix <- sapply(cutoff, function(x) ifelse(predictions - x > 0, TRUE, FALSE))
+  
+  true_positives <- apply(predictions_matrix & truth, 2, sum)
+  
+  false_positives <- apply(predictions_matrix & !truth, 2, sum) 
+  
+  true_negatives <- apply(!predictions_matrix & !truth, 2, sum)
+  
+  false_negatives <- apply(!predictions_matrix & truth, 2, sum)
+  
+  
+  
+  tibble(
+    cutoff = cutoff,
+    TPR = true_positives / (true_positives + false_negatives),
+    FPR = false_positives / (false_positives + true_negatives)
+  )
+}
+
+create_roc_df(bmat_test_results$fixed_effects, bmat_test_results$Offer) %>%
+  ggplot(aes(FPR, TPR)) +
+  geom_line() + geom_point() +
+  geom_abline(lty = 2, colour = "red")
+
+
+```
+
+
+We also can fit this model so each college has its own line, each drawn from the above distribution:
+
+```{r}
+
+crossed_test_df <- cross_df(list(College_ID = seq(28), Score = seq(-3, 3, 0.1))) %>%
+  left_join(distinct(df, College, College_ID), by = "College_ID")
+
+
+predicted_bmat_results <- bind_cols(
   crossed_test_df, 
   map_dfc(
     bmat_models, 
@@ -364,26 +441,28 @@ bmat_results <- bind_cols(
 )
 
 test_binned <- test %>%
+  #group_by(College) %>%
   mutate(bins = ntile(BMAT_all, n = 5)) %>%
-  group_by(bins, College_ID) %>%
+  group_by(bins, College) %>%
   summarise(BMAT_all_mean = mean(BMAT_all), fraction_offer = mean(Offer), n = n())
 
 train_binned <- train %>%
-  mutate(bins = ntile(BMAT_all, n = 5)) %>%
-  group_by(bins, College_ID) %>%
+  #group_by(College) %>%
+  mutate(bins = ntile(BMAT_all, n = 7)) %>%
+  group_by(bins, College) %>%
   summarise(BMAT_all_mean = mean(BMAT_all), fraction_offer = mean(Offer), n = n())
 
 ```
 
 ```{r}
-bmat_results %>%
+predicted_bmat_results %>%
   mutate(BMAT_all = Score * sd(test$BMAT_all) + mean(test$BMAT_all)) %>%
-  gather(-College_ID, -Score, -BMAT_all, key = "model", value = "p") %>%
+  gather(-College, -College_ID, -Score, -BMAT_all, key = "model", value = "p") %>%
   ggplot() +
   geom_point(data = train_binned, aes(x = BMAT_all_mean, y = fraction_offer, size = n)) +
   geom_line(aes(BMAT_all, p, colour = model)) +
   scale_colour_brewer(type = "qual") +
-  facet_wrap(~College_ID)
+  facet_wrap(~College)
 ```
 
 
@@ -399,9 +478,11 @@ bind_cols(
   gather(-(Year:College_ID), key = "model", value = "p") %>%
   mutate(pred_Offer = if_else(p > 0.5, TRUE, FALSE)) %>%
   mutate(prediction_truth = if_else(pred_Offer == Offer, TRUE, FALSE)) %>%
+  mutate(diff = (Offer - p)^2) %>%
+  count(model, pred_Offer, Offer)
   group_by(model) %>%
-  summarise(accuracy = mean(prediction_truth))
-  #count(model, prediction_truth)
+  #summarise(accuracy = mean(diff))
+  count(model, prediction_truth)
 
 ```
 
@@ -430,8 +511,45 @@ bmat_test_results <- bind_cols(
 )
 
 bmat_test_results %>%
-  mutate(difference = Offer - fixed_intercept_and_fixed_slope) %>%
+  mutate(difference = Offer - fixed_effects) %>%
   arrange(desc(abs(difference)))
 
+```
+
+
+
+```{r}
+(seq(0, 1, 0.1) - 0 > 0) & as.logical(c(0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1))
+```
+
+
+```{r}
+
+glm(Offer ~ Score*as.factor(College_ID), data = train, family = "binomial") %>%
+#glm(Offer ~ Score, data = train, family = "binomial") %>%
+#lme4::glmer(Offer ~ Score + (1 + Score|College_ID), data = mutate(train, College_ID = as.factor(College_ID)), family = "binomial") %>%
+  predict(newdata = crossed_test_df, type = "response") %>%
+  {mutate(.data = crossed_test_df, p = .)} %>%
+  mutate(BMAT_all = Score * sd(test$BMAT_all) + mean(test$BMAT_all)) %>%
+  ggplot() +
+  geom_point(data = train_binned, aes(x = BMAT_all_mean, y = fraction_offer, size = n)) +
+  geom_line(aes(BMAT_all, p), colour = "red") +
+  scale_colour_brewer(type = "qual") +
+  facet_wrap(~College)
+
+bmat_models
+```
+
+```{r}
+glm(Offer ~ Score*as.factor(College_ID), data = train, family = "binomial") %>%
+glm(Offer ~ Score, data = train, family = "binomial") %>%
+  predict(newdata = test, type = "response") %>%
+  {mutate(.data = test, p = .)} %>%
+  mutate(BMAT_all = Score * sd(test$BMAT_all) + mean(test$BMAT_all)) %>%
+  mutate(pred_Offer = if_else(p > 0.5, TRUE, FALSE)) %>%
+  mutate(diff = (Offer - p)^2) %>%
+  mutate(prediction_truth = if_else(pred_Offer == Offer, TRUE, FALSE)) %>%
+  #group_by(model) %>%
+  summarise(accuracy = mean(diff))
 ```
 

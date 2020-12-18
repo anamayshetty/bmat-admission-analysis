@@ -17,6 +17,31 @@ This files dicusses alternative models for our dataset
 
 1. Straight-line model
 
+```{r Striaght-line vs Logistic Model}
+#tibble(x = seq(2, 18, 0.01), linear = (x - 2)/16, logistic = 1 / (1 + exp(-(-10 + x)))) %>%
+tibble(x = seq(-3, 3, 0.01), `straight line` = (x + 3)/6, logistic = 1 / (1 + exp(-(2*x)))) %>%
+  gather(`straight line`, logistic, key = "form", value = "y") %>%
+  ggplot(aes(x, y, colour = form)) +
+  geom_line() +
+  scale_colour_brewer(type = "qual") +
+  xlab("Score") + ylab("Probabilty of Getting Offer")
+```
+
+Below, are two potential options:
+
+The striaght line model (in green) is probably quite familiar and natural. As we increase our mark on the BMAT, we increase out chances of getting in. So why do we have this "logistic" line as well? There are deep mathematical/philosophical reasons[^3], but more usefully, there are two big practical benefits to the logistic model:
+
+1. The logistic model is alot more flexible than the linear model. You can see that if we got someone who got a really really high BMAT score, they can end up with a probabilty of getting in greater than 1! That's (literally) not possible, and the same on the low end. The logistic model *never* goes greater than 1 or less than 0, so we will never get a nonsense result out. 
+
+2. We intuitively know that a candidate who does really well and **really** really well are going to have a similar probabilty of getting in: the number of candidates between someone who gets two 8s and someone who gets two 9s isn't very much. But the difference between someone who gets two 6s and two 7s **is** a lot, and there are alot more candidates between them. On the bottom end, someone who gets 2 3s is not going have that much better of a chance of getting in than someone who gets 2 2s, even though for all of these pairs, the difference in marks is 2. So it makes sense that at the ends we have a flat line (the chance of getting in doesn't change very much) whilst for the candidates in the middle, a small increase in marks will really improve their chance of getting in. 
+
+The only downside is that the logistic model is a bit nastier-looking. Let's look at the linear model first though: here we are going to use $p$ to represent the probabilty of getting an offer, and $Score$ to represent the normalised BMAT score - which you'll remember is roughly from -3 to 3:
+
+$$ p = a + b* Score$$
+
+So this is our friendly striaght line equation from GCSE: $a$ is the intercept, and $b$ is the slope of our straight line. Because we've normalise our BMAT data, we can even be more specific: we can say $a$ is the probabilty of an offer for someone with an average BMAT score (i.e. a normalised BMAT score of 0), whilst $b$ is the increase in probabilty of getting in by increasing your BMAT score by one standard deviation. We'll talk a bit more about what that means when we get to our results, in case that's too tricky to take in right now. 
+
+
 2. Varying parameters
 
 3. Adaptive priors
@@ -29,22 +54,175 @@ train <- read_tsv("data/train.txt")
 train <- train %>%
   mutate_at(c("BMAT_Section_1", "BMAT_Section_2"), ~(. - mean(.)) / sd(.))
 
+test <- read_tsv("data/test.txt")
+
+test <- test %>%
+  mutate_at(c("BMAT_Section_1", "BMAT_Section_2"), ~(. - mean(.)) / sd(.))
+
 ```
+
+```{r Prior predictive simulation}
+tibble(x = rnorm(1e3), e1 = rnorm(1e3, 0, sqrt(2)), e2 = rnorm(1e3, 0, sqrt(2))) %>%
+  mutate_all(round, 1) %>%
+  mutate(ID = seq(nrow(.))) %>%
+  mutate(
+    BMAT_S1 = x + e1,
+    BMAT_S2 = x + e2,
+    BMAT_all = BMAT_S1 + BMAT_S2,
+    p = 1/(1 + exp(-(-1.5 + 2 * x)))
+  ) %>%
+  ggplot(aes(BMAT_S1, BMAT_S2)) +
+  geom_point()
+```
+
+```{r}
+train %>%
+  ggplot(aes(BMAT_Section_1, BMAT_Section_2)) +
+  geom_point()
+
+
+```
+
 
 ```{r}
 latent_model <- ulam(
   alist(
     Offer ~ dbinom(1, p),
-    logit(p) <- a + b * Smarts[Candidate_ID],
+    logit(p) <- a + b * Smarts,
     a ~ dnorm(-1, 1.5),
     b ~ dlnorm(1, 0.25),
-    BMAT_Section_1 <- beta1[Candidate_ID] + Smarts[Candidate_ID],
-    BMAT_Section_2 <- beta2[Candidate_ID] + Smarts[Candidate_ID],
-    beta1[Candidate_ID] ~ dnorm(0, 0.5),
-    beta2[Candidate_ID] ~ dnorm(0, 0.5),
-    Smarts[Candidate_ID] ~ dnorm(0, 1)
+    BMAT_Section_1 <- beta1 + Smarts,
+    BMAT_Section_2 <- beta2 + Smarts,
+    beta1 ~ dnorm(0, sigma1),
+    beta2 ~ dnorm(0, sigma2),
+    Smarts ~ dnorm(0, 1),
+    sigma1 ~ dnorm(0.2, 0.2),
+    sigma2 ~ dnorm(0.2, 0.2)
   ),
   data = train, chains = 4, log_lik=TRUE
 )
+```
+
+```{r}
+
+train
+
+wew <- link(latent_model, data = test)
+
+str(wew)
+
+precis(latent_model, depth = 2)
+```
+
+```{r Practicing Latent Model}
+practice_df <- tibble(x = rnorm(1e3), e1 = rnorm(1e3, 0, sqrt(2)), e2 = rnorm(1e3, 0, sqrt(2))) %>%
+  mutate_all(round, 1) %>%
+  mutate(ID = seq(nrow(.))) %>%
+  mutate(
+    BMAT_S1 = x + e1,
+    BMAT_S2 = x + e2,
+    BMAT_all = BMAT_S1 + BMAT_S2,
+    p = 1/(1 + exp(-(-1.5 + 2 * x))),
+    Offer = rbinom(nrow(.), 1, p)
+  )
+
+practice_df %>%
+  mutate(bins = ntile(BMAT_all, 30)) %>%
+  group_by(bins) %>%
+  summarise(mean_bmat = mean(BMAT_all), mean_offer = mean(Offer)) %>%
+  ggplot(aes(mean_bmat, mean_offer)) +
+  geom_point()
+
+```
+
+It will look like something below. 
+
+```{r Prior Predictive Modelling for Linear Regression}
+
+cross_df(list(x = seq(-3, 3, 0.1), a = rnorm(30, 0.4, 0.1), b = exp(rnorm(30, log(1/6), 0.5)))) %>%
+  mutate(y = a + b * x) %>%
+  unite(col = "ab", a, b) %>%
+  ggplot(aes(x, y, group = ab)) +
+  geom_line(alpha = .1) +
+  theme_minimal() +
+  xlab("Normalised BMAT Score") + ylab("Probabilty of Offer")
+
+
+```
+
+As we can see, before we see any data, we're pretty unsure about what our best-fit line is going to look like. We are sure it's sloping upwards, and pretty sure the average Cambridge applicant is more likely to be rejected than accepted, but beyond that we are being very vague. Some of our estimates even go beyond 0 and 1!
+
+```{r Displaying distribution of straight-line parameters}
+tibble(a = rnorm(1e5, 0.4, 0.1), b = exp(rnorm(1e5, log(1/6), 0.5))) %>%
+  gather(a, b, key = "key", value = "value") %>%
+  ggplot(aes(value, fill = key)) +
+  geom_density() +
+  scale_fill_brewer(type = "qual") +
+  guides(fill = FALSE) +
+  facet_wrap(~key) +
+  ggtitle("Prior distribution of straight-line model parameters")
+```
+
+
+```{r}
+# Give each college unique intercept
+# bmat_models[[4]] <- quap(
+#   alist(
+#     Offer ~ dbinom(1, p),
+#     logit(p) <- a[College_ID] + b * Score,
+#     a[College_ID] ~ dnorm(-1, 1.5),
+#     b ~ dlnorm(1, 0.25)
+#   ),
+#   data = train
+# )
+
+# Give each college unique slope and intercept
+# bmat_models[[2]] <- quap(
+#   alist(
+#     Offer ~ dbinom(1, p),
+#     logit(p) <- a[College_ID] + b[College_ID] * Score,
+#     a[College_ID] ~ dnorm(-1, 1.5),
+#     b[College_ID] ~ dlnorm(1, 0.25)
+#   ),
+#   data = train
+# )
+
+
+
+# straight-line model
+# bmat_models[[1]] <- quap(
+#   alist(
+#     Offer <- a + b * Score,
+#     a ~ dnorm(0.4, 0.1),
+#     b ~ dlnorm(-1.8, 0.5)
+#   ),
+#   data = train
+# )
+# 
+# # Intercept only
+# bmat_models[[2]] <- quap(
+#   alist(
+#     Offer ~ dbinom(1, p),
+#     logit(p) <- a,
+#     a ~ dnorm(-1, 1.5)
+#   ),
+#   data = train
+# )
+
+
+# Give each college unique slope and intercept with adaptive prior behind it
+# bmat_models[[6]] <- ulam(
+#   alist(
+#     Offer ~ dbinom(1, p),
+#     logit(p) <- a[College_ID] + b[College_ID] * Score,
+#     a[College_ID] ~ dnorm(a_bar, 1.5),
+#     a_bar ~ dnorm(1.5, 0.5),
+#     b[College_ID] ~ dlnorm(b_bar, 0.25),
+#     b_bar ~ dnorm(1, 0.2)
+#   ),
+#   data = train, chains = 4, log_lik=TRUE
+# )
+
+
 ```
 
