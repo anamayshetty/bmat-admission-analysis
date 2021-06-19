@@ -49,7 +49,7 @@ The Bio-Medial Aptitude Test (BMAT) is an admissions test sat by students applyi
 
 The entire exam takes two hours, and candidates recieve a mark of 1-9 each for Section 1 and 2, and a mark from 1-5 for Section 3, along with a mark A-E for their spelling and grammar in the essay.
 
-Candidates often want to know what their chances of getting into Cambridge are based on their BMAT score, and this generates alot of data from prospective students using Freedom of Information (FoI) requests to get the data out of the university. I have found one such dataset here, which we will use. This dataset contains data from 2017 to 2019 on Home (i.e. from the UK) Medicine candidiates, with the following data:
+Candidates often want to know what their chances of getting into Cambridge are based on their BMAT score, and this generates alot of data from prospective students using Freedom of Information (FoI) requests to get the data out of the university. I have found one such dataset here by the mysterious [Tania Lake](https://www.whatdotheyknow.com/request/spread_of_bmat_by_college_for_a1#outgoing-884685) [^1], which we will use. This dataset contains data from 2017 to 2019 on Home (i.e. from the UK) Medicine candidiates, with the following data:
 
 1. What year they are applying in (2017, 2018 or 2019)
 
@@ -82,8 +82,6 @@ Let's also try plotting out some of this to get a better sense of the dataset. F
 df %>%
   select(Year:Offer) %>%
   gather(BMAT_Section_1, BMAT_Section_2, key = "Section", value = "Mark") %>%
-  #ggplot(aes(x = Offer, y = Mark, fill = Offer)) +
-  #geom_violin() +
   ggplot(aes(x = Mark, fill = Offer)) +
   geom_density(alpha = 0.5) +
   facet_grid(rows = vars(Year), cols = vars(Section)) +
@@ -135,7 +133,6 @@ df <- df %>%
 
 train <- filter(df, Year %in% c(2017, 2018))
 test <- filter(df, Year == 2019)
-
 
 ```
 
@@ -241,6 +238,8 @@ So for our model, we need to determine the $a$ and $b$ parameter should roughly 
 
 Using these three facts, I can start saying things that my distribution of $b$ needs to be positive and $a$ needs to give us an intercept where the mean BMAT score i.e. a BMAT normalised score of 0 goes through roughly 20%. We also know that we should be staying between 0 and 1 on the y-axis for nearly all of our possible normalised BMAT scores. 
 
+We can plot out what a potential series of curves would look like, based on what our assumptions of $a$ and $b$ are, and whether they would be sensible. 
+
 
 ```{r Prior Predictive Modelling for Logistic Regression}
 
@@ -268,13 +267,20 @@ tibble(a = rnorm(1e5, -1, 1.5), b = exp(rnorm(1e5, 1, 0.25))) %>%
   ggtitle("Prior distribution of model parameters")
 ```
 
+So now we have a model of how the probabilty of getting admitted to Cambridge changes as we change the BMAT Score. Let's look at we can take what we said in words above and turn into a math model. 
+
+$$ p = \frac{1}{1 + e^{-y}}$$
+
+$$ y = a + b * Score$$
+
+$$\sim$$
+
 Now let's run some models!
 
 ```{r Generating Fixed-effects models, echo=FALSE}
 
 
 bmat_models <- vector("list", 2)
-# names(bmat_models) <- list("linear", "fixed_intercept_only", "fixed_intercept_and_fixed_slope", "varying_intercept_and_fixed_slope", "varying_intercept_and_varying_slope", "adaptive_intercepts_and_adaptive_slopes")
 
 names(bmat_models) <- list("fixed_effects", "varying effects")
 
@@ -468,35 +474,35 @@ predicted_bmat_results %>%
 
 ```{r}
 
-bind_cols(
-  test, 
-  map_dfc(
-    bmat_models, 
-    ~apply(link(., data=test), MARGIN = 2, FUN = mean)
-    )
-) %>%
-  gather(-(Year:College_ID), key = "model", value = "p") %>%
-  mutate(pred_Offer = if_else(p > 0.5, TRUE, FALSE)) %>%
-  mutate(prediction_truth = if_else(pred_Offer == Offer, TRUE, FALSE)) %>%
-  mutate(diff = (Offer - p)^2) %>%
-  count(model, pred_Offer, Offer)
-  group_by(model) %>%
+# bind_cols(
+#   test, 
+#   map_dfc(
+#     bmat_models, 
+#     ~apply(link(., data=test), MARGIN = 2, FUN = mean)
+#     )
+# ) %>%
+#   gather(-(Year:College_ID), key = "model", value = "p") %>%
+#   mutate(pred_Offer = if_else(p > 0.5, TRUE, FALSE)) %>%
+#   mutate(prediction_truth = if_else(pred_Offer == Offer, TRUE, FALSE)) %>%
+#   mutate(diff = (Offer - p)^2) %>%
+#   count(model, pred_Offer, Offer)
+  #group_by(model) %>%
   #summarise(accuracy = mean(diff))
-  count(model, prediction_truth)
+  #count(model, prediction_truth)
 
 ```
 
 ```{r Investigating outliers}
 
 
-bmat_results %>%
-  mutate(BMAT_all = Score * sd(test$BMAT_all) + mean(test$BMAT_all)) %>%
-  gather(-College_ID, -Score, -BMAT_all, key = "model", value = "p") %>%
-  filter(College_ID == 18) %>%
-  ggplot() +
-  geom_point(data = train_binned, aes(x = BMAT_all_mean, y = fraction_offer)) +
-  geom_line(aes(BMAT_all, p, colour = model)) +
-  scale_colour_brewer(type = "qual")
+# bmat_results %>%
+#   mutate(BMAT_all = Score * sd(test$BMAT_all) + mean(test$BMAT_all)) %>%
+#   gather(-College_ID, -Score, -BMAT_all, key = "model", value = "p") %>%
+#   filter(College_ID == 18) %>%
+#   ggplot() +
+#   geom_point(data = train_binned, aes(x = BMAT_all_mean, y = fraction_offer)) +
+#   geom_line(aes(BMAT_all, p, colour = model)) +
+#   scale_colour_brewer(type = "qual")
 
 ```
 
@@ -516,40 +522,8 @@ bmat_test_results %>%
 
 ```
 
+[^1]: [Who are you Tania Lake, what did you see!?](https://xkcd.com/979/)
+[^2]: This is called multicollinearity, and there are specific mathematical reasons why this is the case. For an intuitive explanation, let's say I ask you whether the number of bedrooms in a house or the size of the garden increases the selling price of a house. Nearly all houses with lots of bedrooms will have big gardens - because both are a feature of large houses - so it is hard to say whether one or the other affects the house price. Similarly, because stuents with good scores on Section 1 get good scores on Section 2, it is hard to say whether Section 1 *or* Section 2 scores increase your chance of getting in: just that doing well on one section means you will do well on the other section, and you are more likely to get in. 
 
 
-```{r}
-(seq(0, 1, 0.1) - 0 > 0) & as.logical(c(0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1))
-```
-
-
-```{r}
-
-glm(Offer ~ Score*as.factor(College_ID), data = train, family = "binomial") %>%
-#glm(Offer ~ Score, data = train, family = "binomial") %>%
-#lme4::glmer(Offer ~ Score + (1 + Score|College_ID), data = mutate(train, College_ID = as.factor(College_ID)), family = "binomial") %>%
-  predict(newdata = crossed_test_df, type = "response") %>%
-  {mutate(.data = crossed_test_df, p = .)} %>%
-  mutate(BMAT_all = Score * sd(test$BMAT_all) + mean(test$BMAT_all)) %>%
-  ggplot() +
-  geom_point(data = train_binned, aes(x = BMAT_all_mean, y = fraction_offer, size = n)) +
-  geom_line(aes(BMAT_all, p), colour = "red") +
-  scale_colour_brewer(type = "qual") +
-  facet_wrap(~College)
-
-bmat_models
-```
-
-```{r}
-glm(Offer ~ Score*as.factor(College_ID), data = train, family = "binomial") %>%
-glm(Offer ~ Score, data = train, family = "binomial") %>%
-  predict(newdata = test, type = "response") %>%
-  {mutate(.data = test, p = .)} %>%
-  mutate(BMAT_all = Score * sd(test$BMAT_all) + mean(test$BMAT_all)) %>%
-  mutate(pred_Offer = if_else(p > 0.5, TRUE, FALSE)) %>%
-  mutate(diff = (Offer - p)^2) %>%
-  mutate(prediction_truth = if_else(pred_Offer == Offer, TRUE, FALSE)) %>%
-  #group_by(model) %>%
-  summarise(accuracy = mean(diff))
-```
 
