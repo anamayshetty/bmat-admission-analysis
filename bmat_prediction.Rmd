@@ -166,13 +166,13 @@ test %>%
   ggtitle("Shifting BMAT Score", subtitle = "We can now reference a Standard Normal Distribution")
 ```
 
-Again, the reasons are not too important [^2], but this will help us when interpreting the model we get given: we can say things like "1 SD increase in your BAMT score will increase your chances of getting in by X amount", and we can do this because we have now made sure that the underlying distribution has a standard deviation of 1 unit. It will also let us take our model and use on datasets with different means and standard deviations by first normalising them, making our model more generalisable. 
+This will help us when interpreting the model we get given: we can say things like "1 SD increase in your BMAT score will increase your chances of getting in by X amount", and we can do this because we have now made sure that the underlying distribution has a standard deviation of 1 unit. It will also let us take our model and use on datasets with different means and standard deviations by first normalising them, making our model more generalisable. 
 
 We will use the normalised score (which goes between -3 and 3 roughly) when modelling, and we will convert back to the normal BMAT score when assessing the results. Don't be alarmed when you see it: a normalised score for -3 means getting a really low score on the BMAT, 0 means getting an average score, and 3 means getting a very high score.
 
 # Prior predictive modelling
 
-The purpose of our analysis is to get model which for a given BMAT score, will give us a probabilty of being accepted. We will be using the logistic function to relate the normalised BMAT score to probabilty of getting an offer.  
+The purpose of our analysis is to find a formula that we can use to calculate the probabilty of getting accepted based on your BMAT score. You should ideally be able to plug your current BMAT score into the formula and then the probabilty of getting an offer will be output.We will be using the logistic function to relate the normalised BMAT score to probabilty of getting an offer.  
 
 Let's take a look at the logistic model: brace youself:
 
@@ -189,7 +189,7 @@ Instead of just plotting $y$ on the y-axis and $Score$ on the x-axis, we then us
 
 $$ p = \frac{1}{1 + e^{-y}}$$
 
-And then we plot p on the y-axis. We do this because we are trying to predict the probabilty of someone getting an offer, and probabilties can only go between 0 and 1. A straight line keeps going off to inifinity, so we would end up with some BMAT scores predicting someone having probabilties greater than 1 and less than 0 of getting an offer, which isn't possible![^1].
+And then we plot $p$ on the y-axis. We do this because we are trying to predict the probabilty of someone getting an offer, and probabilties can only go between 0 and 1. A straight line keeps going off to inifinity, so if we just use our striaght-line equation, we would end up with some BMAT scores predicting someone having probabilties greater than 1 and less than 0 of getting an offer, which isn't possible!.
 
 Once we have our model, we now just need to estimate two parameters: $a$ and $b$. Once we have that, we will be able to predict offer probabilities from BMAT scores! We need to pick our parameters because changing them will lead to very different lines and predictions:
 
@@ -208,7 +208,9 @@ The $a$ parameter moves the line left and right: a high $a$ means the student wi
 
 # Prior predictive modelling for parameters
 
-So now we our model and the parameters we need to estimate. Now back at GCSE/A-Level, we would plot out our data and try to draw a straight line through it, and estimate the slope and intercept. We could transform our normalised BMAT scores using our logistic equation and to a similar routine of plotting out the points and drawing a striaght line if we were so inclined. This kind of approach is called **regression**, and our outputs will be estimates for $a$ and $b$. These esimates will let us draw the line and allow us to predict likelihood of entry into Cambridge for anyone we can get BMAT data off. 
+So now have we our model and the parameters we need to estimate. 
+
+Now back at GCSE/A-Level, when we wanted to calculate the slope and intercept from some data, we would plot out our data on some graph paper and try to draw a straight line through it, and estimate the slope - change in y dividided by the change in x - and intercept - where the straight line intersects the y-axis. We could transform our normalised BMAT scores using our logistic equation and do a similar routine of plotting out the points and drawing a striaght line if we were so inclined. This kind of approach is called **regression**, and our outputs will be estimates for $a$ and $b$. These esimates will let us draw the line and allow us to predict likelihood of entry into Cambridge for anyone we can get BMAT data off. 
 This is approximately what our computer behind the scences will be doing if we were using a **frequentist** approach - which is often the default - and the functions `lm()` and `glm()` from R. 
 
 Because we are using a Bayesian approach though, there's one thing we need to do in addition to the above steps: we need to tell the computer what we roughly think our paramters $a$ and $b$ will be, and then let the computer use those suggestions to develop estimates for our parameters.
@@ -256,6 +258,12 @@ cross_df(list(x = seq(-3, 3, 0.1), a = rnorm(20, -1, 1.5), b = exp(rnorm(20, 1, 
 
 ```
 
+So that looks sensible to me. The potential distribution of lines fits with what we know about our dataset, but there is alot of variability in case there is something surprising in the data.
+
+What we are looking at here is the computer's guess of what the final line could look like before we show it some data. We are now going to show it the data, and using its prior knoweldge, it will be able able to update its intial guess. 
+
+Below is the potential prior range of values for $a$ and $b$.
+
 ```{r Displaying distribution of logistic parameters}
 tibble(a = rnorm(1e5, -1, 1.5), b = exp(rnorm(1e5, 1, 0.25))) %>%
   gather(a, b, key = "key", value = "value") %>%
@@ -264,18 +272,13 @@ tibble(a = rnorm(1e5, -1, 1.5), b = exp(rnorm(1e5, 1, 0.25))) %>%
   scale_fill_brewer(type = "qual") +
   guides(fill = FALSE) +
   facet_wrap(~key) +
+  xlim(-7.5, 7.5) +
   ggtitle("Prior distribution of model parameters")
 ```
 
-So now we have a model of how the probabilty of getting admitted to Cambridge changes as we change the BMAT Score. Let's look at we can take what we said in words above and turn into a math model. 
-
-$$ p = \frac{1}{1 + e^{-y}}$$
-
-$$ y = a + b * Score$$
-
-$$\sim$$
-
 Now let's run some models!
+
+# Results
 
 ```{r Generating Fixed-effects models, echo=FALSE}
 
@@ -319,11 +322,12 @@ extract.samples(bmat_models[[1]]) %>%
   scale_fill_brewer(type = "qual") +
   guides(fill = FALSE) +
   facet_wrap(~key) +
+  xlim(-7.5, 7.5) +
   ggtitle("Posterior distribution of model parameters")
   
 ```
 
-So we can now see that compared to before, the distributions are much narrower. This means we are much more confidenent in what the correct values of the parameters are. Let's see what our curve looks like:
+So we can now see that compared to before, the distributions are much narrower. This means we are much more confident in what the correct values of the parameters are. Let's see what our curve looks like:
 
 ```{r Binned test results}
 test_binned <- test %>%
@@ -523,7 +527,5 @@ bmat_test_results %>%
 ```
 
 [^1]: [Who are you Tania Lake, what did you see!?](https://xkcd.com/979/)
+
 [^2]: This is called multicollinearity, and there are specific mathematical reasons why this is the case. For an intuitive explanation, let's say I ask you whether the number of bedrooms in a house or the size of the garden increases the selling price of a house. Nearly all houses with lots of bedrooms will have big gardens - because both are a feature of large houses - so it is hard to say whether one or the other affects the house price. Similarly, because stuents with good scores on Section 1 get good scores on Section 2, it is hard to say whether Section 1 *or* Section 2 scores increase your chance of getting in: just that doing well on one section means you will do well on the other section, and you are more likely to get in. 
-
-
-
