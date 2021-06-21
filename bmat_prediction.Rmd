@@ -327,7 +327,7 @@ extract.samples(bmat_models[[1]]) %>%
   
 ```
 
-So we can now see that compared to before, the distributions are much narrower. This means we are much more confident in what the correct values of the parameters are. Let's see what our curve looks like:
+So we can now see that compared to before, the distributions are much narrower. This means we are much more confident in what the correct values of the parameters are. Let's see what our final curves look like:
 
 ```{r Binned test results}
 test_binned <- test %>%
@@ -342,6 +342,24 @@ train_binned <- train %>%
   group_by(bins, College) %>%
   summarise(BMAT_all_mean = mean(BMAT_all), fraction_offer = mean(Offer), n = n())
 ```
+
+What we have is a similar graph to the prior distribution curves, but this time the model has seen the data and updated. We now see a far tighter series of lines, which give us the best guess what the true relationship is. 
+
+```{r Posterior Predictive Modelling for Logistic Regression}
+
+cross_df(list(x = seq(-3, 3, 0.1), a = extract.samples(bmat_models[[1]], n = 30)$a, b = extract.samples(bmat_models[[1]], n = 30)$b)) %>%
+  mutate(y = a + b * x, p = 1 / (1 + exp(-y))) %>%
+  mutate(BMAT_all = x * sd(train$BMAT_all) + mean(train$BMAT_all)) %>%
+  unite(col = "ab", a, b) %>%
+  ggplot(aes(BMAT_all, p, group = ab)) +
+  geom_line(alpha = .05, colour = "blue") +
+  theme_minimal() +
+  xlab("Raw BMAT Score") + ylab("Probabilty of Offer") +
+  ggtitle("Estimated relationship between BMAT Score and Probabilty of Offer")
+
+```
+
+We can also show this with confidence bands. We can see on the above graphs that there are many different lines, which each line being a prediction. We can show a band where X% of all predictions lie within.
 
 ```{r}
 cross_df(list(x = seq(-3, 3, 0.1), a = extract.samples(bmat_models[[1]], n = 30)$a, b = extract.samples(bmat_models[[1]], n = 30)$b)) %>%
@@ -366,23 +384,11 @@ cross_df(list(x = seq(-3, 3, 0.1), a = extract.samples(bmat_models[[1]], n = 30)
   
 ```
 
+As you can see above, there are three coloured bands. The darkest and narrowest band is the 67% band. This means that the dark blue section covers 67% of our simultations. The paler bands refer to the 89% and 97% confidence interval - the larger the confidence number, the wider the bands are in order to encompass a larger number of simulations.  
 
-```{r Posterior Predictive Modelling for Logistic Regression}
+# Predictions
 
-cross_df(list(x = seq(-3, 3, 0.1), a = extract.samples(bmat_models[[1]], n = 30)$a, b = extract.samples(bmat_models[[1]], n = 30)$b)) %>%
-  mutate(y = a + b * x, p = 1 / (1 + exp(-y))) %>%
-  mutate(BMAT_all = x * sd(train$BMAT_all) + mean(train$BMAT_all)) %>%
-  unite(col = "ab", a, b) %>%
-  ggplot(aes(BMAT_all, p, group = ab)) +
-  geom_line(alpha = .05, colour = "blue") +
-  theme_minimal() +
-  xlab("Raw BMAT Score") + ylab("Probabilty of Offer") +
-  ggtitle("Estimated relationship between BMAT Score and Probabilty of Offer")
-
-
-```
-
-But not just that, we want to know how good our predictions are! We can see how our prediction does on those from 2019, which we have not used to train our model:
+However, the point of our work was not to make nice graphs - we want to know how good our predictions are! We can see how our prediction does on those from 2019, which we have not used to train our model:
 
 ```{r}
 bmat_test_results <- bind_cols(
@@ -398,9 +404,11 @@ table(bmat_test_results$Offer, bmat_test_results$pred_Offer)
 
 ```
 
-We can also visualise this as an ROC curve:
 
-```{r ROC Calculations}
+
+```{r ROC Calculations, include=FALSE}
+
+#We can also visualise this as an ROC curve:
 
 create_roc_df <- function(predictions, truth) {
   

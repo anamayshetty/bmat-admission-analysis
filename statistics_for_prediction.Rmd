@@ -52,7 +52,13 @@ Let's say I gave you my dataset, but without the BMAT scores. You may think that
 
 The average fraction of applications which lead to offers is `r round(mean(df$Offer), 3)`. This means that if you knew nothing about the person, you should tell them they won't get in! After all, you'll be right roughly 75% of the time.
 
-### Option 2: You'll get in if you do really well in the BMAT, but not if you do really *really* well on the BMAT
+### Option 2: Let me find your score in my table
+
+### Option 3: You'll get in if you do really well in the BMAT, but not if you do really *really* well on the BMAT
+
+### Option 4: Let's use a model?
+
+
 
 ```{r}
 df %>%
