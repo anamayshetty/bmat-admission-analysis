@@ -1,5 +1,5 @@
 ---
-title: "statistics_for_prediction"
+title: "Statistics for Prediction"
 author: "Anamay Shetty"
 date: "12/12/2020"
 output: html_document
@@ -26,10 +26,13 @@ df <- read_delim("data/bmat_results_tl.txt", delim = " ", col_names = c("Domicil
   mutate(x = (str_remove(x, " ?(Y|) [0-9](.[0-9]|) [0-9](.[0-9]|)"))) %>%
   rename("College" = x) %>%
   mutate(BMAT_all = BMAT_Section_1 + BMAT_Section_2) %>%
-  #group_by(College, Year) %>%
-  #mutate(offer_fraction = sum(Offer)/n()) %>%
-  #ungroup %>%
-  select(Candidate, Offer, BMAT_all)
+  # This is to deal with pesky floating point problems
+  mutate(BMAT_all = as.integer(BMAT_all * 10) / 10) %>%
+  select(Candidate, Year, Offer, BMAT_all)
+
+test_df <- filter(df, Year == 2019)
+train_df <- filter(df, Year != 2019)
+
 ```
 
 Statistics is a common feature of many science courses. I see statistics as solving two questions in science:
@@ -46,17 +49,124 @@ A bit of background. When I was first starting off as a very bor(ed/ing) Year 12
 
 "Anamay I have <blah> BMAT score: what's my chances of getting into Cambridge?"
 
-### Option 1: You're not going to get in
+#### Option 1: You're not going to get in
 
 Let's say I gave you my dataset, but without the BMAT scores. You may think that there's no way you can answer the question posed, but we can!
 
-The average fraction of applications which lead to offers is `r round(mean(df$Offer), 3)`. This means that if you knew nothing about the person, you should tell them they won't get in! After all, you'll be right roughly 75% of the time.
+The average fraction of applications which lead to offers is `r round(mean(train_df$Offer), 3)`. This means that if you knew nothing about the person, you should tell them they won't get in! After all, you'll be right roughly 75% of the time.
 
-### Option 2: Let me find your score in my table
+Let's just reflect on that - even without *any* modelling or statistics, I can accurately call an applicant's result 3 out of 4 times. This is why when papers are published talking about cool their snazzy new prediction algorithm is, you shouls always make sure that they have a comparison against something basic like our blanket 'No' rule. You will be surprised how effective simple rules can be, and why simple accuracy scores often don't show the whole picture. 
 
-### Option 3: You'll get in if you do really well in the BMAT, but not if you do really *really* well on the BMAT
+To keep track as we're going along, we're going to use the 2019 year results as a yardstick to measure how well we're doing. We're going to take each rule and apply to the 2019 batch and see how many we predict correctly. 
 
-### Option 4: Let's use a model?
+Our first one is easy. Since `r round(mean(!test_df$Offer), 3)` of applicants in 2019 didn't get an offer, you would have a `r round(mean(!test_df$Offer), 3)` accuracy if you told every applicant you met "You're not going to get in".
+
+#### Option 2: Let me find your score in my table
+
+But I didn't download this whole dataset for nothing. The next step up is to take an applicant's score and look up in our table. Depending on what previous candidates got in previous years, we can tell our fresh-faced sixth former what the outcome of their application will be.
+
+Let's say our enterprising candidate got 14.1 on their BMAT and wants to know what their chance of getting in is. We can look up in our dataset what previous candidates got:
+
+```{r}
+train_df %>%
+  filter(BMAT_all == 14.1)
+
+```
+
+We can see from the above table that one candidate got 14.1 in 2018 and they did not get in. What happens if we predict our candidate won't get in this year with 4.9 as well?
+
+```{r}
+test_df %>%
+  filter(BMAT_all == 14.1)
+
+```
+
+You can see that you would be correct! 
+
+Obviously this is just one example and presents two obvious problems: what do I do when there are many candidates with the same score, and what do we do when we have a candidate with a score not previously seen before?
+
+#### Option 3: Let's just match people up
+
+Let's take that first problem on first. Let's say we meet with a candidate with a score of 12.3?
+
+```{r}
+train_df %>%
+  filter(BMAT_all == 12.3) %>%
+  count(Offer)
+
+```
+
+We can see that there are 27 candidates in 2017 and 2018 with a score of 12.3: 21 of them got an offer (yay) and 6 did not (cry).
+
+What do we tell our candidate this year with a score of 12.3? One approach is to say because more candidates got offer than did not, that you should tell the candidate that they will get in. 
+
+```{r}
+test_df %>%
+  filter(BMAT_all == 12.3)
+```
+
+We can see that there were 5 candidates in 2019 who got 12.3: 3 of them got offers and 2 did not. What would happen if we used this strategy of deciding whether candidates got in or not depending on whether more tha 50% of candidates in previous years with their score got in. 
+
+```{r}
+matching_results <- test_df %>%
+  left_join(train_df, by = "BMAT_all", suffix = c(".test", ".train")) %>%
+  #filter(is.na(Offer.train))
+  group_by(Candidate.test, Offer.test) %>%
+  summarise(pred_Offer = mean(Offer.train) > 0.5) %>%
+  mutate(Correct_prediction = Offer.test == pred_Offer) %>%
+  ungroup %>%
+  count(Correct_prediction)
+
+matching_results
+```
+
+As we can see from the table above, we `r matching_results[2, 2]` candidates who we gave a correct response to, and `r matching_results[1, 2]` who we didn't. The `r matching_results[3, 2]` NAs refer to candidates who got a score that wasn't found in the previous two years, and so we couldn't say anything to them because we had no data!
+
+If we ignore the NAs, our accuracy is `r round(matching_results[2, 2] / (matching_results[2, 2]+matching_results[1, 2]), 3)` which is about 6-7% better than a blanket "No" approach! This is because we are now having a look at the candidate's BMAT score, and we are learning that candidates with a high BMAT score are going to do well, and those with a low score are not.
+
+However, we still have nothing to say to those candidates with NAs. Let's take our prediction efforts one step further. 
+
+#### Option 4: Let's start doing some l i n e a r i n t e r p o l a t i o n ?
+
+Let's start by drawing some nice graphs.
+
+```{r}
+train_df %>%
+  ggplot(aes(x = BMAT_all, y = Offer)) +
+  geom_point() +
+  xlab("BMAT Score")
+```
+
+We can see here that we have plotted two sets of BMAT scores from 2017 and 2018: the lower dots are for unsuccessful candidates and the upper line is for successful candidates.
+
+Now to replicate what we have done so far, we need to plot our results for *each* score, with the y-axis showing the average number of candidates with that score getting an offer. 
+
+```{r}
+train_df %>%
+  group_by(BMAT_all) %>%
+  summarise(Offer = mean(Offer)) %>%
+  {ggplot(data = ., aes(x = BMAT_all, y = Offer)) +
+  geom_point(data = filter(., BMAT_all == 12.3), colour = "red", size = 3) +
+  geom_point(data = filter(., BMAT_all == 14.1), colour = "green", size = 3) +
+  geom_point(data = filter(., BMAT_all == 4.7), colour = "blue", size = 3) +
+  geom_point() +
+      geom_vline(xintercept = 4.7) +
+  scale_y_continuous(labels = scales::percent) +
+  xlab("BMAT Score") + ylab("Average Success Rate")}
+  
+```
+
+Let's just pause and understand what we've drawn. I've highlighted two of the points on the graph. 
+
+The green point corresponds to the score of 14.1, which we discussed before is our one candidate in 2018 who got in. Because only one person got 14.1 and they got in, we say that anyone who gets a score of 14.1 will always get in. 
+
+The red points corresponds to the score of 12.3. Here we had 27 candidates, of whom 21 got in. Because 21/27 got in, we say the average success rate is 78%. Our rule from before was to say that anyone with a score where less than 50% of previous candidates got an offer was *not* going to get an offer, and vice versa.
+
+What about someone who got 4.7?
+
+#### Option 5: Let's use a model?
+
+
 
 
 
