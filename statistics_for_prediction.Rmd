@@ -151,7 +151,7 @@ train_df %>%
   #geom_point(data = filter(., BMAT_all == 14.1), colour = "green", size = 3) +
   geom_point(data = filter(., BMAT_all == 4.9), colour = "blue", size = 3) +
   geom_point() +
-  geom_vline(xintercept = 7.8) +
+  geom_vline(xintercept = 14.7) +
   scale_y_continuous(labels = scales::percent) +
   xlab("BMAT Score") + ylab("Average Success Rate")}
   
@@ -252,12 +252,48 @@ train_df %>%
 
 ```
 
-For each potential BMAT score, we can go and see where it intersects the line, and then read off the average success score. 
+For each potential BMAT score, we can go and see where it intersects the line, and then read off the average success score: for example, we can ~36% of candidates in 2017/8 with a BMAT score of 11 got an offer, so we will tell a student with 11 that they have a 36% chance of getting in i.e. they will be rejected.
 
 #### Option 5: Time for a model?
 
-Now we have a comprehensive model. We can see that 
+Now we have a comprehensive model, and we can just leave it there - after all, we now can tell any candidate what chance they have of getting in, and we didn't have to do any stats!
 
+I wanted to walk through all of this to show you how far we could get just using some basic problem solving. You can consider what we have to be an *algorithm*, a way of converting BMAT scores into a prediction of success or not. The next step will show us some statistics (finally), but I wanted to show it as a natural progression of our problem solving.
 
+Let's take another look at out graph, and I've highlighted a few points:
 
+```{r}
+
+train_df %>%
+  group_by(BMAT_all) %>%
+  summarise(Offer = mean(Offer)) %>%
+  {ggplot(data = ., aes(x = BMAT_all, y = Offer)) +
+  geom_hline(yintercept = 0.5, colour = "grey", lty = 2) +
+  geom_point(data = filter(., BMAT_all == 11.6), colour = "red", size = 3) +
+  geom_point(data = filter(., BMAT_all == 11.9), colour = "purple", size = 3) +
+  geom_point(data = filter(., BMAT_all == 16.3), colour = "green", size = 3) +
+  geom_point(data = filter(., BMAT_all == 17), colour = "blue", size = 3) +
+  geom_line() +
+  scale_y_continuous(labels = scales::percent) +
+  scale_x_continuous(breaks = seq(1, 18))  +
+  xlab("BMAT Score") + ylab("Average Success Rate")}
+
+```
+
+Let's compare candidate who got a 11.6 (red) and someone who got 11.9 (purple). Despite the fact that the person in purple got a higher score, we would have told them that they are not going to get an offer, as they fall below 50% - the grey dashed line on the graph, whilst the candidate with the lower score will be told they will get an offer.
+
+This is made even clearer with someone who got 17 (blue). This is an *insane* score to get, and yet we not only tell them they won't get an offer, we can *guarantee* it! They after all have a predicted 0% chance! This is despite doing better than someone who got 16.3 (green), who can *guarantee* with a 100% probabilty can get in. 
+
+We therefore have two problems - we have all of these jumps in our data, which make adjacent scores change wildly, and we are often completely of people's chances at either end. Both of these are wrong to our common-sense: people who get similar scores should have a similar chance of getting in, and people with very low/high scores should have a low/high - but not certain chance - of getting in.
+
+So why are we getting these results? That's because our dataset has told us that candidates who get 17 will always fail:
+
+```{r}
+train_df %>%
+  filter(BMAT_all == 17)
+```
+
+But we don't just have to rely on past results - we have knowledge about how the world and exams work, which our basic algorithm hasn't been told about. 
+
+This is where modelling comes in. We want to use a curve that follows our intuition, but is flexible enough to then be changed by our data. 
 
