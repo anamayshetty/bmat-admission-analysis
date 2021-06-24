@@ -65,21 +65,22 @@ Our first one is easy. Since `r round(mean(!test_df$Offer), 3)` of applicants in
 
 But I didn't download this whole dataset for nothing. The next step up is to take an applicant's score and look up in our table. Depending on what previous candidates got in previous years, we can tell our fresh-faced sixth former what the outcome of their application will be.
 
-Let's say our enterprising candidate got 14.1 on their BMAT and wants to know what their chance of getting in is. We can look up in our dataset what previous candidates got:
+Let's say our enterprising candidate got 4.9 on their BMAT and wants to know what their chance of getting in is. We can look up in our dataset what previous candidates got:
 
 ```{r}
 train_df %>%
-  filter(BMAT_all == 14.1)
+  filter(BMAT_all == 4.9)
 
 ```
 
-We can see from the above table that one candidate got 14.1 in 2018 and they did not get in. What happens if we predict our candidate won't get in this year with 4.9 as well?
+We can see from the above table that one candidate got 4.9 in 2018 and they did not get in. What happens if we predict our candidate won't get in this year with 4.9 as well?
 
 ```{r}
 test_df %>%
-  filter(BMAT_all == 14.1)
+  filter(BMAT_all == 4.9)
 
 ```
+
 
 You can see that you would be correct! 
 
@@ -105,7 +106,7 @@ test_df %>%
   filter(BMAT_all == 12.3)
 ```
 
-We can see that there were 5 candidates in 2019 who got 12.3: 3 of them got offers and 2 did not. What would happen if we used this strategy of deciding whether candidates got in or not depending on whether more tha 50% of candidates in previous years with their score got in. 
+We can see that there were 5 candidates in 2019 who got 12.3: 3 of them got offers and 2 did not. What would happen if we used this strategy of deciding whether candidates got in or not depending on whether more than 50% of candidates in previous years with their score got in. 
 
 ```{r}
 matching_results <- test_df %>%
@@ -126,7 +127,7 @@ If we ignore the NAs, our accuracy is `r round(matching_results[2, 2] / (matchin
 
 However, we still have nothing to say to those candidates with NAs. Let's take our prediction efforts one step further. 
 
-#### Option 4: Let's start doing some l i n e a r i n t e r p o l a t i o n ?
+#### Option 4: Let's start doing some linear interpolation and probabilties?
 
 Let's start by drawing some nice graphs.
 
@@ -147,10 +148,10 @@ train_df %>%
   summarise(Offer = mean(Offer)) %>%
   {ggplot(data = ., aes(x = BMAT_all, y = Offer)) +
   geom_point(data = filter(., BMAT_all == 12.3), colour = "red", size = 3) +
-  geom_point(data = filter(., BMAT_all == 14.1), colour = "green", size = 3) +
-  geom_point(data = filter(., BMAT_all == 4.7), colour = "blue", size = 3) +
+  #geom_point(data = filter(., BMAT_all == 14.1), colour = "green", size = 3) +
+  geom_point(data = filter(., BMAT_all == 4.9), colour = "blue", size = 3) +
   geom_point() +
-      geom_vline(xintercept = 4.7) +
+  geom_vline(xintercept = 7.8) +
   scale_y_continuous(labels = scales::percent) +
   xlab("BMAT Score") + ylab("Average Success Rate")}
   
@@ -158,36 +159,105 @@ train_df %>%
 
 Let's just pause and understand what we've drawn. I've highlighted two of the points on the graph. 
 
-The green point corresponds to the score of 14.1, which we discussed before is our one candidate in 2018 who got in. Because only one person got 14.1 and they got in, we say that anyone who gets a score of 14.1 will always get in. 
+The green point corresponds to the score of 4.9, which we discussed before is our one candidate in 2018 who did not get in. Because only one person got 4.9 and they did not get in, we say that anyone who gets a score of 4.9 will never get in. 
 
 The red points corresponds to the score of 12.3. Here we had 27 candidates, of whom 21 got in. Because 21/27 got in, we say the average success rate is 78%. Our rule from before was to say that anyone with a score where less than 50% of previous candidates got an offer was *not* going to get an offer, and vice versa.
 
-What about someone who got 4.7?
+Before we move on, let's reflect on that. Instead of telling our applicant whether they will get in or not, we can give them a *probabilty* of getting an offer: 20%, 40%, 60% etc. This naturally comes out of the averages we've been calculating and makes intuitive sense: if 3 out of 5 (60%) people in the past got an offer with a score of 12.3, then future applicants will have a 60% chance of getting an offer.
 
-#### Option 5: Let's use a model?
-
-
-
-
+But what do we do about someone's score we haven't seen before, like someone with a score of 14.7?
 
 ```{r}
-df %>%
-  ggplot(aes(x = BMAT_all, y = as.numeric(Offer))) +
-  geom_point()
+train_df %>%
+  filter(BMAT_all == 14.7)
 ```
 
+We can look either side of this missing score and see what are the closest results we have:
 
 ```{r}
-df %>%
-  #mutate(bins = BMAT_all) %>%
-  mutate(bins = round(BMAT_all)) %>%
-  group_by(bins) %>%
-  mutate(offer_fraction = mean(Offer), n = n()) %>%
-  ggplot(aes(bins, offer_fraction)) +
-  geom_point(aes(x = BMAT_all, y = as.numeric(Offer))) +
-  geom_point(colour = "red") +
-  geom_line(colour = "red")
+train_df %>%
+  filter(BMAT_all %in% c(14.6, 14.9))
 ```
 
+We can see that either side of this score, the candidate did get in, so we can predict that someone with a score of 4.7 *also* will get in. 
+This is the equivalent of drawing a line through our points, and if we have any gaps, using the line:
 
-As you can see, we have 
+```{r}
+train_df %>%
+  group_by(BMAT_all) %>%
+  summarise(Offer = mean(Offer)) %>%
+  filter(BMAT_all  >= 14.5 & BMAT_all <= 15) %>%
+  ggplot(aes(x = BMAT_all, y = Offer)) +
+  geom_line() +
+  geom_point(size = 5) +
+  geom_point(data = tibble(BMAT_all = 14.7, Offer = 1), size = 5, colour = "red") +
+  scale_y_continuous(labels = scales::percent, breaks = c(0.95, 1))
+  
+```
+
+We can extend this out to the rest of our dataset, and fill in all avaialable gaps. Let's see what it does to our accuracy:
+
+```{r}
+
+do_linear_interpolation_y <- function(x1, x2, y1, y2, x) {
+  
+  m <- (y2 - y1) / (x2 - x1)
+  c <- y1
+  y <- m * (x - x1) + c
+  
+  return(y)
+}
+
+no_gaps_train_df <- train_df %>%
+  group_by(BMAT_all) %>%
+  summarise(mean = mean(Offer)) %>%
+  mutate(x1 = BMAT_all, x2 = BMAT_all, y1 = mean, y2 = mean) %>%
+  right_join(tibble(BMAT_all = seq(10, 180)/10), by = "BMAT_all") %>%
+  fill(x1, y1, .direction = "down") %>%
+  fill(x2, y2, .direction = "up") %>%
+  mutate(predmean = do_linear_interpolation_y(x1, x2, y1, y2, BMAT_all)) %>%
+  mutate(Offer = ifelse(is.na(mean), predmean, mean)) %>%
+  select(BMAT_all, Offer) %>%
+  fill(Offer, .direction = "up")
+
+test_df %>%
+  left_join(no_gaps_train_df, by = "BMAT_all", suffix = c(".test", ".train")) %>%
+  mutate(Correct_prediction = Offer.test == (Offer.train > 0.5)) %>%
+  count(Correct_prediction)
+
+  
+
+```
+
+And we have now correctly classified out previous NAs! We can show our current progress with a graph:
+
+```{r}
+
+eleven_graph_intersection <- train_df %>%
+  group_by(BMAT_all) %>%
+  summarise(Offer = mean(Offer)) %>%
+  filter(BMAT_all == 11.0) %>%
+  .[[1, 2]]
+
+train_df %>%
+  group_by(BMAT_all) %>%
+  summarise(Offer = mean(Offer)) %>%
+  ggplot(aes(x = BMAT_all, y = Offer)) +
+  geom_line() +
+  geom_segment(x = 11, y = 0, xend = 11, yend = 0.3636364, colour = "red", lty = 2) +
+  geom_segment(x = 0, y = 0.3636364, xend = 11, yend = 0.3636364, colour = "red", lty = 2) +
+  scale_y_continuous(labels = scales::percent) +
+  scale_x_continuous(breaks = seq(1, 18))  +
+  xlab("BMAT Score") + ylab("Average Success Rate")
+
+```
+
+For each potential BMAT score, we can go and see where it intersects the line, and then read off the average success score. 
+
+#### Option 5: Time for a model?
+
+Now we have a comprehensive model. We can see that 
+
+
+
+
