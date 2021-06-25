@@ -49,7 +49,7 @@ A bit of background. When I was first starting off as a very bor(ed/ing) Year 12
 
 "Anamay I have <blah> BMAT score: what's my chances of getting into Cambridge?"
 
-#### Option 1: You're not going to get in
+### Option 1: You're not going to get in
 
 Let's say I gave you my dataset, but without the BMAT scores. You may think that there's no way you can answer the question posed, but we can!
 
@@ -61,7 +61,7 @@ To keep track as we're going along, we're going to use the 2019 year results as 
 
 Our first one is easy. Since `r round(mean(!test_df$Offer), 3)` of applicants in 2019 didn't get an offer, you would have a `r round(mean(!test_df$Offer), 3)` accuracy if you told every applicant you met "You're not going to get in".
 
-#### Option 2: Let me find your score in my table
+### Option 2: Let me find your score in my table
 
 But I didn't download this whole dataset for nothing. The next step up is to take an applicant's score and look up in our table. Depending on what previous candidates got in previous years, we can tell our fresh-faced sixth former what the outcome of their application will be.
 
@@ -86,7 +86,7 @@ You can see that you would be correct!
 
 Obviously this is just one example and presents two obvious problems: what do I do when there are many candidates with the same score, and what do we do when we have a candidate with a score not previously seen before?
 
-#### Option 3: Let's just match people up
+### Option 3: Let's just match people up
 
 Let's take that first problem on first. Let's say we meet with a candidate with a score of 12.3?
 
@@ -127,7 +127,7 @@ If we ignore the NAs, our accuracy is `r round(matching_results[2, 2] / (matchin
 
 However, we still have nothing to say to those candidates with NAs. Let's take our prediction efforts one step further. 
 
-#### Option 4: Let's start doing some linear interpolation and probabilties?
+### Option 4: Let's start doing some linear interpolation and probabilties?
 
 Let's start by drawing some nice graphs.
 
@@ -254,7 +254,7 @@ train_df %>%
 
 For each potential BMAT score, we can go and see where it intersects the line, and then read off the average success score: for example, we can ~36% of candidates in 2017/8 with a BMAT score of 11 got an offer, so we will tell a student with 11 that they have a 36% chance of getting in i.e. they will be rejected.
 
-#### Option 5: Time for a model?
+### Option 5: Time for a model?
 
 Now we have a comprehensive model, and we can just leave it there - after all, we now can tell any candidate what chance they have of getting in, and we didn't have to do any stats!
 
@@ -295,5 +295,108 @@ train_df %>%
 
 But we don't just have to rely on past results - we have knowledge about how the world and exams work, which our basic algorithm hasn't been told about. 
 
-This is where modelling comes in. We want to use a curve that follows our intuition, but is flexible enough to then be changed by our data. 
+This is where modelling comes in. We want to impose some structure on the algorithm, whilst making sure that it can change with new data. The way we do this is by having an equation - which we can represent as a line - which can be used to convert between BMAT score and success rate. 
 
+So what kind of line can we use? Our first thought would be to use a straight line. We know that any striaght line can be described by its gradient and its y-intercept, so we need to draw a striaght-line and figure out which gradient/y-intercept combination work the best:
+
+```{r}
+train_df %>%
+  group_by(BMAT_all) %>%
+  summarise(Offer = mean(Offer)) %>%
+  ggplot(data = ., aes(x = BMAT_all, y = Offer)) +
+  geom_point() +
+  stat_function(fun = function(x) x / 17 - 1/17, colour = "red") +
+  stat_function(fun = function(x) x / 16 - 1/6, colour = "red") +
+  stat_function(fun = function(x) x / 18 + 1/8, colour = "red") +
+  scale_y_continuous(labels = scales::percent, breaks = seq(0, 1, 0.1)) +
+  scale_x_continuous(breaks = seq(1, 18))  +
+  xlab("BMAT Score") + ylab("Average Success Rate")
+
+```
+
+I have drawn a few examples of straight lines we can use for our data. We can see that they do not fit very well and some do not make sense: the top line predicts a probabilty of greater than 100% with a score greter than 16!
+
+This is a problem with using a striaght line - because these lines stretch onwards forever, they will run into these problems. What we need is a kind of line which caps off at 0 and 100%. Luckily, we have such a line, one described by the **logistic distribution**:
+
+```{r}
+
+no_gaps_train_df %>%
+  ggplot(data = ., aes(x = BMAT_all, y = Offer)) +
+  geom_point() +
+  stat_function(fun = plogis, args = list(location = 10, scale = 1), colour = "red") +
+  stat_function(fun = plogis, args = list(location = 11, scale = 2), colour = "red") +
+  stat_function(fun = plogis, args = list(location = 12, scale = 0.5), colour = "red") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_x_continuous(breaks = seq(1, 18))  +
+  xlab("BMAT Score") + ylab("Average Success Rate")
+
+```
+
+Now we have a much better line: we will never get an answer bigger than 100% or less than 0 for our average success rate. It also means similar scores will have similar chances of getting in, and those with low/high scores will have a low/high chance of getting in. In general, for problems where we are trying to predict the chance of something happening between 0 and 100%, we would want to use a **logistic distribution** line[^1].
+
+[^1]: This is a simplistic reason for choosing between different linear models for differnet applications. A more satisfying discussion can be found in McElreath's Statistical Rethinking when he discusses maximum entropy distributions and general linear models.
+
+Like a striaght-line graph, where we wanted to estimate the slope and gradient, we also want to calculate the slope and gradient of the **logistic distribution** lines.
+
+The slope is how steep our line is going to be - the bigger the slope, the more your chance of getting in changes.
+
+The intercept is the BMAT score needed to have a 50% chance of getting into Cambridge. 
+
+We can get a computer to chose which slope and intercept will create a line which best matches our data. Let's see how it's done:
+
+```{r}
+
+bmat_model <- glm(Offer ~ BMAT_all, family = "binomial", data = train_df)
+
+intercept <- -bmat_model$coefficients[[1]]
+
+slope <- bmat_model$coefficients[[2]]
+
+```
+
+```{r}
+
+no_gaps_train_df %>%
+  ggplot(data = ., aes(x = BMAT_all, y = Offer)) +
+  geom_line() +
+  stat_function(fun = plogis, args = list(location = intercept, scale = slope), colour = "red") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_x_continuous(breaks = seq(1, 18))  +
+  xlab("BMAT Score") + ylab("Average Success Rate")
+
+```
+
+Nice! We can see that our line does a pretty good job of mimicking our previous attempt to match BMAT score to success rate, whilst being far smoother. However, does this do any better than our original method of looking up the results in the table and then telling the applicant their score? Let's remind ourselves of the success of the old model:
+
+```{r}
+
+head(predict(bmat_model, type = "response", newdata = test_df))
+
+model_results <- no_gaps_train_df %>%
+  mutate(Offer = Offer > 0.5) %>%
+  right_join(test_df, by = "BMAT_all", suffix = c(".empirical_model", ".truth")) %>%
+  mutate(Offer.logistic_model = predict(bmat_model, type = "response", newdata = test_df) > 0.5)
+
+model_results %>%
+  mutate(Correct_prediction = Offer.truth == Offer.empirical_model) %>%
+  count(Correct_prediction)
+
+```
+
+And let's see how our new model does:
+
+```{r}
+model_results %>%
+  mutate(Correct_prediction = Offer.truth == Offer.logistic_model) %>%
+  count(Correct_prediction)
+```
+
+And it turns out that our logistic model did much better: 84% accuracy vs 81% accuracy, with 30 more people given a correct prediction.
+
+### Reflection
+
+Let's think about what just happened there. We went from using a simple model just looking at past years to one using a statistical model, where we come up with a particular line, and we estimate a slope and interecpt. We can see that the stistical model is better, because it imposes some sensible rules e.g. people with higher scores should have a better chance of getting in.
+
+This is to me *the main reason* why in data science we use statistics. Data science could just be an excercise in collecting big datasets and calculating averages, like we did before - and it works fairly well. However, we need statistical models to improve our accuracy because we need a way to tell our algorithms certain truths about the world.
+
+This idea is often thought about as either regularisation (more common in frequentist statistics) or priors (more common in Bayesian), but I think this point of using *models* as a way improve accuracy purposely *not* directly using our data is under-rated, and forms the first step in understaing why we use statistics in prediction. 
